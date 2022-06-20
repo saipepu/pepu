@@ -57,9 +57,15 @@
 
   @media (max-width: v.$tablet) {
     padding: 0px 75px;
+    .demo_cursor,.demo_cursor_secondary {
+      display: none;
+    }
   }
   @media (max-width: v.$mobile) {
     padding: 0px 25px;
+    .demo_cursor,.demo_cursor {
+      display: none;
+    }
   }
   .bodyWrapper {
     padding-top: 100px;

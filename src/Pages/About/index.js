@@ -16,7 +16,6 @@ const About = () => {
     var offset = 0;
     body.style.height = Math.floor(height) + 'px'
   
-    var currentTop = body.getBoundingClientRect().top;
     var count = 0;
     const smoothScroll = () => {
       var newBodyTop = body.getBoundingClientRect().top;
@@ -27,6 +26,9 @@ const About = () => {
         count = count + 1
       } else {
         var smoothing = `translateY(${offset}px) translateZ(0)`;
+      }
+      if (window.innerWidth <= 1024) {
+        var smoothing = `translateY(${newBodyTop}px) translateZ(0)`
       }
       count = count + 1
       scrollContainer.style.transform = smoothing;

@@ -105,10 +105,16 @@ a {
   .pageWrapper {
     padding: 0px 75px;
   }
+  .pageWrapper .demo_cursor, .pageWrapper .demo_cursor_secondary {
+    display: none;
+  }
 }
 @media (max-width: 482px) {
   .pageWrapper {
     padding: 0px 25px;
+  }
+  .pageWrapper .demo_cursor, .pageWrapper .demo_cursor {
+    display: none;
   }
 }
 .pageWrapper .bodyWrapper {

@@ -22,6 +22,10 @@ const Home = () => {
       var newBodyTop = body.getBoundingClientRect().top;
       offset += (newBodyTop - offset) * speed;
       var smoothing = `translateY(${offset}px) translateZ(0)`;
+
+      if (window.innerWidth <= 1024) {
+        var smoothing = `translateY(${newBodyTop}px) translateZ(0)`
+      }
       scrollContainer.style.transform = smoothing;
       requestAnimationFrame(smoothScroll)
     }

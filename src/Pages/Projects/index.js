@@ -26,15 +26,18 @@ const Projects = () => {
       } else {
         var smoothing = `translateY(${offset}px) translateZ(0)`;
       }
+      if (window.innerWidth <= 1024) {
+        var smoothing = `translateY(${newBodyTop}px) translateZ(0)`
+      } else {
+        const different = newBodyTop - currentTop;
+        const acceleration = different * 1;
+        var skew = 'skewY(' + acceleration + 'deg)';
+        card.forEach((item) => {
+          item.style.transform = skew
+        })
+      }
       count = count + 1
       scrollContainer.style.transform = smoothing;
-
-      const different = newBodyTop - currentTop;
-      const acceleration = different * 1;
-      var skew = 'skewY(' + acceleration + 'deg)';
-      card.forEach((item) => {
-        item.style.transform = skew
-      })
       currentTop = newBodyTop
 
       requestAnimationFrame(smoothScroll)
