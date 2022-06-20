@@ -18,9 +18,9 @@ const Navbar = () => {
         <p>currently in Thailand</p>
       </div>
       <ul className={styles.navlinks}>
-        <li><a href="/pepu/projects">works</a></li>
-        <li><a href="/pepu/about">about</a></li>
-        <li><a href="/pepu/contact">contact</a></li>
+        <li><a href="/projects">works</a></li>
+        <li><a href="/about">about</a></li>
+        <li><a href="/contact">contact</a></li>
       </ul>
       <div className={styles.hamburgerMenu} onClick={() => handleClick()}>
         <div className={styles.stack} data-att={toggleMenu ? 'open' : 'close'}></div>
