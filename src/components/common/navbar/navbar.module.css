@@ -1,0 +1,204 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+*::-webkit-scrollbar {
+  display: none;
+}
+
+:root {
+  --big-bold: 900 360px/100% "Inter";
+  --six-cap: small-caps 400 80px/100% "Six Caps";
+  --para: 400 36px "Inter";
+  --normal: 400 24px "Inter";
+  --skew: 500 70px "Inter";
+  --project-title: 900 70px "Inter";
+}
+
+@media only screen and (max-width: 1024px) {
+  :root {
+    --big-bold: 900 200px "Inter";
+    --six-cap: small-caps 400 100px/100% "Six Caps";
+    --para: 400 32px "Inter";
+    --normal: 400 20px "Inter";
+    --skew: 500 55px "Inter";
+    --project-title: 900 55px"Inter";
+  }
+}
+@media only screen and (max-width: 482px) {
+  :root {
+    --big-bold: 900 120px "Inter";
+    --six-cap: small-caps 400 50px/100% "Six Caps";
+    --para: 400 24px "Inter";
+    --normal: 400 16px "Inter";
+    --skew: 500 45px"Inter";
+    --project-title: 900 45px"Inter";
+  }
+}
+body {
+  -ms-scroll-chaining: none;
+      overscroll-behavior: none;
+  color: #081121;
+}
+
+a {
+  text-decoration: none;
+  color: #081121;
+}
+
+.navContainer {
+  position: fixed;
+  padding: 0px 128px;
+  left: 0;
+  width: 100%;
+  height: 100px;
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  background-color: transparent;
+  z-index: 10;
+}
+.navContainer .logo {
+  font: var(--normal);
+  z-index: 10;
+}
+.navContainer .status {
+  margin-left: 50px;
+  display: flex;
+  font: var(--normal);
+}
+.navContainer .status p:not(:last-child) {
+  margin-right: 50px;
+}
+.navContainer .navlinks {
+  list-style-type: none;
+  margin-left: auto;
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+  position: relative;
+  font: var(--normal);
+}
+.navContainer .navlinks li:not(:first-child) {
+  margin-left: 30px;
+}
+.navContainer .navlinks::before {
+  content: "";
+  position: absolute;
+  top: 50%;
+  right: 110%;
+  transform: translateY(50%);
+  width: 60px;
+  height: 2px;
+  background-color: #081121;
+}
+.navContainer .collapseMenu {
+  position: fixed;
+  top: 0px;
+  left: 0px;
+  width: 100vw;
+  height: 100vh;
+  background-color: #081121;
+  color: #D3D2C7;
+  display: flex;
+}
+.navContainer .collapseMenu .status {
+  display: block;
+  margin: 0;
+  margin-top: 50px;
+  margin-bottom: 50px;
+  color: #D3D2C7;
+  font: var(--normal);
+}
+.navContainer .collapseMenu .status p {
+  margin-bottom: 10px;
+}
+.navContainer .collapseMenu .navlinks {
+  display: block;
+  font: 800 36px "Inter";
+  color: #D3D2C7;
+}
+.navContainer .collapseMenu .navlinks li, .navContainer .collapseMenu .navlinks a {
+  color: #D3D2C7;
+  margin: 0;
+  margin-bottom: 10px;
+}
+.navContainer .collapseMenu .socialNavLinks {
+  list-style-type: none;
+  margin-top: 50px;
+}
+.navContainer .collapseMenu .socialNavLinks li, .navContainer .collapseMenu .socialNavLinks a {
+  font: var(--normal);
+  color: #D3D2C7;
+  margin-bottom: 10px;
+}
+@media only screen and (max-width: 1024px) {
+  .navContainer {
+    padding: 0px 75px;
+  }
+  .navContainer .collapseMenu {
+    padding: 100px 75px;
+  }
+  .navContainer .navlinks {
+    display: none;
+  }
+  .navContainer .hamburgerMenu {
+    cursor: pointer;
+    z-index: 10;
+    position: relative;
+    margin-left: auto;
+    width: 40px;
+    height: 26px;
+    display: grid;
+  }
+  .navContainer .hamburgerMenu .stack {
+    position: relative;
+    width: 100%;
+    height: 2px;
+    background-color: #081121;
+    margin: auto;
+    transition: transform 0.3s ease-in-out;
+  }
+  .navContainer .hamburgerMenu .stack::before, .navContainer .hamburgerMenu .stack::after {
+    content: "";
+    position: absolute;
+    width: 100%;
+    height: 2px;
+    background-color: #081121;
+    transform-origin: right;
+    transition: transform 0.3s ease-in-out;
+  }
+  .navContainer .hamburgerMenu .stack::before {
+    top: 13px;
+  }
+  .navContainer .hamburgerMenu .stack::after {
+    top: -13px;
+  }
+  .navContainer .hamburgerMenu [data-att=open] {
+    background-color: transparent;
+  }
+  .navContainer .hamburgerMenu [data-att=open]::before {
+    transform: rotate(40deg);
+    background-color: #D3D2C7;
+  }
+  .navContainer .hamburgerMenu [data-att=open]::after {
+    transform: rotate(-40deg);
+    background-color: #D3D2C7;
+  }
+}
+@media (max-width: 482px) {
+  .navContainer {
+    padding: 0px 25px;
+  }
+  .navContainer .logo {
+    font-size: 24px;
+  }
+  .navContainer .status {
+    display: none;
+  }
+  .navContainer .collapseMenu {
+    padding: 100px 25px;
+  }
+}/*# sourceMappingURL=navbar.module.css.map */

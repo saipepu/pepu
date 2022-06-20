@@ -1,0 +1,96 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+*::-webkit-scrollbar {
+  display: none;
+}
+
+:root {
+  --big-bold: 900 360px/100% "Inter";
+  --six-cap: small-caps 400 80px/100% "Six Caps";
+  --para: 400 36px "Inter";
+  --normal: 400 24px "Inter";
+  --skew: 500 70px "Inter";
+  --project-title: 900 70px "Inter";
+}
+
+@media only screen and (max-width: 1024px) {
+  :root {
+    --big-bold: 900 200px "Inter";
+    --six-cap: small-caps 400 100px/100% "Six Caps";
+    --para: 400 32px "Inter";
+    --normal: 400 20px "Inter";
+    --skew: 500 55px "Inter";
+    --project-title: 900 55px"Inter";
+  }
+}
+@media only screen and (max-width: 482px) {
+  :root {
+    --big-bold: 900 120px "Inter";
+    --six-cap: small-caps 400 50px/100% "Six Caps";
+    --para: 400 24px "Inter";
+    --normal: 400 16px "Inter";
+    --skew: 500 45px"Inter";
+    --project-title: 900 45px"Inter";
+  }
+}
+body {
+  -ms-scroll-chaining: none;
+      overscroll-behavior: none;
+  color: #081121;
+}
+
+a {
+  text-decoration: none;
+  color: #081121;
+}
+
+.skewTextContainer {
+  position: relative;
+  width: 100%;
+  height: -webkit-fit-content;
+  height: -moz-fit-content;
+  height: fit-content;
+  margin: auto;
+}
+.skewTextContainer .line1, .skewTextContainer .line2, .skewTextContainer .line3 {
+  width: 100%;
+  text-align: center;
+  line-height: 100%;
+  letter-spacing: -0.03em;
+  font: var(--skew);
+  white-space: nowrap;
+}
+.skewTextContainer .line1 {
+  transform: matrix(0.79, -0.35, 0.88, 0.8, -50, 30);
+}
+.skewTextContainer .line2 {
+  transform: matrix(0.99, -0.46, -0.11, 1, 0, 0);
+}
+.skewTextContainer .line3 {
+  transform: matrix(0.79, -0.35, 0.88, 0.8, 50, -20);
+}
+.skewTextContainer .outline {
+  color: #D3D2C7;
+  text-shadow: -1px 1px 0 #081121, 1px 1px 0 #081121, 1px -1px 0 #081121, -1px -1px 0 #081121;
+}
+.skewTextContainer .inspiration {
+  transform: matrix(0.79, -0.35, 0.88, 0.8, -80, 40);
+}
+@media only screen and (max-width: 482px) {
+  .skewTextContainer {
+    width: 100%;
+  }
+  .skewTextContainer .line1 {
+    transform: matrix(0.79, -0.35, 0.88, 0.8, -55, 30);
+  }
+  .skewTextContainer .line2 {
+    transform: matrix(0.99, -0.46, -0.11, 1, 0, 0);
+  }
+  .skewTextContainer .line3 {
+    transform: matrix(0.79, -0.35, 0.88, 0.8, 45, -20);
+  }
+}/*# sourceMappingURL=skewText.module.css.map */

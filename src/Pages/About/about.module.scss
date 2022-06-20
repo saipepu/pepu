@@ -1,0 +1,198 @@
+@use '../../styles/global.module.scss' as v;
+
+.container {
+  position: fixed;
+  top: 0px;
+  left: 0px;
+  width: 100%;
+  height: fit-content;
+  will-change: transform;
+  padding: 100px 128px;
+
+  .heroSection {
+    height: 50vh;
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    .bigBold {
+      font: var(--big-bold);
+      font-size: 250px;
+      line-height: 90%;
+      letter-spacing: -15px;
+      text-align: left;
+
+      span {
+        letter-spacing: 0px;
+        display: inline-block;
+        font: var(--normal);
+        transform: translateX(-70%);
+      }
+    }
+    .status {
+      height: 100%;
+      text-align: right;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: flex-end;
+
+      .date {
+        text-align: right;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        align-items: flex-end;
+  
+        .day {
+          font: 500 100px 'Inter'
+        }
+        .month {
+          font: var(--para);
+          font-weight: bolder;
+        }
+        .status {
+          font: var(--normal);
+        }
+      }
+    }
+  }
+
+  .bodySection {
+    width: 100%;
+    height: fit-content;
+    position: relative;
+
+    .profileContainer,.whatIdo,.accent,.pitch {
+      text-align: justify;
+      width: 100%;
+      display: flex;
+      justify-content: space-between;
+      align-items: flex-start;
+      margin-bottom: 50px;
+      font: var(--para);
+      font-weight: lighter;
+
+      .index {
+        flex: 1;
+        display: grid;
+        padding-right: 50px;
+        
+        p,div {
+          width: 50%;
+          margin-left: auto;
+        }
+      }
+      .content {
+        flex: 1;
+        position: relative;
+
+        &::before {
+          position: absolute;
+          content: '';
+          left: -70px;
+          top: 20px;
+          width: 60px;
+          height: 2px;
+          background-color: v.$primary;
+        }
+      }
+      [data-attr=noPseudo] {
+        &::before {
+          display: none;
+        }
+      }
+    }
+    .workSpaceImgContainer {
+      margin-left: auto;
+      height: 40vh;
+      width: 50%;
+      display: grid;
+
+      .imgWrapper {
+        width: 80%;
+        height: 50%;
+        margin: auto;
+        margin-left: 0px;
+        background-color: v.$primary;
+      }
+    }
+    .skewTextContainer {
+      width: 50%;
+      height: 50vh;
+      display: grid;
+    }
+    .bouncingCtaContainer {
+      width: 50%;
+      margin: 50px 0px 50px auto;
+    }
+  }
+
+  @media (max-width: v.$tablet) {
+    padding: 100px 75px;
+    .heroSection{
+      height: 20vh;
+      .status {
+        display: none;
+      }
+      .bigBold {
+        font: var(--big-bold);
+        letter-spacing: -10px;
+        span {
+          transform: translate(-60%, 0)
+        }
+      }
+    }
+    .bodySection {
+      .profileContainer,.whatIdo,.accent,.pitch {
+        .content {
+          &::before {
+            left: -50px;
+            width: 40px;
+          }
+        }
+      }
+      .workSpaceImgContainer,.skewTextContainer {
+        height: 30vh;
+      }
+    }
+  }
+  @media only screen and (max-width: v.$mobile) {
+    padding: 100px 25px;
+    .heroSection {
+      .bigBold {
+        font: var(--big-bold);
+        letter-spacing: -5px;
+        display: flex;
+        flex-wrap: nowrap;
+        align-items: baseline;
+        span {
+          transform: translate(-20%, 0)
+        }
+      }
+    }
+    .bodySection {
+      .profileContainer,.whatIdo,.accent,.pitch {
+        font-size: 16px;
+
+        .content{
+          &::before {
+            top: 10px;
+            left: -40px;
+            width: 30px;
+          }
+        }
+      }
+      .workSpaceImgContainer,.skewTextContainer {
+        width: 100%;
+        .imgWrapper {
+          margin: auto;
+        }
+      }
+      .bouncingCtaContainer {
+        width: 100%;
+      }
+    }
+  }
+}

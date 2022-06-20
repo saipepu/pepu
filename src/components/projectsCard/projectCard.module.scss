@@ -1,0 +1,111 @@
+@use '../../styles/global.module.scss' as v;
+
+.projectCard {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  margin-bottom: 100px;
+  transition: transform 0.5s ease-in-out;
+  will-change: transform;
+
+  .titlePart {
+    width: 100%;
+    height: fit-content;
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    margin-bottom: 50px;
+
+    .index {
+      font: var(--normal);
+      font-size: 40px;
+      width: 25%;
+      height: 100%;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+    }
+
+    .card {
+      padding: 20px;
+      width: fit-content;
+      min-width: 25vw;
+      height: fit-content;
+      display: flex;
+      flex-direction: column;
+      justify-content: flex-start;
+      align-items: flex-start;
+      color: v.$secondary;
+      background-color: v.$primary;
+      transition: transform 0.01s linear;
+      will-change: transform;
+
+      .title {
+        font: var(--project-title);
+        text-align: left;
+        margin-bottom: 10px;
+      }
+      .brief {
+        position: relative;
+        font: var(--normal);
+        font-weight: lighter;
+        padding-left: 30px;
+
+        &::before {
+          content: '';
+          position: absolute;
+          left: 10px;
+          top: 0.8vw;
+          width: 0.5vw;
+          height: 0.5vw;
+          border-radius: 100%;
+          background-color: v.$secondary;
+        }
+      }
+    }
+  }
+  .contentPart {
+    position: relative;
+    width: 100%;
+    height: fit-content;
+    display: flex;
+    justify-content: flex-start;
+    align-items: flex-start;
+
+    .placeHolder {
+      flex-grow: none;
+      width: 25%;
+      height: 100%;
+      background-color: darkcyan;
+    }
+
+    .aboutTitle {
+      font: var(--normal);
+      flex-grow: none;
+      width: 25%;
+      display: flex;
+      justify-content: flex-start;
+      align-items: flex-start;
+      font-weight: lighter;
+    }
+    .description {
+      font: var(--normal);
+      flex-grow: none;
+      width: 50%;
+      font-weight: lighter;
+      position: relative;
+
+      &::before {
+        position: absolute;
+        content: '';
+        left: -70px;
+        top: 15px;
+        width: 60px;
+        height: 2px;
+        background-color: v.$primary;
+      }
+    }
+  }
+}

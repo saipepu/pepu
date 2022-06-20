@@ -1,0 +1,105 @@
+@use '../../styles/global.module.scss' as v;
+
+.container {
+  position: fixed;
+  top: 0px;
+  left: 0px;
+  width: 100%;
+  height: fit-content;
+  will-change: transform;
+  padding: 100px 128px;
+
+  .heroSection {
+    margin-top: 50px;
+    height: 50vh;
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    .bigBold {
+      font: var(--big-bold);
+      font-size: 250px;
+      // line-height: 80%;
+      letter-spacing: -15px;
+      text-align: left;
+    }
+    .status {
+      height: 100%;
+      text-align: right;
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+      align-items: flex-end;
+
+      .date {
+        text-align: right;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        align-items: flex-end;
+  
+        .day {
+          font: 500 100px 'Inter';
+          line-height: 80%;
+        }
+        .month {
+          font: var(--para);
+          font-weight: bolder;
+        }
+        .status {
+          font: var(--normal);
+        }
+      }
+      .content {
+        font: var(--normal);
+        width: 45%;
+        text-align: justify;
+      }
+    }
+  }
+  .projectCardContainer {
+    margin: 200px 0px 0px 0px;
+  }
+  @media (max-width: v.$tablet) {
+    padding: 100px 75px;
+    .heroSection {
+      height: 20vh;
+      .bigBold {
+        font: var(--big-bold);
+        line-height: 80%;
+      }
+      .status{
+        .date {
+          .day {
+            font-size: 80px;
+          }
+        }
+      }
+    }
+  }
+  @media only screen and (max-width: v.$mobile) {
+    padding: 100px 25px;
+    .heroSection {
+      flex-direction: column;
+      justify-content: space-between;
+      align-items: flex-start;
+      height: 40vh;
+      .bigBold {
+        font: var(--big-bold);
+        line-height: 80%;
+        letter-spacing: -3px;
+        margin-bottom: 20px;
+      }
+      .status {
+        flex-direction: row-reverse;
+        align-items: flex-start;
+        .content {
+          width: 50%;
+          height: 100%;
+        }
+      }
+    }
+  }
+
+}

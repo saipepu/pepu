@@ -1,0 +1,110 @@
+@use '../../styles/global.module.scss' as v;
+
+.container {
+  // pointer-events: none;
+  position: fixed;
+  top: 0px;
+  left: 0px;
+  width: 100%;
+  height: fit-content;
+  will-change: transform;
+  padding: 150px 128px;
+
+  .bigBold {
+    width: 100%;
+    text-align: right;
+    font: var(--big-bold);
+    letter-spacing: 90%;
+    letter-spacing: -15px;
+  }
+  .iam {
+    font: var(--six-cap)
+  }
+  .profile {
+    font: var(--normal)
+  }
+  .content {
+    z-index: 10;
+    margin-left: auto;
+    width: 40%;
+    text-align: justify;
+    font: var(--para);
+
+    .CtaButton {
+      // cursor: pointer;
+      width: fit-content;
+      margin-top: 30px;
+      text-transform: uppercase;
+      font: var(--normal);
+    }
+  }
+  .skewTextContainer {
+    width: 45vw;
+    user-select: none;
+    padding: 30px 0px;
+    // transform: translateY(-100px);
+  }
+  .dividerTitle {
+    width: 50%;
+    height: fit-content;
+    margin: 250px 0px 250px auto;
+    font: var(--normal)
+  }
+  .projectsContainer {
+    height: 50vh;
+  }
+  .aboutMeCta {
+    width: 50%;
+    height: fit-content;
+    margin-left: auto;
+    margin-bottom: 100px;
+  }
+  @media (max-width: v.$tablet) {
+    padding: 100px 75px;
+    .dividerTitle {
+      margin: 100px 0px 100px auto;
+    }
+    .projectsContainer {
+      height: 40vh;
+    }
+    .bigBold {
+      letter-spacing: 0px;
+    }
+  }
+  @media only screen and (max-width: v.$mobile) {
+    padding: 100px 25px;
+
+    .iam,.profile {
+      display: none;
+    }
+    .bigBold {
+      height: 30vh;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      text-align: center;
+      letter-spacing: -2px;
+    }
+    .skewTextContainer_mobile {
+      display: none;
+    }
+    &:nth-child(2) {
+      display: none;
+    }
+    .content {
+      width: 100%;
+    }
+    .skewTextContainer {
+      width: 100%;
+    }
+    .dividerTitle {
+      display: none;
+    }
+    .projectsContainer {
+      display: none;
+    }
+    .aboutMeCta {
+      width: 100%;
+    }
+  }
+}

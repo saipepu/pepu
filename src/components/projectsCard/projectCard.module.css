@@ -1,0 +1,159 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+*::-webkit-scrollbar {
+  display: none;
+}
+
+:root {
+  --big-bold: 900 360px/100% "Inter";
+  --six-cap: small-caps 400 80px/100% "Six Caps";
+  --para: 400 36px "Inter";
+  --normal: 400 24px "Inter";
+  --skew: 500 70px "Inter";
+  --project-title: 900 70px "Inter";
+}
+
+@media only screen and (max-width: 1024px) {
+  :root {
+    --big-bold: 900 200px "Inter";
+    --six-cap: small-caps 400 100px/100% "Six Caps";
+    --para: 400 32px "Inter";
+    --normal: 400 20px "Inter";
+    --skew: 500 55px "Inter";
+    --project-title: 900 55px"Inter";
+  }
+}
+@media only screen and (max-width: 482px) {
+  :root {
+    --big-bold: 900 120px "Inter";
+    --six-cap: small-caps 400 50px/100% "Six Caps";
+    --para: 400 24px "Inter";
+    --normal: 400 16px "Inter";
+    --skew: 500 45px"Inter";
+    --project-title: 900 45px"Inter";
+  }
+}
+body {
+  -ms-scroll-chaining: none;
+      overscroll-behavior: none;
+  color: #081121;
+}
+
+a {
+  text-decoration: none;
+  color: #081121;
+}
+
+.projectCard {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  margin-bottom: 100px;
+  transition: transform 0.5s ease-in-out;
+  will-change: transform;
+}
+.projectCard .titlePart {
+  width: 100%;
+  height: -webkit-fit-content;
+  height: -moz-fit-content;
+  height: fit-content;
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  margin-bottom: 50px;
+}
+.projectCard .titlePart .index {
+  font: var(--normal);
+  font-size: 40px;
+  width: 25%;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.projectCard .titlePart .card {
+  padding: 20px;
+  width: -webkit-fit-content;
+  width: -moz-fit-content;
+  width: fit-content;
+  min-width: 25vw;
+  height: -webkit-fit-content;
+  height: -moz-fit-content;
+  height: fit-content;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: flex-start;
+  color: #D3D2C7;
+  background-color: #081121;
+  transition: transform 0.01s linear;
+  will-change: transform;
+}
+.projectCard .titlePart .card .title {
+  font: var(--project-title);
+  text-align: left;
+  margin-bottom: 10px;
+}
+.projectCard .titlePart .card .brief {
+  position: relative;
+  font: var(--normal);
+  font-weight: lighter;
+  padding-left: 30px;
+}
+.projectCard .titlePart .card .brief::before {
+  content: "";
+  position: absolute;
+  left: 10px;
+  top: 0.8vw;
+  width: 0.5vw;
+  height: 0.5vw;
+  border-radius: 100%;
+  background-color: #D3D2C7;
+}
+.projectCard .contentPart {
+  position: relative;
+  width: 100%;
+  height: -webkit-fit-content;
+  height: -moz-fit-content;
+  height: fit-content;
+  display: flex;
+  justify-content: flex-start;
+  align-items: flex-start;
+}
+.projectCard .contentPart .placeHolder {
+  flex-grow: none;
+  width: 25%;
+  height: 100%;
+  background-color: darkcyan;
+}
+.projectCard .contentPart .aboutTitle {
+  font: var(--normal);
+  flex-grow: none;
+  width: 25%;
+  display: flex;
+  justify-content: flex-start;
+  align-items: flex-start;
+  font-weight: lighter;
+}
+.projectCard .contentPart .description {
+  font: var(--normal);
+  flex-grow: none;
+  width: 50%;
+  font-weight: lighter;
+  position: relative;
+}
+.projectCard .contentPart .description::before {
+  position: absolute;
+  content: "";
+  left: -70px;
+  top: 15px;
+  width: 60px;
+  height: 2px;
+  background-color: #081121;
+}/*# sourceMappingURL=projectCard.module.css.map */

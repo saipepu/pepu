@@ -1,0 +1,167 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+*::-webkit-scrollbar {
+  display: none;
+}
+
+:root {
+  --big-bold: 900 360px/100% "Inter";
+  --six-cap: small-caps 400 80px/100% "Six Caps";
+  --para: 400 36px "Inter";
+  --normal: 400 24px "Inter";
+  --skew: 500 70px "Inter";
+  --project-title: 900 70px "Inter";
+}
+
+@media only screen and (max-width: 1024px) {
+  :root {
+    --big-bold: 900 200px "Inter";
+    --six-cap: small-caps 400 100px/100% "Six Caps";
+    --para: 400 32px "Inter";
+    --normal: 400 20px "Inter";
+    --skew: 500 55px "Inter";
+    --project-title: 900 55px"Inter";
+  }
+}
+@media only screen and (max-width: 482px) {
+  :root {
+    --big-bold: 900 120px "Inter";
+    --six-cap: small-caps 400 50px/100% "Six Caps";
+    --para: 400 24px "Inter";
+    --normal: 400 16px "Inter";
+    --skew: 500 45px"Inter";
+    --project-title: 900 45px"Inter";
+  }
+}
+body {
+  -ms-scroll-chaining: none;
+      overscroll-behavior: none;
+  color: #081121;
+}
+
+a {
+  text-decoration: none;
+  color: #081121;
+}
+
+.container {
+  position: fixed;
+  top: 0px;
+  left: 0px;
+  width: 100%;
+  height: -webkit-fit-content;
+  height: -moz-fit-content;
+  height: fit-content;
+  will-change: transform;
+  padding: 150px 128px;
+}
+.container .bigBold {
+  width: 100%;
+  text-align: right;
+  font: var(--big-bold);
+  letter-spacing: 90%;
+  letter-spacing: -15px;
+}
+.container .iam {
+  font: var(--six-cap);
+}
+.container .profile {
+  font: var(--normal);
+}
+.container .content {
+  z-index: 10;
+  margin-left: auto;
+  width: 40%;
+  text-align: justify;
+  font: var(--para);
+}
+.container .content .CtaButton {
+  width: -webkit-fit-content;
+  width: -moz-fit-content;
+  width: fit-content;
+  margin-top: 30px;
+  text-transform: uppercase;
+  font: var(--normal);
+}
+.container .skewTextContainer {
+  width: 45vw;
+  -webkit-user-select: none;
+     -moz-user-select: none;
+      -ms-user-select: none;
+          user-select: none;
+  padding: 30px 0px;
+}
+.container .dividerTitle {
+  width: 50%;
+  height: -webkit-fit-content;
+  height: -moz-fit-content;
+  height: fit-content;
+  margin: 250px 0px 250px auto;
+  font: var(--normal);
+}
+.container .projectsContainer {
+  height: 50vh;
+}
+.container .aboutMeCta {
+  width: 50%;
+  height: -webkit-fit-content;
+  height: -moz-fit-content;
+  height: fit-content;
+  margin-left: auto;
+  margin-bottom: 100px;
+}
+@media (max-width: 1024px) {
+  .container {
+    padding: 100px 75px;
+  }
+  .container .dividerTitle {
+    margin: 100px 0px 100px auto;
+  }
+  .container .projectsContainer {
+    height: 40vh;
+  }
+  .container .bigBold {
+    letter-spacing: 0px;
+  }
+}
+@media only screen and (max-width: 482px) {
+  .container {
+    padding: 100px 25px;
+  }
+  .container .iam, .container .profile {
+    display: none;
+  }
+  .container .bigBold {
+    height: 30vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    letter-spacing: -2px;
+  }
+  .container .skewTextContainer_mobile {
+    display: none;
+  }
+  .container:nth-child(2) {
+    display: none;
+  }
+  .container .content {
+    width: 100%;
+  }
+  .container .skewTextContainer {
+    width: 100%;
+  }
+  .container .dividerTitle {
+    display: none;
+  }
+  .container .projectsContainer {
+    display: none;
+  }
+  .container .aboutMeCta {
+    width: 100%;
+  }
+}/*# sourceMappingURL=home.module.css.map */
