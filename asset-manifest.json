@@ -1,14 +1,14 @@
 {
   "files": {
     "main.css": "/pepu/static/css/main.cfbf69da.css",
-    "main.js": "/pepu/static/js/main.a453eea8.js",
+    "main.js": "/pepu/static/js/main.606c2b2a.js",
     "static/media/Rectangle.png": "/pepu/static/media/Rectangle.ecd67e87716b00d9c34d.png",
     "index.html": "/pepu/index.html",
     "main.cfbf69da.css.map": "/pepu/static/css/main.cfbf69da.css.map",
-    "main.a453eea8.js.map": "/pepu/static/js/main.a453eea8.js.map"
+    "main.606c2b2a.js.map": "/pepu/static/js/main.606c2b2a.js.map"
   },
   "entrypoints": [
     "static/css/main.cfbf69da.css",
-    "static/js/main.a453eea8.js"
+    "static/js/main.606c2b2a.js"
   ]
 }
