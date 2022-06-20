@@ -54,7 +54,7 @@ const BouncingButton = ({backText, frontText, link}) => {
 
   return (
     <>
-    <div onClick={() => navigate(`/pepu/${link}`)} className={styles.container} id="container" onMouseMove={(e) => handleHover(e)} onMouseLeave={(e) => handleLeave(e)}>
+    <div onClick={() => navigate(`/${link}`)} className={styles.container} id="container" onMouseMove={(e) => handleHover(e)} onMouseLeave={(e) => handleLeave(e)}>
       <div className={styles.backCircle}>
         <p className={styles.text}>{backText}</p>
       </div>
