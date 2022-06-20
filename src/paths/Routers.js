@@ -11,8 +11,8 @@ const Routers = () => {
     <BrowserRouter basename={process.env.PUBLIC_URL}>
       <Routes>
         <Route path="/" exact element={<Home />} />
-        <Route path="/about" element={<About />} />
-        <Route path="/projects" element={<Projects />} />
+        <Route path="/about" exact element={<About />} />
+        <Route path="/projects" exact element={<Projects />} />
       </Routes>
     </BrowserRouter>
     </>

@@ -21,15 +21,15 @@ const ProjectsContainer = () => {
           <h1 className={styles.index}>01</h1>
           <h1 className={styles.demoText} data-att='hovering'>hovering</h1>
         </a>
-        <a href="/" target="_blank" rel="noopener" className={styles.labelContainer} onMouseOver={() => handleHover()} onMouseLeave={() => handleLeave()}>
+        <a href="#" target="_blank" rel="noopener" className={styles.labelContainer} onMouseOver={() => handleHover()} onMouseLeave={() => handleLeave()}>
           <h1 className={styles.index}>02</h1>
           <h1 className={styles.demoText} data-att='luciana'>luciana</h1>
         </a>
-        <a href="/" target="_blank" rel="noopener" className={styles.labelContainer} onMouseOver={() => handleHover()} onMouseLeave={() => handleLeave()}>
+        <a href="#" target="_blank" rel="noopener" className={styles.labelContainer} onMouseOver={() => handleHover()} onMouseLeave={() => handleLeave()}>
           <h1 className={styles.index}>03</h1>
           <h1 className={styles.demoText} data-att='transition'>transition</h1>
         </a>
-        <a href="/" target="_blank" rel="opener" className={styles.labelContainer} onMouseOver={() => handleHover()} onMouseLeave={() => handleLeave()}>
+        <a href="#" target="_blank" rel="opener" className={styles.labelContainer} onMouseOver={() => handleHover()} onMouseLeave={() => handleLeave()}>
           <h1 className={styles.index}>04</h1>
           <h1 className={styles.demoText} data-att='dodo'>dodo</h1>
         </a>

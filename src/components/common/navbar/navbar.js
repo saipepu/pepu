@@ -1,8 +1,10 @@
 import React, { useState } from 'react';
+import { useNavigate } from 'react-router-dom';
 import CtaButton from '../cta';
 import styles from './navbar.module.scss'
 
 const Navbar = () => {
+  const navigate = useNavigate();
   const [toggleMenu, setToggleMenu] = useState(false)
 
   const handleClick = () => {
@@ -12,15 +14,15 @@ const Navbar = () => {
   return (
     <>
     <div className={styles.navContainer}>
-      <a href="/" className={styles.logo} style={toggleMenu ? {color: '#D3D2C7'} : {color: '#081121'}}>PEPU</a>
+      <a navigate={'/'} className={styles.logo} style={toggleMenu ? {color: '#D3D2C7'} : {color: '#081121'}}>PEPU</a>
       <div className={styles.status}>
         <p>creative web developer</p>
         <p>currently in Thailand</p>
       </div>
       <ul className={styles.navlinks}>
-        <li><a href="/pepu/projects">works</a></li>
-        <li><a href="/about">about</a></li>
-        <li><a href="/contact">contact</a></li>
+        <li><a navigate={'/projects'}>works</a></li>
+        <li><a navigate={'/about'}>about</a></li>
+        <li><a navigate={'/contact'}>contact</a></li>
       </ul>
       <div className={styles.hamburgerMenu} onClick={() => handleClick()}>
         <div className={styles.stack} data-att={toggleMenu ? 'open' : 'close'}></div>
@@ -31,8 +33,8 @@ const Navbar = () => {
           <p>currently in Thailand</p>
         </div>
         <ul className={styles.navlinks}>
-          <li><a href="/projects">works</a></li>
-          <li><a href="/about">about</a></li>
+          <li><a navigate={'/projets'}>works</a></li>
+          <li><a navigate={'/about'}>about</a></li>
         </ul>
         <div className={styles.ctaButton}>
           <CtaButton menu={true}>Contact</CtaButton>
