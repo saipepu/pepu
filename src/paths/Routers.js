@@ -8,7 +8,7 @@ const Routers = () => {
 
   return (
     <>
-    <BrowserRouter>
+    <BrowserRouter basename={process.env.PUBLIC_URL}>
       <Routes>
         <Route path="/pepu" exact element={<Home />} />
         <Route path="/pepu/about" element={<About />} />
