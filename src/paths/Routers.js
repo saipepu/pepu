@@ -11,8 +11,8 @@ const Routers = () => {
     <BrowserRouter>
       <Routes>
         <Route path="/pepu" exact element={<Home />} />
-        <Route path="/pepu/about" exact element={<About />} />
-        <Route path="/pepu/projects" exact element={<Projects />} />
+        <Route path="/pepu/about" element={<About />} />
+        <Route path="/pepu/projects" element={<Projects />} />
       </Routes>
     </BrowserRouter>
     </>
