@@ -10,9 +10,9 @@ const Routers = () => {
     <>
     <BrowserRouter basename={process.env.PUBLIC_URL}>
       <Routes>
-        <Route path="/pepu" exact element={<Home />} />
-        <Route path="/pepu/about" element={<About />} />
-        <Route path="/pepu/projects" element={<Projects />} />
+        <Route path="/" exact element={<Home />} />
+        <Route path="/about" element={<About />} />
+        <Route path="/projects" element={<Projects />} />
       </Routes>
     </BrowserRouter>
     </>
