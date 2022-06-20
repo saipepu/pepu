@@ -14,15 +14,15 @@ const Navbar = () => {
   return (
     <>
     <div className={styles.navContainer}>
-      <a navigate={'/'} className={styles.logo} style={toggleMenu ? {color: '#D3D2C7'} : {color: '#081121'}}>PEPU</a>
+      <a onClick={navigate('/')} className={styles.logo} style={toggleMenu ? {color: '#D3D2C7'} : {color: '#081121'}}>PEPU</a>
       <div className={styles.status}>
         <p>creative web developer</p>
         <p>currently in Thailand</p>
       </div>
       <ul className={styles.navlinks}>
-        <li><a navigate={'/projects'}>works</a></li>
-        <li><a navigate={'/about'}>about</a></li>
-        <li><a navigate={'/contact'}>contact</a></li>
+        <li><a onClick={navigate('/projects')}>works</a></li>
+        <li><a onClick={navigate('/about')}>about</a></li>
+        <li><a onClick={navigate('/contact')}>contact</a></li>
       </ul>
       <div className={styles.hamburgerMenu} onClick={() => handleClick()}>
         <div className={styles.stack} data-att={toggleMenu ? 'open' : 'close'}></div>
@@ -33,8 +33,8 @@ const Navbar = () => {
           <p>currently in Thailand</p>
         </div>
         <ul className={styles.navlinks}>
-          <li><a navigate={'/projets'}>works</a></li>
-          <li><a navigate={'/about'}>about</a></li>
+          <li><a onClick={navigate('/projects')}>works</a></li>
+          <li><a onClick={navigate('/about')}>about</a></li>
         </ul>
         <div className={styles.ctaButton}>
           <CtaButton menu={true}>Contact</CtaButton>
