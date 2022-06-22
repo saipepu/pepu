@@ -1,14 +1,39 @@
 @use '../../../styles/global.module.scss' as v;
 
 .CtaButton {
+  position: relative;
   z-index: 2;
   width: fit-content;
   padding: 12px 18px;
   border-radius: 100px;
   border: 2px solid v.$primary;
   font: var(--normal);
+  transition: all 0.3s ease-in-out;
+  overflow: hidden;
 
-  a {
+  p {
+    transition: all 0.3s ease-in-out;
     cursor: none;
+  }
+  p:last-child {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transition: all 0.3s ease-in-out;
+    transform: translate(100%, -50%);
+  }
+  &:hover {
+    transition: all 0.3s ease-in-out;
+    background-color: v.$primary;
+    color: v.$secondary;
+
+    p {
+      transition: all 0.3s ease-in-out;
+      transform: translateX(-150%);
+    }
+    p:last-child {
+      transition: all 0.3s ease-in-out;
+      transform: translate(-50%, -50%);
+    }
   }
 }

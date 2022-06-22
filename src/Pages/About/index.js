@@ -4,9 +4,12 @@ import Footer from '../../components/common/footer'
 import SkewTextContainer from '../../components/common/skewText'
 import Layout from '../../layout'
 import styles from './about.module.scss'
+import workspaceImg from '../../workspace.png'
 
 const About = () => {
   const [firstLand, setFirstLand] = useState(true);
+  const [date, setDate] = useState()
+  const [month, setMonth] = useState()
 
   const OnResize = () => {
     const body = document.body;
@@ -36,7 +39,11 @@ const About = () => {
     }
     smoothScroll()
   }
+  var time = new Date()
   useEffect(() => {
+    setDate(time.getDate())
+    setMonth(time.toLocaleString('default', {month: 'long'}))
+
     OnResize()
     setFirstLand(true);
   }, [])
@@ -54,8 +61,8 @@ const About = () => {
           </div>
           <div className={styles.status}>
             <div className={styles.date}>
-              <span className={styles.day}>24</span>
-              <span className={styles.month}>may</span>
+              <span className={styles.day}>{date}</span>
+              <span className={styles.month}>{month}</span>
               <span className={styles.status}>available<br />for projects</span>
             </div>
           </div>
@@ -66,8 +73,9 @@ const About = () => {
               <p>profile</p>
             </div>
             <div className={styles.content}>
-              A designer who can code &
-              A coder who can design.
+              <div></div>
+              <p>A designer who can code &
+              A coder who can design.</p>
             </div>
           </div>
           <div className={styles.whatIdo}>
@@ -77,7 +85,8 @@ const About = () => {
               </div>
             </div>
             <div className={styles.content} data-attr={'noPseudo'}>
-              With a background in designing, Pepu love to create visually stunning interfaces, build interactive programs with his coding skills and coalesce them to facilitate enjoyable experiences for the users on the web.
+              <div></div>
+              <p>With a background in designing, Pepu love to create visually stunning interfaces, build interactive programs with his coding skills and coalesce them to facilitate enjoyable experiences for the users on the web.</p>
             </div>
           </div>
           <div className={styles.accent}>
@@ -85,12 +94,13 @@ const About = () => {
               <p>philosophy</p>
             </div>
             <div className={styles.content}>
-              Regardless of what you want to get motivated about, the answer always begins with action.
+              <div></div>
+              <p>Regardless of what you want to get motivated about, the answer always begins with action.</p>
             </div>
           </div>
           <div className={styles.workSpaceImgContainer}>
             <div className={styles.imgWrapper}>
-              
+              <img src={workspaceImg} alt="my-work-space" />
             </div>
           </div>
           <div className={styles.skewTextContainer}>
@@ -101,7 +111,8 @@ const About = () => {
               <p>talk is cheap</p>
             </div>
             <div className={styles.content}>
-              let me show you the works
+              <div></div>
+              <p>let me show you the works</p>
             </div>
           </div>
           <div className={styles.bouncingCtaContainer}>

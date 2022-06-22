@@ -8,6 +8,8 @@ import Layout from '../../layout';
 import styles from './home.module.scss'
 
 const Home = () => {
+  const [paraX, setParaX] = useState(0)
+  const [paraY, setParaY] = useState(0)
 
   const OnResize = () => {
     const body = document.body;
@@ -17,16 +19,21 @@ const Home = () => {
     var offset = 0;
     body.style.height = Math.floor(height) + 'px'
   
-    var currentTop = body.getBoundingClientRect().top;
+    const currentBodyTop = body.getBoundingClientRect().top;
     const smoothScroll = () => {
+      console.log(currentBodyTop)
+      console.log(body.getBoundingClientRect().height)
       var newBodyTop = body.getBoundingClientRect().top;
       offset += (newBodyTop - offset) * speed;
       var smoothing = `translateY(${offset}px) translateZ(0)`;
 
-      if (window.innerWidth <= 1024) {
+      if (window.innerWidth <= 1080) {
         var smoothing = `translateY(${newBodyTop}px) translateZ(0)`
       }
       scrollContainer.style.transform = smoothing;
+
+      setParaY(((newBodyTop * 0.2) + 100) * 2)
+
       requestAnimationFrame(smoothScroll)
     }
     smoothScroll()
@@ -39,6 +46,19 @@ const Home = () => {
     OnResize();
   }
 
+  const parallax = {
+    transform: `translate(${paraX}px, ${paraY}px)`
+  }
+  const parallaxCta = {
+    transform: `translate(${paraX}px, ${paraY * 0.5}px)`
+  }
+  const parallax1 = {
+    transform: `translate(${paraX}px, ${paraY + 540}px)`
+  }
+  const parallax2 = {
+    transform: `translate(${paraX}px, ${paraY + 240}px)`
+  }
+
   return (
     <>
     <Layout>
@@ -47,23 +67,23 @@ const Home = () => {
         <p className={styles.profile}>Frontend<br />Developer & Designer</p>
         <div className={styles.bigBold}>PEPU</div>
         <div className={styles.content}>
-          <div className={styles.para}>
+          <div className={styles.para} style={paraY >= 0 ? parallax: {}}>
             Frontend engineer and UI/UX junkie, passionate   about web technologies,  interactive web design, problem-solving, typo-graphy and micro animation.
           </div>
-          <div className={styles.CtaButton}>
+          <div className={styles.CtaButton} style={paraY >= 0 ? parallaxCta: {}}>
             <CtaButton>Contact</CtaButton>
           </div>
         </div>
-        <div className={styles.skewTextContainer}>
+        <div className={styles.skewTextContainer} style={window.innerWidth < 500 ? parallax: {}}>
           <SkewTextContainer line1={'Not Your'} line2={'-Average-'} line3={'Developer'} />
         </div>
-        <div className={styles.dividerTitle}>
+        <div className={styles.dividerTitle} style={parallax2}>
           heighlighted projects
         </div>
         <div className={styles.projectsContainer}>
           <ProjectsContainer />
         </div>
-        <div className={styles.dividerTitle}>
+        <div className={styles.dividerTitle} style={parallax1}>
           before you go
         </div>
         <div className={styles.skewTextContainer}>

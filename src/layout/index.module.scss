@@ -8,6 +8,7 @@
   background-color: v.$secondary;
 
   .demo_cursor,.demo_cursor_secondary {
+    z-index: 99;
     display: none;
     cursor: none;
     pointer-events: none;
@@ -20,7 +21,7 @@
     border-radius: 100%;
     background: black;
     // background-color: v.$primary;
-    background-color: #F27A18 ;
+    background-color: #F27A18;
     transition-delay: 0.15s;
     transition: all 0.15s ease-out;
     transition-timing-function: ease-out;

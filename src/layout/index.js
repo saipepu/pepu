@@ -8,7 +8,6 @@ const Layout = ({children}) => {
   const [posY, setPosY] = useState(0);
   const [posX, setPosX] = useState(0);
   const [hover, isHover] = useState(false)
-  const [ctaHover, setCtaHover] = useState(false)
 
   const handleHover = (e) => {
     setPosY(e.pageY);
@@ -22,19 +21,6 @@ const Layout = ({children}) => {
     const contactCta = document.getElementById('contactCta')
     contactCta.addEventListener('mouseover', () => {
     })
-    
-    // console.log(e.target);
-    // switch(e.target.id) {
-    //   case 'contactCta': {
-    //     setCtaHover(true);
-    //     console.log('cta')
-    //   };
-    //   default: {
-    //     console.log('no cta')
-    //     setCtaHover(false);
-    //     isHover(true);
-    //   }
-    // }
   }
 
   const x = () => {
@@ -43,7 +29,7 @@ const Layout = ({children}) => {
     const bodyWrapper = document.querySelector('#bodyWrapper')
     const scrollContainer = document.querySelector('#scrollContainer')
     const height = scrollContainer.getBoundingClientRect().height;
-    body.style.height = Math.floor(height) + 'px'
+    body.style.height = Math.floor(height) - 100 + 'px'
     pageWrapper.style.height = document.body.getBoundingClientRect().height + 'px'
     bodyWrapper.style.height = document.body.getBoundingClientRect().height + 'px'
     // console.log(pageWrapper.style.height);
@@ -77,16 +63,6 @@ const Layout = ({children}) => {
     cursor: 'none',
     willChange: 'transform'
   }
-  // const mouseMoveHover = {
-  //   transform: `translate3d(${posX}px, ${posY}px, 0) scale(1.5)`,
-  //   cursor: 'none',
-  //   willChange: 'transform'
-  // }
-  // const mouseMoveClick = {
-  //   transform: `translate3d(${posX}px, ${posY}px, 0) scale(0.1)`,
-  //   cursor: 'none',
-  //   willChange: 'transform'
-  // }
 
   document.body.addEventListener('mouseleave', () => {
     isHover(false);

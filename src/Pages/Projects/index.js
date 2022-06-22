@@ -1,12 +1,20 @@
-import React, { useEffect } from 'react'
+import React, { useEffect, useState } from 'react'
 import Footer from '../../components/common/footer'
 import ProjectCard from '../../components/projectsCard/projectsCard'
 import Layout from '../../layout'
 import styles from './work.module.scss'
 
 const Projects = () => {
+  const [date, setDate] = useState()
+  const [month, setMonth] = useState()
+  var time = new Date();
 
   useEffect(() => {
+    setDate(time.getDate())
+    setMonth(time.getMonth('long'))
+    setMonth(time.toLocaleString('default', {month: 'long'}))
+    console.log(month)
+
     const body = document.body;
     const scrollContainer = document.querySelector('#scrollContainer')
     const card =document.querySelectorAll('#box')
@@ -55,8 +63,8 @@ const Projects = () => {
           </div>
           <div className={styles.status}>
             <div className={styles.date}>
-              <span className={styles.day}>24</span>
-              <span className={styles.month}>may</span>
+              <span className={styles.day}>{date}</span>
+              <span className={styles.month}>{month}</span>
               <span className={styles.status}>available<br />for projects</span>
             </div>
             <div className={styles.content}>

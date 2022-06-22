@@ -1,5 +1,6 @@
 import React from 'react';
 import { BrowserRouter, Route, Routes } from 'react-router-dom';
+import NotFound from '../Pages/404/404';
 import About from '../Pages/About';
 import Home from '../Pages/Home';
 import Projects from '../Pages/Projects';
@@ -13,6 +14,7 @@ const Routers = () => {
         <Route path="/" exact element={<Home />} />
         <Route path="/about" exact element={<About />} />
         <Route path="/projects" exact element={<Projects />} />
+        <Route path="*" exact element={<NotFound />} />
       </Routes>
     </BrowserRouter>
     </>

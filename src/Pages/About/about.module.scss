@@ -13,6 +13,7 @@
     height: 50vh;
     width: 100%;
     display: flex;
+    flex-wrap: wrap;
     justify-content: space-between;
     align-items: center;
 
@@ -22,12 +23,17 @@
       line-height: 90%;
       letter-spacing: -15px;
       text-align: left;
+      white-space: none;
+      display: flex;
+      flex-wrap: nowrap;
+      justify-content: flex-end;
+      align-items: flex-end;
 
       span {
         letter-spacing: 0px;
         display: inline-block;
         font: var(--normal);
-        transform: translateX(-70%);
+        transform: translate(-70%, -50%);
       }
     }
     .status {
@@ -86,21 +92,25 @@
       }
       .content {
         flex: 1;
+        flex-shrink: none;
         position: relative;
+        display: flex;
 
-        &::before {
-          position: absolute;
-          content: '';
-          left: -70px;
-          top: 20px;
+        div {
           width: 60px;
           height: 2px;
           background-color: v.$primary;
+          transform: translateY(20px);
+          margin-right: 10px;
+        }
+        p {
+          flex: 1;
+          width: fit-content;
         }
       }
       [data-attr=noPseudo] {
-        &::before {
-          display: none;
+        div {
+          background-color: transparent;
         }
       }
     }
@@ -109,19 +119,28 @@
       height: 40vh;
       width: 50%;
       display: grid;
+      margin-bottom: 50px;
+      padding-left: 25px;
 
       .imgWrapper {
         width: 80%;
-        height: 50%;
+        height: 80%;
         margin: auto;
         margin-left: 0px;
         background-color: v.$primary;
+
+        img {
+          width: 100%;
+          height: 100%;
+          object-fit: cover;
+        }
       }
     }
     .skewTextContainer {
       width: 50%;
       height: 50vh;
       display: grid;
+      margin-bottom: 50px;
     }
     .bouncingCtaContainer {
       width: 50%;
@@ -132,7 +151,7 @@
   @media (max-width: v.$tablet) {
     padding: 100px 75px;
     .heroSection{
-      height: 20vh;
+      height: 35vh;
       .status {
         display: none;
       }
@@ -140,12 +159,19 @@
         font: var(--big-bold);
         letter-spacing: -10px;
         span {
-          transform: translate(-60%, 0)
+          transform: translate(-60%, -180%)
         }
       }
     }
     .bodySection {
       .profileContainer,.whatIdo,.accent,.pitch {
+        .index {
+          flex: 0.25;
+          p,div {
+            margin: 0;
+            margin-right: auto;
+          }
+        }
         .content {
           &::before {
             left: -50px;
@@ -154,7 +180,7 @@
         }
       }
       .workSpaceImgContainer,.skewTextContainer {
-        height: 30vh;
+        height: 50vh;
       }
     }
   }
@@ -168,7 +194,8 @@
         flex-wrap: nowrap;
         align-items: baseline;
         span {
-          transform: translate(-20%, 0)
+          transform: translate(-20%, 0);
+          display: none;
         }
       }
     }

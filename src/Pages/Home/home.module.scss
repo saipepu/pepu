@@ -47,8 +47,9 @@
   .dividerTitle {
     width: 50%;
     height: fit-content;
-    margin: 250px 0px 250px auto;
-    font: var(--normal)
+    margin: 150px 0px 150px auto;
+    font: var(--normal);
+    // transform: translate(0px, 100px)
   }
   .projectsContainer {
     height: 50vh;

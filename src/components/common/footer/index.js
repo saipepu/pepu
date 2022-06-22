@@ -7,8 +7,13 @@ const Footer = () => {
     <>
     <div className={styles.footerContainer}>
       <div className={styles.status}>
-        avaliable<br />freelance projects
-        <span>discuss</span>
+        <div className={styles.content}>
+          avaliable for<br />freelance projects
+        </div>
+        <div className={styles.hoverEffect}>
+          <div className={styles.bar}></div>
+          <div className={styles.discuss}>discuss</div>
+        </div>
       </div>
       <div className={styles.socialMedia}>
         <ul>
@@ -18,8 +23,8 @@ const Footer = () => {
         </ul>
       </div>
       <div className={styles.credit}>
-        PEPU scratched<br/>
-        PEPU published
+        <p>pepu_scratched</p>
+        <p>pepu_publish</p>
       </div>
     </div>
     </>

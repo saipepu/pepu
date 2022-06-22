@@ -21,7 +21,8 @@ const CtaButton = ({menu, children}) => {
   return (
     <>
       <div onClick={() => navigate('/pepu/contactme')} onMouseMove={(e) => handleHover(e)} onMouseLeave={(e) => handleLeave(e)} className={styles.CtaButton} style={!menu ? {borderColor: '#081121'} : {borderColor: '#D3D2C7'}} id="contactCta">
-        {children}
+        <p>{children}</p>
+        <p>{children}</p>
       </div>
     </>
   )

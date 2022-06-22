@@ -1,6 +1,7 @@
 import React, { useState } from 'react';
 import { useNavigate } from 'react-router-dom';
 import styles from './projectsContainer.module.scss'
+import img from '../../project_img_placeholder.jpg'
 
 const ProjectsContainer = () => {
   const navigate = useNavigate();
@@ -36,7 +37,7 @@ const ProjectsContainer = () => {
       </div>
       <div className={styles.imgContainer}>
         <div className={hover ? `${styles.imgWrapper} ${styles.animation}` : `${styles.imgWrapper}`}>
-          
+          <img src={img} alt="placeholderImage" />
         </div>
       </div>
     </div>

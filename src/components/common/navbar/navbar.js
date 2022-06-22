@@ -9,6 +9,9 @@ const Navbar = () => {
 
   const handleClick = () => {
     setToggleMenu(!toggleMenu)
+    // const pageWrapper = document.getElementById("pageWrapper")
+    // pageWrapper.style.cursor = 'default'
+    // console.log(pageWrapper);
   }
 
   return (
@@ -20,6 +23,7 @@ const Navbar = () => {
         <p>currently in Thailand</p>
       </div>
       <ul className={styles.navlinks}>
+        <li></li>
         <li><a onClick={() => navigate('/projects')}>works</a></li>
         <li><a onClick={() => navigate('/about')}>about</a></li>
         <li><a onClick={() => navigate('/contact')}>contact</a></li>
@@ -29,10 +33,10 @@ const Navbar = () => {
       </div>
       <div className={styles.collapseMenu} style={toggleMenu ? {display: 'block'}: {display: 'none'}}>
         <div className={styles.status}>
-          <p>creative<br />web develoepr</p>
+          <p>creative web develoepr</p>
           <p>currently in Thailand</p>
         </div>
-        <ul className={styles.navlinks}>
+        <ul className={styles.menuNavLinks}>
           <li><a onClick={() => navigate('/projects')}>works</a></li>
           <li><a onClick={() => navigate('/about')}>about</a></li>
         </ul>
