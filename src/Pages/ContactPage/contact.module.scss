@@ -1,0 +1,75 @@
+@use '../../styles/global.module.scss' as v;
+
+.container {
+  width: 100%;
+  padding-bottom: 50px;
+  
+  .bodyContainer {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin: 100px 0px;
+  
+    .bouncingCtaContainer {
+      flex: 1;
+    }
+    .contentPart {
+      flex: 1;
+
+      .title {
+        width: fit-content;
+        margin-bottom: 50px;
+
+        p {
+          font: var(--normal);
+
+          span {
+            display: inline-block;
+            font: var(--project-title);
+          }
+        }
+      }
+      .formContainer {
+        width: 100%;
+
+        form {
+          display: flex;
+          flex-direction: column;
+          align-items: flex-start;
+          justify-content: flex-start;
+
+          input {
+            font: var(--normal);
+            padding: 10px 5px;
+            margin-bottom: 20px;
+            width: 100%;
+            background-color: transparent;
+            border: none;
+            border-bottom: 2px solid v.$primary;
+
+            &:focus {
+              outline: none;
+              background-color: transparent;
+            }
+            &:active {
+              background-color: transparent;
+            }
+          }
+          button {
+            appearance: none;
+            border: none;
+            background-color: transparent;
+          }
+        }
+      }
+    }
+
+    @media only screen and (max-width: v.$mobile) {
+      display: flex;
+      flex-direction: column-reverse;
+      justify-content: flex-start;
+      align-items: center;
+      margin: 50px 0px;
+    }
+  }
+}

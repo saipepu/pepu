@@ -2,7 +2,7 @@ import React from 'react';
 import { useNavigate } from 'react-router-dom';
 import styles from './cta.module.scss'
 
-const CtaButton = ({menu, children}) => {
+const CtaButton = ({menu, children, noLink}) => {
   const navigate = useNavigate();
   
   const handleHover = (e) => {
@@ -20,7 +20,7 @@ const CtaButton = ({menu, children}) => {
 
   return (
     <>
-      <div onClick={() => navigate('/pepu/contactme')} onMouseMove={(e) => handleHover(e)} onMouseLeave={(e) => handleLeave(e)} className={styles.CtaButton} style={!menu ? {borderColor: '#081121'} : {borderColor: '#D3D2C7'}} id="contactCta">
+      <div onClick={() => noLink ? '': navigate('/contact')} onMouseMove={(e) => handleHover(e)} onMouseLeave={(e) => handleLeave(e)} className={styles.CtaButton} style={!menu ? {borderColor: '#081121'} : {borderColor: '#D3D2C7'}} id="contactCta">
         <p>{children}</p>
         <p>{children}</p>
       </div>

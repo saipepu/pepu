@@ -41,7 +41,7 @@ const Navbar = () => {
           <li><a onClick={() => navigate('/about')}>about</a></li>
         </ul>
         <div className={styles.ctaButton}>
-          <CtaButton menu={true}>Contact</CtaButton>
+          <CtaButton menu={true} onClick={() => navigate('/contact')}>Contact</CtaButton>
         </div>
         <ul className={styles.socialNavLinks}>
           <li><a href="https://www.instagram.com/p_e_p_u/">instagram</a></li>

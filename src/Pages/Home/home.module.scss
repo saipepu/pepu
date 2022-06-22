@@ -71,6 +71,9 @@
     .bigBold {
       letter-spacing: 0px;
     }
+    .content {
+      width: 50%;
+    }
   }
   @media only screen and (max-width: v.$mobile) {
     padding: 100px 25px;

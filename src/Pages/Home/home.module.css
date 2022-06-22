@@ -100,7 +100,7 @@ a {
   height: -webkit-fit-content;
   height: -moz-fit-content;
   height: fit-content;
-  margin: 250px 0px 250px auto;
+  margin: 150px 0px 150px auto;
   font: var(--normal);
 }
 .container .projectsContainer {
@@ -126,6 +126,9 @@ a {
   }
   .container .bigBold {
     letter-spacing: 0px;
+  }
+  .container .content {
+    width: 50%;
   }
 }
 @media only screen and (max-width: 482px) {

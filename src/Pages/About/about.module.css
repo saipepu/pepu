@@ -63,6 +63,7 @@ a {
   height: 50vh;
   width: 100%;
   display: flex;
+  flex-wrap: wrap;
   justify-content: space-between;
   align-items: center;
 }
@@ -72,12 +73,17 @@ a {
   line-height: 90%;
   letter-spacing: -15px;
   text-align: left;
+  white-space: none;
+  display: flex;
+  flex-wrap: nowrap;
+  justify-content: flex-end;
+  align-items: flex-end;
 }
 .container .heroSection .bigBold span {
   letter-spacing: 0px;
   display: inline-block;
   font: var(--normal);
-  transform: translateX(-70%);
+  transform: translate(-70%, -50%);
 }
 .container .heroSection .status {
   height: 100%;
@@ -132,37 +138,52 @@ a {
 }
 .container .bodySection .profileContainer .content, .container .bodySection .whatIdo .content, .container .bodySection .accent .content, .container .bodySection .pitch .content {
   flex: 1;
+  flex-shrink: none;
   position: relative;
+  display: flex;
 }
-.container .bodySection .profileContainer .content::before, .container .bodySection .whatIdo .content::before, .container .bodySection .accent .content::before, .container .bodySection .pitch .content::before {
-  position: absolute;
-  content: "";
-  left: -70px;
-  top: 20px;
+.container .bodySection .profileContainer .content div, .container .bodySection .whatIdo .content div, .container .bodySection .accent .content div, .container .bodySection .pitch .content div {
   width: 60px;
   height: 2px;
   background-color: #081121;
+  transform: translateY(20px);
+  margin-right: 10px;
 }
-.container .bodySection .profileContainer [data-attr=noPseudo]::before, .container .bodySection .whatIdo [data-attr=noPseudo]::before, .container .bodySection .accent [data-attr=noPseudo]::before, .container .bodySection .pitch [data-attr=noPseudo]::before {
-  display: none;
+.container .bodySection .profileContainer .content p, .container .bodySection .whatIdo .content p, .container .bodySection .accent .content p, .container .bodySection .pitch .content p {
+  flex: 1;
+  width: -webkit-fit-content;
+  width: -moz-fit-content;
+  width: fit-content;
+}
+.container .bodySection .profileContainer [data-attr=noPseudo] div, .container .bodySection .whatIdo [data-attr=noPseudo] div, .container .bodySection .accent [data-attr=noPseudo] div, .container .bodySection .pitch [data-attr=noPseudo] div {
+  background-color: transparent;
 }
 .container .bodySection .workSpaceImgContainer {
   margin-left: auto;
   height: 40vh;
   width: 50%;
   display: grid;
+  margin-bottom: 50px;
+  padding-left: 25px;
 }
 .container .bodySection .workSpaceImgContainer .imgWrapper {
   width: 80%;
-  height: 50%;
+  height: 80%;
   margin: auto;
   margin-left: 0px;
   background-color: #081121;
+}
+.container .bodySection .workSpaceImgContainer .imgWrapper img {
+  width: 100%;
+  height: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
 }
 .container .bodySection .skewTextContainer {
   width: 50%;
   height: 50vh;
   display: grid;
+  margin-bottom: 50px;
 }
 .container .bodySection .bouncingCtaContainer {
   width: 50%;
@@ -173,7 +194,7 @@ a {
     padding: 100px 75px;
   }
   .container .heroSection {
-    height: 20vh;
+    height: 35vh;
   }
   .container .heroSection .status {
     display: none;
@@ -183,14 +204,24 @@ a {
     letter-spacing: -10px;
   }
   .container .heroSection .bigBold span {
-    transform: translate(-60%, 0);
+    transform: translate(-60%, -180%);
   }
-  .container .bodySection .profileContainer .content::before, .container .bodySection .whatIdo .content::before, .container .bodySection .accent .content::before, .container .bodySection .pitch .content::before {
-    left: -50px;
+  .container .bodySection .profileContainer .index, .container .bodySection .whatIdo .index, .container .bodySection .accent .index, .container .bodySection .pitch .index {
+    flex: 0.25;
+  }
+  .container .bodySection .profileContainer .index p, .container .bodySection .profileContainer .index div, .container .bodySection .whatIdo .index p, .container .bodySection .whatIdo .index div, .container .bodySection .accent .index p, .container .bodySection .accent .index div, .container .bodySection .pitch .index p, .container .bodySection .pitch .index div {
+    margin: 0;
+    margin-right: auto;
+  }
+  .container .bodySection .profileContainer .index p, .container .bodySection .whatIdo .index p, .container .bodySection .accent .index p, .container .bodySection .pitch .index p {
+    width: 100%;
+  }
+  .container .bodySection .profileContainer .content div, .container .bodySection .whatIdo .content div, .container .bodySection .accent .content div, .container .bodySection .pitch .content div {
     width: 40px;
+    transform: translateY(10px);
   }
   .container .bodySection .workSpaceImgContainer, .container .bodySection .skewTextContainer {
-    height: 30vh;
+    height: 50vh;
   }
 }
 @media only screen and (max-width: 482px) {
@@ -206,12 +237,13 @@ a {
   }
   .container .heroSection .bigBold span {
     transform: translate(-20%, 0);
+    display: none;
   }
   .container .bodySection .profileContainer, .container .bodySection .whatIdo, .container .bodySection .accent, .container .bodySection .pitch {
     font-size: 16px;
   }
   .container .bodySection .profileContainer .content::before, .container .bodySection .whatIdo .content::before, .container .bodySection .accent .content::before, .container .bodySection .pitch .content::before {
-    top: 10px;
+    top: 5px;
     left: -40px;
     width: 30px;
   }

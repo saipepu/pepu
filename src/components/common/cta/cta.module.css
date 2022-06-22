@@ -49,6 +49,7 @@ a {
 }
 
 .CtaButton {
+  position: relative;
   z-index: 2;
   width: -webkit-fit-content;
   width: -moz-fit-content;
@@ -57,7 +58,31 @@ a {
   border-radius: 100px;
   border: 2px solid #081121;
   font: var(--normal);
+  transition: all 0.3s ease-in-out;
+  overflow: hidden;
+  cursor: pointer;
 }
-.CtaButton a {
+.CtaButton p {
+  transition: all 0.3s ease-in-out;
   cursor: none;
+}
+.CtaButton p:last-child {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transition: all 0.3s ease-in-out;
+  transform: translate(100%, -50%);
+}
+.CtaButton:hover {
+  transition: all 0.3s ease-in-out;
+  background-color: #081121;
+  color: #D3D2C7;
+}
+.CtaButton:hover p {
+  transition: all 0.3s ease-in-out;
+  transform: translateX(-150%);
+}
+.CtaButton:hover p:last-child {
+  transition: all 0.3s ease-in-out;
+  transform: translate(-50%, -50%);
 }/*# sourceMappingURL=cta.module.css.map */

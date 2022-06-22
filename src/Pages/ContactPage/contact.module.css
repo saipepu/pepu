@@ -1,0 +1,120 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+*::-webkit-scrollbar {
+  display: none;
+}
+
+:root {
+  --big-bold: 900 360px/100% "Inter";
+  --six-cap: small-caps 400 80px/100% "Six Caps";
+  --para: 400 36px "Inter";
+  --normal: 400 24px "Inter";
+  --skew: 500 70px "Inter";
+  --project-title: 900 70px "Inter";
+}
+
+@media only screen and (max-width: 1024px) {
+  :root {
+    --big-bold: 900 200px "Inter";
+    --six-cap: small-caps 400 100px/100% "Six Caps";
+    --para: 400 32px "Inter";
+    --normal: 400 20px "Inter";
+    --skew: 500 55px "Inter";
+    --project-title: 900 55px"Inter";
+  }
+}
+@media only screen and (max-width: 482px) {
+  :root {
+    --big-bold: 900 120px "Inter";
+    --six-cap: small-caps 400 50px/100% "Six Caps";
+    --para: 400 24px "Inter";
+    --normal: 400 16px "Inter";
+    --skew: 500 45px"Inter";
+    --project-title: 900 45px"Inter";
+  }
+}
+body {
+  -ms-scroll-chaining: none;
+      overscroll-behavior: none;
+  color: #081121;
+}
+
+a {
+  text-decoration: none;
+  color: #081121;
+}
+
+.container {
+  width: 100%;
+  padding-bottom: 50px;
+}
+.container .bodyContainer {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin: 100px 0px;
+}
+.container .bodyContainer .bouncingCtaContainer {
+  flex: 1;
+}
+.container .bodyContainer .contentPart {
+  flex: 1;
+}
+.container .bodyContainer .contentPart .title {
+  width: -webkit-fit-content;
+  width: -moz-fit-content;
+  width: fit-content;
+  margin-bottom: 50px;
+}
+.container .bodyContainer .contentPart .title p {
+  font: var(--normal);
+}
+.container .bodyContainer .contentPart .title p span {
+  display: inline-block;
+  font: var(--project-title);
+}
+.container .bodyContainer .contentPart .formContainer {
+  width: 100%;
+}
+.container .bodyContainer .contentPart .formContainer form {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: flex-start;
+}
+.container .bodyContainer .contentPart .formContainer form input {
+  font: var(--normal);
+  padding: 10px 5px;
+  margin-bottom: 20px;
+  width: 100%;
+  background-color: transparent;
+  border: none;
+  border-bottom: 2px solid #081121;
+}
+.container .bodyContainer .contentPart .formContainer form input:focus {
+  outline: none;
+  background-color: transparent;
+}
+.container .bodyContainer .contentPart .formContainer form input:active {
+  background-color: transparent;
+}
+.container .bodyContainer .contentPart .formContainer form button {
+  -webkit-appearance: none;
+     -moz-appearance: none;
+          appearance: none;
+  border: none;
+  background-color: transparent;
+}
+@media only screen and (max-width: 482px) {
+  .container .bodyContainer {
+    display: flex;
+    flex-direction: column-reverse;
+    justify-content: flex-start;
+    align-items: center;
+    margin: 50px 0px;
+  }
+}/*# sourceMappingURL=contact.module.css.map */
