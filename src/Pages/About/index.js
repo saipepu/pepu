@@ -22,7 +22,7 @@ const About = () => {
     var count = 0;
     const smoothScroll = () => {
       var newBodyTop = body.getBoundingClientRect().top;
-      console.log(body.getBoundingClientRect().top)
+      // console.log(body.getBoundingClientRect().top)
       offset += (newBodyTop - offset) * speed;
       if (count == 0) {
         window.scrollTo(0,0)

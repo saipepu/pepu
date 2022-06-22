@@ -13,7 +13,7 @@ const Projects = () => {
     setDate(time.getDate())
     setMonth(time.getMonth('long'))
     setMonth(time.toLocaleString('default', {month: 'long'}))
-    console.log(month)
+    // console.log(month)
 
     const body = document.body;
     const scrollContainer = document.querySelector('#scrollContainer')

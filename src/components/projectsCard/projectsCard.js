@@ -25,7 +25,8 @@ const ProjectCard = ({index, title, brief, description, link}) => {
           about
         </div>
         <div className={styles.description}>
-          {description}
+          <div></div>
+          <p>{description}</p>
         </div>
       </div>
     </div>

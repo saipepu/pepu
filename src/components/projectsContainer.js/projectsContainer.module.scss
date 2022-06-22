@@ -8,13 +8,22 @@
   height: 100%;
   
   .canvas {
-    flex: 1;
+    // flex: 1;
     position: relative;
-    width: 100%;
+    width: 50%;
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: flex-start;
+
+    canvas {
+      position: absolute;
+      right: -100%;
+      top: 50%;
+      transform: translate(0%, -50%);
+      width: 300px;
+      height: 300px;
+    }
 
     .labelContainer {
       position: relative;
@@ -97,11 +106,14 @@
     display: grid;
 
     .imgWrapper {
-      position: relative;
+      opacity: 0;
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
       width: 400px;
       height: 300px;
       background-color: v.$primary;
-      // opacity: 0.4;
       margin: auto;
       
       &::before {

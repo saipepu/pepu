@@ -21,8 +21,8 @@ const Home = () => {
   
     const currentBodyTop = body.getBoundingClientRect().top;
     const smoothScroll = () => {
-      console.log(currentBodyTop)
-      console.log(body.getBoundingClientRect().height)
+      // console.log(currentBodyTop)
+      // console.log(body.getBoundingClientRect().height)
       var newBodyTop = body.getBoundingClientRect().top;
       offset += (newBodyTop - offset) * speed;
       var smoothing = `translateY(${offset}px) translateZ(0)`;
@@ -46,16 +46,25 @@ const Home = () => {
     OnResize();
   }
 
-  const parallax = {
-    transform: `translate(${paraX}px, ${paraY}px)`
+  if (window.innerWidth < 500) {
+    var parallax = {
+      transform: `translate(${paraX}px, ${paraY * 0.5}px)`
+    }
+    var parallaxCta = {
+      transform: `translate(${paraX}px, ${paraY * 0.5}px)`
+    }
+  } else {
+    var parallax = {
+      transform: `translate(${paraX}px, ${paraY}px)`
+    }    
+    var parallaxCta = {
+      transform: `translate(${paraX}px, ${paraY * 0.5}px)`
+    }
   }
-  const parallaxCta = {
-    transform: `translate(${paraX}px, ${paraY * 0.5}px)`
-  }
-  const parallax1 = {
+  var parallax1 = {
     transform: `translate(${paraX}px, ${paraY + 540}px)`
   }
-  const parallax2 = {
+  var parallax2 = {
     transform: `translate(${paraX}px, ${paraY + 240}px)`
   }
 
@@ -67,7 +76,7 @@ const Home = () => {
         <p className={styles.profile}>Frontend<br />Developer & Designer</p>
         <div className={styles.bigBold}>PEPU</div>
         <div className={styles.content}>
-          <div className={styles.para} style={paraY >= 0 ? parallax: {}}>
+          <div className={styles.para} style={paraY >= 0 ? parallax: window.innerWidth < 500 ? parallax: {}}>
             Frontend engineer and UI/UX junkie, passionate   about web technologies,  interactive web design, problem-solving, typo-graphy and micro animation.
           </div>
           <div className={styles.CtaButton} style={paraY >= 0 ? parallaxCta: {}}>
