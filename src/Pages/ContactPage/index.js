@@ -5,10 +5,13 @@ import Footer from '../../components/common/footer';
 import Layout from '../../layout';
 import styles from './contact.module.scss'
 import emailjs from 'emailjs-com'
+import Splitting from 'splitting'
 
 const Contact = () => {
+  const splitWord = useRef();
   const [paraX, setParaX] = useState(0)
   const [paraY, setParaY] = useState(0)
+  const [sent, setSent] = useState()
   const form = useRef()
 
   const sendEmail = (e) => {
@@ -16,9 +19,12 @@ const Contact = () => {
     emailjs.sendForm('service_qs0ifwn', 'template_rf3879x', form.current, 'user_ubipvwIhsyqQzy3VcDLcv')
     .then((result) => {
       console.log(result);
+      setSent('completed')
     }, (error) => {
       console.log(error.text)
+      setSent('failed')
     })
+    form.current.reset();
   }
 
   const OnResize = () => {
@@ -49,6 +55,17 @@ const Contact = () => {
     smoothScroll()
   }
   useEffect(() => {
+
+    if(splitWord) {
+      const result = Splitting({
+        target: splitWord.current,
+        by: 'chars'
+      })
+      result[0].chars.map((item, index) => {
+        item.style.animationDelay = `${index * 0.025}s`
+      })
+    }
+
     OnResize()
   }, [])
 
@@ -66,9 +83,9 @@ const Contact = () => {
           </div>
 
           <div className={styles.contentPart}>
-            <div className={styles.title}>
-              <p>let's do a<span>Colleboration</span></p>
-              <p><span>Available</span>for freelane projects</p>
+            <div className={styles.title} ref={splitWord}>
+              let's do a<span className={styles.bold}>Colleboration</span><br />
+              <span className={styles.bold}>Available</span>for freelane projects
             </div>
             <div className={styles.formContainer}>
               <form ref={form} onSubmit={sendEmail}>
@@ -77,6 +94,10 @@ const Contact = () => {
                 <button type="submit" className={styles.sendBtn}>
                   <CtaButton noLink={true}>SEND</CtaButton>
                 </button>
+                <div className={styles.feedback}>
+                  {sent == 'completed' ? <p>Your E-mail has been received by PePu. Thanks for reaching out!</p> : ''}
+                  {sent == 'failed' ?  <p className={styles.error}>Ooops Something went wrong. Please try again!</p>: ''}
+                </div>
               </form>
             </div>
           </div>

@@ -20,9 +20,40 @@
     .bigBold {
       font: var(--big-bold);
       font-size: 250px;
-      // line-height: 80%;
+      line-height: 90%;
       letter-spacing: -15px;
       text-align: left;
+      overflow: hidden;
+      width: fit-content;
+      padding-right: 60px;
+      
+      br {
+        display: none;
+      }
+      span {
+        display: flex;
+        width: fit-content;
+        justify-content: flex-end;
+        align-items: center;
+        margin-right: auto;
+  
+        span {
+          display: inline-block;
+          transition: all 0.3s cubic-bezier(0, 0.48, 0.33, 0.99);
+          transform: translate(0px, 500px);
+          animation: transformStagger 1s cubic-bezier(0, 0.48, 0.33, 0.99) forwards;
+          animation-fill-mode: forwards;
+  
+        }
+        @keyframes transformStagger {
+          from {
+            transform: translate(0px, 500px);
+          }
+          to {
+            transform: translate(0px, 0px)
+          }
+        }
+      }
     }
     .status {
       height: 100%;
@@ -31,13 +62,6 @@
       flex-direction: column;
       justify-content: space-between;
       align-items: flex-end;
-
-      .date {
-        text-align: right;
-        display: flex;
-        flex-direction: column;
-        justify-content: space-between;
-        align-items: flex-end;
   
         .day {
           font: 500 100px 'Inter';
@@ -50,7 +74,6 @@
         .status {
           font: var(--normal);
         }
-      }
       .content {
         font: var(--normal);
         width: 45%;

@@ -14,14 +14,62 @@
     width: 100%;
     text-align: right;
     font: var(--big-bold);
-    letter-spacing: 90%;
     letter-spacing: -15px;
+    line-height: 90%;
+    overflow: hidden;
+     
+    span {
+      display: flex;
+      width: fit-content;
+      justify-content: flex-end;
+      align-items: center;
+      margin-left: auto;
+
+      span {
+        display: inline-block;
+        transition: all 0.3s cubic-bezier(0, 0.48, 0.33, 0.99);
+        transform: translate(0px, 500px);
+        animation: transformStagger 1s cubic-bezier(0, 0.48, 0.33, 0.99) forwards;
+        animation-fill-mode: forwards;
+
+      }
+      @keyframes transformStagger {
+        from {
+          transform: translate(0px, 500px);
+        }
+        to {
+          transform: translate(0px, 0px)
+        }
+      }
+    }
   }
   .iam {
-    font: var(--six-cap)
+    width: fit-content;
+    font: var(--six-cap);
+    overflow: hidden;
+
+    p {
+      transform: translate(0px ,50px);
+      animation: iam 1s ease-out forwards;
+    }
+    @keyframes iam {
+      from {
+        transform: translate(0px, 50px);
+      }
+      to {
+        transform: translate(0px, 0px);
+      }
+    }
   }
   .profile {
-    font: var(--normal)
+    font: var(--normal);
+    width: fit-content;
+    overflow: hidden;
+
+    p {
+      transform: translate(0, 30px);
+      animation: iam 1s ease-out forwards;
+    }
   }
   .content {
     z-index: 10;

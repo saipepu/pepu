@@ -28,8 +28,34 @@
       flex-wrap: nowrap;
       justify-content: flex-end;
       align-items: flex-end;
+      width: fit-content;
+      overflow: hidden;
 
       span {
+        display: flex;
+        width: fit-content;
+        justify-content: flex-end;
+        align-items: center;
+        margin-right: auto;
+  
+        span {
+          display: inline-block;
+          transition: all 0.3s cubic-bezier(0, 0.48, 0.33, 0.99);
+          transform: translate(0px, 500px);
+          animation: transformStagger 1s cubic-bezier(0, 0.48, 0.33, 0.99) forwards;
+          animation-fill-mode: forwards;
+  
+        }
+        @keyframes transformStagger {
+          from {
+            transform: translate(0px, 500px);
+          }
+          to {
+            transform: translate(0px, 0px)
+          }
+        }
+      }
+      .pepu {
         letter-spacing: 0px;
         display: inline-block;
         font: var(--normal);

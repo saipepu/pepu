@@ -6,10 +6,14 @@ import SkewTextContainer from '../../components/common/skewText';
 import ProjectsContainer from '../../components/projectsContainer.js/projectsContainer';
 import Layout from '../../layout';
 import styles from './home.module.scss'
+import {gsap} from 'gsap'
+import Splitting from 'splitting'
 
 const Home = () => {
   const [paraX, setParaX] = useState(0)
   const [paraY, setParaY] = useState(0)
+  const splitWord = useRef();
+  const [splitted, setSplitted] = useState();
 
   const OnResize = () => {
     const body = document.body;
@@ -40,6 +44,19 @@ const Home = () => {
   }
   useEffect(() => {
     OnResize()
+
+    if(splitWord) {
+      const result = Splitting({
+        target: splitWord.current,
+        by: 'chars'
+      })
+      setSplitted(result);
+      result[0]?.chars.map((item, index) => {
+        // item.style.transitionDelay = `${(Math.random() * 0.5) + 0.5}s`
+        item.style.animationDelay = `${index * 0.08}s`
+        console.log(item);
+      })
+    }
   }, [])
 
   window.onresize = () => {
@@ -72,9 +89,16 @@ const Home = () => {
     <>
     <Layout>
       <div className={styles.container} id="scrollContainer">
-        <p className={styles.iam}>I AM</p>
-        <p className={styles.profile}>Frontend<br />Developer & Designer</p>
-        <div className={styles.bigBold}>PEPU</div>
+        <div className={styles.iam}>
+          <p>I AM</p>
+        </div>
+        <div className={styles.profile}>
+          <p>Frontend</p>
+        </div>
+        <div className={styles.profile}>
+          <p>Developer & Designer</p>
+        </div>
+        <div className={styles.bigBold} id="bigBold" ref={splitWord}>PEPU</div>
         <div className={styles.content}>
           <div className={styles.para} style={paraY >= 0 ? parallax: window.innerWidth < 500 ? parallax: {}}>
             Frontend engineer and UI/UX junkie, passionate   about web technologies,  interactive web design, problem-solving, typo-graphy and micro animation.

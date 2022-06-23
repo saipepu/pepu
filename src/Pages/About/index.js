@@ -1,12 +1,14 @@
-import React, { useEffect, useState } from 'react'
+import React, { useEffect, useRef, useState } from 'react'
 import BouncingButton from '../../components/common/bouncingButton'
 import Footer from '../../components/common/footer'
 import SkewTextContainer from '../../components/common/skewText'
 import Layout from '../../layout'
 import styles from './about.module.scss'
 import workspaceImg from '../../workspace.png'
+import Splitting from 'splitting'
 
 const About = () => {
+  const splitWord = useRef();
   const [firstLand, setFirstLand] = useState(true);
   const [date, setDate] = useState()
   const [month, setMonth] = useState()
@@ -44,6 +46,16 @@ const About = () => {
     setDate(time.getDate())
     setMonth(time.toLocaleString('default', {month: 'long'}))
 
+    if(splitWord) {
+      const result = Splitting({
+        target: splitWord.current,
+        by: 'chars'
+      })
+      result[0].chars.map((item, index) => {
+        item.style.animationDelay = `${index * 0.05}s`
+      })
+    }
+
     OnResize()
     setFirstLand(true);
   }, [])
@@ -56,8 +68,8 @@ const About = () => {
     <Layout >
       <div className={styles.container} id="scrollContainer">
         <div className={styles.heroSection}>
-          <div className={styles.bigBold}>
-            ABOUT<span>PEPU</span>
+          <div className={styles.bigBold} ref={splitWord}>
+            ABOUT<span className={styles.pepu}>PEPU</span>
           </div>
           <div className={styles.status}>
             <div className={styles.date}>

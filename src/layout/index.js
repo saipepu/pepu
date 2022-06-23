@@ -43,22 +43,28 @@ const Layout = ({children}) => {
     })
   }
   useEffect(() => {
+
+    const pageTransition1 = document.getElementById('pageTransition1')
+    pageTransition1.style.height = document.body.getBoundingClientRect().height + 'px';
+    const pageTransition2 = document.getElementById('pageTransition2')
+    pageTransition2.style.height = document.body.getBoundingClientRect().height + 'px';
+
     x();
     adjustCardWidth();
   }, [])
+
   window.onresize = () => {
     x()
     adjustCardWidth()
   }
 
   const mouseMove = {
-    display: 'block',
+
     transform: `translate3d(${posX}px, ${posY}px, 0) scale(1)`,
     cursor: 'none',
     willChange: 'transform'
   }
   const mouseMoveSecondary = {
-    display: 'block',
     transform: `translate3d(${posX - 20}px, ${posY - 20}px, 0) scale(1)`,
     cursor: 'none',
     willChange: 'transform'
@@ -76,8 +82,10 @@ const Layout = ({children}) => {
       <div className={styles.bodyWrapper} id="bodyWrapper">
         {children}
       </div>
-      <div className={styles.demo_cursor} style={hover ? mouseMove: {}} id="demo_cursor"></div>
-      <div className={styles.demo_cursor_secondary} style={hover ? mouseMoveSecondary: {}} id="demo_cursor"></div>
+      <div className={styles.demo_cursor} style={hover ? mouseMove: {display: 'none'}} id="demo_cursor"></div>
+      <div className={styles.demo_cursor_secondary} style={hover ? mouseMoveSecondary: {display: 'none'}} id="demo_cursor"></div>
+      <div className={styles.pageTransition1} id='pageTransition1'></div>
+      <div className={styles.pageTransition2} id='pageTransition2'></div>
     </div>
     </>
   )

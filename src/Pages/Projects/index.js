@@ -1,10 +1,13 @@
-import React, { useEffect, useState } from 'react'
+import React, { useEffect, useRef, useState } from 'react'
 import Footer from '../../components/common/footer'
 import ProjectCard from '../../components/projectsCard/projectsCard'
 import Layout from '../../layout'
 import styles from './work.module.scss'
+import Splitting from 'splitting'
 
 const Projects = () => {
+  const splitWord = useRef();
+  const [splitted, setSplitted] = useState();
   const [date, setDate] = useState()
   const [month, setMonth] = useState()
   var time = new Date();
@@ -13,7 +16,17 @@ const Projects = () => {
     setDate(time.getDate())
     setMonth(time.getMonth('long'))
     setMonth(time.toLocaleString('default', {month: 'long'}))
-    // console.log(month)
+
+    if(splitWord) {
+      const result = Splitting({
+        target: splitWord.current,
+        by: 'chars'
+      })
+      setSplitted(result);
+      result[0]?.chars.map((item, index) => {
+        item.style.animationDelay = `${index * 0.08}s`
+      })
+    }
 
     const body = document.body;
     const scrollContainer = document.querySelector('#scrollContainer')
@@ -58,14 +71,18 @@ const Projects = () => {
     <Layout>
       <div className={styles.container} id="scrollContainer">
         <div className={styles.heroSection}>
-          <div className={styles.bigBold}>
+          <div className={styles.bigBold} ref={splitWord}>
             WO<br/>RKS
           </div>
           <div className={styles.status}>
-            <div className={styles.date}>
-              <span className={styles.day}>{date}</span>
-              <span className={styles.month}>{month}</span>
-              <span className={styles.status}>available<br />for projects</span>
+            <div className={styles.day}>
+              <p>{date}</p>
+            </div>
+            <div className={styles.month}>
+              <p className={styles.month}>{month}</p>
+            </div>
+            <div className={styles.status}>
+              <p className={styles.status}>available<br />for projects</p>
             </div>
             <div className={styles.content}>
               I design and code beautifully simple things, and I love what I do

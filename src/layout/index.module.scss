@@ -9,7 +9,6 @@
 
   .demo_cursor,.demo_cursor_secondary {
     z-index: 99;
-    display: none;
     cursor: none;
     pointer-events: none;
     user-select: none;
@@ -32,7 +31,6 @@
     // z-index: 99;
   }
   .demo_cursor_secondary {
-    display: none;
     transition-delay: 0.22s;
     transition: all 0.3s cubic-bezier(0.67, -0.03, 0.27, 1.02);
     transition-timing-function: ease-out;
@@ -54,6 +52,42 @@
     background-origin: center;
     background-size: cover;
     background-color: v.$secondary;
+  }
+
+  .pageTransition1,.pageTransition2 {
+    position: fixed;
+    top: 0px;
+    left: 0px;
+    width: 100vw;
+    min-height: 100vh;
+    background: v.$primary;
+    animation-delay: 1s;
+    animation: pageTransition1 2s ease-in-out forwards;
+    z-index: 99;
+
+    @keyframes pageTransition1 {
+      0% {
+        clip-path: polygon(0 0, 100% 0, 100% 0, 0 0);
+      }
+      50% {
+        clip-path: polygon(0 0, 100% 0, 100% 100%, 0 100%);
+      }
+      100% {
+        clip-path: polygon(0 100%, 100% 100%, 100% 100%, 0 100%);
+      }
+    }
+  }
+  .pageTransition2 {
+    background: v.$secondary;
+    animation: pageTransition2 1s ease-in-out forwards;
+    @keyframes pageTransition2 {
+      0% {
+        clip-path: polygon(0 0, 100% 0, 100% 100%, 0 100%);
+      }
+      100% {
+        clip-path: polygon(0 100%, 100% 100%, 100% 100%, 0 100%);
+      }
+    }
   }
 
   @media (max-width: v.$tablet) {

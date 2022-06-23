@@ -18,8 +18,8 @@ $accent: #F27A18;
 
 //FONT VARIANTS
 :root {
- --big-bold: 900 360px/100% 'Inter';
- --six-cap: small-caps 400 80px/100% 'Six Caps';
+ --big-bold: 900 360px/100% 'Inter','sans serif';
+ --six-cap: small-caps 400 80px/100% 'Six Caps','sans serif';
  --para: 400 36px 'Inter';
  --normal: 400 24px 'Inter';
  --skew: 500 70px 'Inter';
