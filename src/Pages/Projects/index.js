@@ -24,7 +24,7 @@ const Projects = () => {
       })
       setSplitted(result);
       result[0]?.chars.map((item, index) => {
-        item.style.animationDelay = `${index * 0.08}s`
+        item.style.animationDelay = `${(index * 0.08) + 1.5}s`
       })
     }
 
@@ -74,18 +74,18 @@ const Projects = () => {
           <div className={styles.bigBold} ref={splitWord}>
             WO<br/>RKS
           </div>
-          <div className={styles.status}>
+          <div className={styles.info}>
             <div className={styles.day}>
               <p>{date}</p>
             </div>
             <div className={styles.month}>
-              <p className={styles.month}>{month}</p>
+              <p>{month}</p>
             </div>
             <div className={styles.status}>
-              <p className={styles.status}>available<br />for projects</p>
+              <p>available<br />for projects</p>
             </div>
             <div className={styles.content}>
-              I design and code beautifully simple things, and I love what I do
+              <p>I design and code beautifully simple things, and I love what I do</p>
             </div>
           </div>
         </div>

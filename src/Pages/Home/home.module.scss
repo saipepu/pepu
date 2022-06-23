@@ -49,12 +49,13 @@
     overflow: hidden;
 
     p {
-      transform: translate(0px ,50px);
+      transform: translate(0px ,70px);
       animation: iam 1s ease-out forwards;
+      animation-delay: 1.5s;
     }
     @keyframes iam {
       from {
-        transform: translate(0px, 50px);
+        transform: translate(0px, 70px);
       }
       to {
         transform: translate(0px, 0px);
@@ -69,6 +70,7 @@
     p {
       transform: translate(0, 30px);
       animation: iam 1s ease-out forwards;
+      animation-delay: 1.5s;
     }
   }
   .content {
@@ -136,6 +138,10 @@
       align-items: center;
       text-align: center;
       letter-spacing: -2px;
+
+      span {
+        margin: auto;
+      }
     }
     .skewTextContainer_mobile {
       display: none;

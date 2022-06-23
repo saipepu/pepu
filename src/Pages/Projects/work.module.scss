@@ -55,29 +55,66 @@
         }
       }
     }
-    .status {
+    .info {
       height: 100%;
       text-align: right;
       display: flex;
       flex-direction: column;
-      justify-content: space-between;
+      justify-content: flex-start;
       align-items: flex-end;
   
         .day {
           font: 500 100px 'Inter';
-          line-height: 80%;
+          overflow: hidden;
+          height: fit-content;
+          width: fit-content;
+
+          p {
+            opacity: 0;
+            animation: introAnimation 1s ease-in-out forwards;
+            animation-delay: 1.5s;
+          }
         }
         .month {
           font: var(--para);
           font-weight: bolder;
+          overflow: hidden;
+          p {
+            opacity: 0;
+            animation: introAnimation 1s ease-in-out forwards;
+            animation-delay: 1.5s;
+          }
         }
         .status {
           font: var(--normal);
+          overflow: hidden;
+          p {
+            opacity: 0;
+            animation: introAnimation 1s ease-in-out forwards;
+            animation-delay: 1.5s;
+          }
         }
       .content {
+        margin-top: auto;
         font: var(--normal);
         width: 45%;
         text-align: justify;
+        overflow: hidden;
+        p {
+          opacity: 0;
+          animation: introAnimation 1s ease-in-out forwards;
+          animation-delay: 1.5s;
+        }
+      }
+      @keyframes introAnimation {
+        from {
+          opacity: 0;
+          transform: translate(0px, 50px);
+        }
+        to {
+          opacity: 1;
+          transform: translate(0px, 0px);
+        }
       }
     }
   }
@@ -92,12 +129,10 @@
         font: var(--big-bold);
         line-height: 80%;
       }
-      .status{
-        .date {
+      .info{
           .day {
             font-size: 80px;
           }
-        }
       }
     }
   }
@@ -113,15 +148,22 @@
         line-height: 80%;
         letter-spacing: -3px;
         margin-bottom: 20px;
+        height: 500px;
       }
-      .status {
+      .info {
         flex-direction: row-reverse;
         align-items: flex-start;
+        .day,.month,.status {
+          display: none;
+        }
         .content {
           width: 50%;
           height: 100%;
         }
       }
+    }
+    .projectCardContainer {
+      margin: 50px 0px 0px 0px;
     }
   }
 

@@ -53,7 +53,7 @@ const Home = () => {
       setSplitted(result);
       result[0]?.chars.map((item, index) => {
         // item.style.transitionDelay = `${(Math.random() * 0.5) + 0.5}s`
-        item.style.animationDelay = `${index * 0.08}s`
+        item.style.animationDelay = `${(index * 0.08) + 1.5}s`
         console.log(item);
       })
     }
@@ -111,7 +111,7 @@ const Home = () => {
           <SkewTextContainer line1={'Not Your'} line2={'-Average-'} line3={'Developer'} />
         </div>
         <div className={styles.dividerTitle} style={parallax2}>
-          heighlighted projects
+          highlighted projects
         </div>
         <div className={styles.projectsContainer}>
           <ProjectsContainer />
