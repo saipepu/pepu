@@ -52,7 +52,7 @@ const About = () => {
         by: 'chars'
       })
       result[0].chars.map((item, index) => {
-        item.style.animationDelay = `${index * 0.05}s`
+        item.style.animationDelay = `${(index * 0.05) + 1.5}s`
       })
     }
 

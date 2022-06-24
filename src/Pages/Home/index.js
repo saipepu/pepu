@@ -8,8 +8,10 @@ import Layout from '../../layout';
 import styles from './home.module.scss'
 import {gsap} from 'gsap'
 import Splitting from 'splitting'
+import { useNavigate } from 'react-router-dom';
 
 const Home = () => {
+  const navigate = useNavigate();
   const [paraX, setParaX] = useState(0)
   const [paraY, setParaY] = useState(0)
   const splitWord = useRef();
@@ -119,7 +121,7 @@ const Home = () => {
         <div className={styles.dividerTitle} style={parallax1}>
           before you go
         </div>
-        <div className={styles.skewTextContainer}>
+        <div className={styles.skewTextContainer} onClick={() => navigate('/contact')} style={{cursor: 'pointer'}}>
           <SkewTextContainer contact={true} line1={'Keep in touch'} line2={'saipepu.mdy'} line3={'257@gmail.com'} />
         </div>
         <div className={styles.aboutMeCta}>
