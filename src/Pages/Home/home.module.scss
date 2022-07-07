@@ -16,7 +16,9 @@
     font: var(--big-bold);
     letter-spacing: -15px;
     line-height: 90%;
-    overflow: hidden;
+    // overflow-y: hidden;
+    // overflow-x: visible;
+    // background-color: bisque;
      
     span {
       display: flex;
@@ -24,6 +26,8 @@
       justify-content: flex-end;
       align-items: center;
       margin-left: auto;
+      overflow-y: hidden;
+      padding-right: 6px;
 
       span {
         display: inline-block;

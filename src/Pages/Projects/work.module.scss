@@ -23,7 +23,9 @@
       line-height: 90%;
       letter-spacing: -15px;
       text-align: left;
-      overflow: hidden;
+      // overflow: hidden;
+      // overflow-y: hidden;
+      // overflow-x: hidden;
       width: fit-content;
       padding-right: 60px;
       
@@ -36,6 +38,8 @@
         justify-content: flex-end;
         align-items: center;
         margin-right: auto;
+        overflow-y: hidden;
+        padding-right: 10px;
   
         span {
           display: inline-block;
@@ -68,7 +72,7 @@
           overflow: hidden;
           height: fit-content;
           width: fit-content;
-
+          padding-bottom: 0.1px;
           p {
             opacity: 0;
             animation: introAnimation 1s ease-in-out forwards;
@@ -97,9 +101,11 @@
       .content {
         margin-top: auto;
         font: var(--normal);
-        width: 45%;
+        width: fit-content;
+        max-width: 200px;
         text-align: justify;
         overflow: hidden;
+        padding-bottom: 10px;
         p {
           opacity: 0;
           animation: introAnimation 1s ease-in-out forwards;
@@ -124,7 +130,7 @@
   @media (max-width: v.$tablet) {
     padding: 100px 75px;
     .heroSection {
-      height: 20vh;
+      height: 50vh;
       .bigBold {
         font: var(--big-bold);
         line-height: 80%;

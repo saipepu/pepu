@@ -4,23 +4,47 @@ import Navbar from '../components/common/navbar/navbar';
 import styles from './index.module.scss'
 
 const Layout = ({children}) => {
+
+  const factor = 0.08
+  const factor1 = 0.8
+
+  const lerp = (start, end, factor) => {
+    return start + (end-start) * factor
+  }
   
-  const [posY, setPosY] = useState(0);
-  const [posX, setPosX] = useState(0);
   const [hover, isHover] = useState(false)
 
-  const handleHover = (e) => {
-    setPosY(e.pageY);
-    setPosX(e.pageX);
-    isHover(true);
+  let mouseX = 0
+  let mouseY = 0
+  let easeX1 = 0
+  let easeY1 = 0
+  let easeX2 = 0
+  let easeY2 = 0
 
-    if (e.target.id == 'contactCta') {
-      const demo_cursor = document.getElementById("demo_cursor")
-      demo_cursor.style.transform = `translate3d(${e.pageX}px, ${e.pageY}px, 0) scale(2)`;
+  window.addEventListener('mousemove', (e) => {
+    mouseX = e.pageX
+    mouseY = e.pageY
+    console.log(mouseX, mouseY)
+  })
+
+  const mouseMovement = () => {
+    const cursorDot = document.getElementById('cursor1')
+    const cursorCircle = document.getElementById('cursor2')
+    if(cursorCircle && cursorCircle){
+
+      easeX1 = lerp(easeX1, mouseX, factor)
+      easeY1 = lerp(easeY1, mouseY, factor)
+      cursorDot.style.transform = `translate(${easeX1}px, ${easeY1}px)`
+
+      easeX2 = lerp(easeX2, mouseX, factor1)
+      easeY2 = lerp(easeY2, mouseY, factor1)
+      cursorCircle.style.transform = `translate(${easeX2-20}px, ${easeY2-20}px)`
     }
-    const contactCta = document.getElementById('contactCta')
-    contactCta.addEventListener('mouseover', () => {
-    })
+    console.log('haha')
+    requestAnimationFrame(mouseMovement)
+  }
+  if(document.querySelector('body') != null) {
+    mouseMovement()
   }
 
   const x = () => {
@@ -58,32 +82,20 @@ const Layout = ({children}) => {
     adjustCardWidth()
   }
 
-  const mouseMove = {
-
-    transform: `translate3d(${posX}px, ${posY}px, 0) scale(1)`,
-    cursor: 'none',
-    willChange: 'transform'
-  }
-  const mouseMoveSecondary = {
-    transform: `translate3d(${posX - 20}px, ${posY - 20}px, 0) scale(1)`,
-    cursor: 'none',
-    willChange: 'transform'
-  }
-
   document.body.addEventListener('mouseleave', () => {
     isHover(false);
   })
 
   return (
     <>
-    <div className={styles.pageWrapper} id="pageWrapper" onMouseMove={(e) => handleHover(e)}>
+    <div className={styles.pageWrapper} id="pageWrapper">
       <div className={styles.backgroundImage}></div>
       <Navbar />
       <div className={styles.bodyWrapper} id="bodyWrapper">
         {children}
       </div>
-      <div className={styles.demo_cursor} style={hover ? mouseMove: {display: 'none'}} id="demo_cursor"></div>
-      <div className={styles.demo_cursor_secondary} style={hover ? mouseMoveSecondary: {display: 'none'}} id="demo_cursor"></div>
+      <div id="cursor1" className={styles.demo_cursor}></div>
+      <div id="cursor2" className={styles.demo_cursor_secondary}></div>
       <div className={styles.pageTransition1} id='pageTransition1'></div>
       <div className={styles.pageTransition2} id='pageTransition2'></div>
     </div>

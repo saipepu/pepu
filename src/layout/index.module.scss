@@ -6,7 +6,7 @@
   position: relative;
   padding: 0px 128px;
   background-color: v.$secondary;
-
+  
   .demo_cursor,.demo_cursor_secondary {
     z-index: 99;
     cursor: none;
@@ -19,22 +19,16 @@
     height: 10px;
     border-radius: 100%;
     background: black;
-    // background-color: v.$primary;
     background-color: #F27A18;
-    transition-delay: 0.15s;
-    transition: all 0.15s ease-out;
-    transition-timing-function: ease-out;
     will-change: transform;
-    transform: translate(-50%, -50%);
-    // mix-blend-mode: difference;
     background-blend-mode: difference;
+    transition-timing-function: ease-out;
     // z-index: 99;
   }
   .demo_cursor_secondary {
-    transition-delay: 0.22s;
-    transition: all 0.3s cubic-bezier(0.67, -0.03, 0.27, 1.02);
-    transition-timing-function: ease-out;
-    transform: translate(0, 0);
+    // transition: all 0.3s cubic-bezier(0.67, -0.03, 0.27, 1.02);
+    // transition-timing-function: ease-out;
+    transform: translate(-50%, -50%);
     width: 45px;
     height: 45px;
     background-color: transparent;
