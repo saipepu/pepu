@@ -1,20 +1,20 @@
 {
   "files": {
-    "main.css": "/pepu/static/css/main.1c9b61fe.css",
-    "main.js": "/pepu/static/js/main.f2431c2a.js",
-    "static/media/p1.png": "/pepu/static/media/p1.7b599b36aa4b99605202.png",
-    "static/media/p5.png": "/pepu/static/media/p5.a11c06ba59b65a0a153c.png",
-    "static/media/p3.png": "/pepu/static/media/p3.187217b256eaa83abd50.png",
-    "static/media/p4.png": "/pepu/static/media/p4.2e83ec2c66991ae07690.png",
-    "static/media/p2.png": "/pepu/static/media/p2.c5ca21ada4aab5d1ea8f.png",
+    "main.css": "/pepu/static/css/main.71381881.css",
+    "main.js": "/pepu/static/js/main.f5b42747.js",
+    "static/media/CaseStudyImg.png": "/pepu/static/media/CaseStudyImg.e2f978a4a4b34623afd5.png",
+    "static/media/pepu.png": "/pepu/static/media/pepu.2a812d573498b633ed45.png",
+    "static/media/img7.webp": "/pepu/static/media/img7.39da268dc19667e67f69.webp",
     "static/media/Rectangle.png": "/pepu/static/media/Rectangle.ecd67e87716b00d9c34d.png",
     "static/media/workspace.png": "/pepu/static/media/workspace.11b0a3a295cb9534b67d.png",
+    "static/media/DESIGN.png": "/pepu/static/media/DESIGN.e7d9032c974e188a8f05.png",
+    "static/media/CODE.png": "/pepu/static/media/CODE.5e19fee4bdbb7705d893.png",
     "index.html": "/pepu/index.html",
-    "main.1c9b61fe.css.map": "/pepu/static/css/main.1c9b61fe.css.map",
-    "main.f2431c2a.js.map": "/pepu/static/js/main.f2431c2a.js.map"
+    "main.71381881.css.map": "/pepu/static/css/main.71381881.css.map",
+    "main.f5b42747.js.map": "/pepu/static/js/main.f5b42747.js.map"
   },
   "entrypoints": [
-    "static/css/main.1c9b61fe.css",
-    "static/js/main.f2431c2a.js"
+    "static/css/main.71381881.css",
+    "static/js/main.f5b42747.js"
   ]
 }
