@@ -29,31 +29,34 @@
           display: flex;
           flex-wrap: none;
         }
-        // span {
-        //   display: inline-block;
-        //   overflow: hidden;
-        //   width: fit-content;
-        //   justify-content: flex-end;
-        //   align-items: center;
+
+        span {
+          display: inline-block;
+          overflow: hidden;
+          width: fit-content;
+          justify-content: flex-end;
+          align-items: center;
+          white-space: nowrap;
           
-        //   .whitespace{
-        //     margin: 0;
-        //   }
-        //   span {
-        //     display: inline-block;
-        //     transition: all 0.3s cubic-bezier(0, 0.48, 0.33, 0.99);
-        //     transform: translate(0px, 500px);
-        //     animation: transformStagger 1s cubic-bezier(0, 0.48, 0.33, 0.99) forwards;
-        //   }
-        //   @keyframes transformStagger {
-        //     from {
-        //       transform: translate(0px, 500px);
-        //     }
-        //     to {
-        //       transform: translate(0px, 0px)
-        //     }
-        //   }
-        // }
+          .whitespace{
+            margin: 0;
+          }
+          span {
+            display: inline-block;
+            transition: all 0.3s cubic-bezier(0, 0.48, 0.33, 0.99);
+            transform: translate(0px, 500px);
+            animation-delay: 1s;
+            animation: transformStagger 2s cubic-bezier(0, 0.48, 0.33, 0.99) forwards;
+          }
+          @keyframes transformStagger {
+            from {
+              transform: translate(0px, 500px);
+            }
+            to {
+              transform: translate(0px, 0px)
+            }
+          }
+        }
       }
       .formContainer {
         width: 100%;

@@ -85,12 +85,20 @@
   }
 
   @media (max-width: v.$tablet) {
+    cursor: default;
+    .demo_cursor,.demo_cursor_secondary{
+      cursor: pointer;
+    }
     padding: 0px 75px;
     .demo_cursor,.demo_cursor_secondary {
       display: none;
     }
   }
   @media (max-width: v.$mobile) {
+    cursor: default;
+    .demo_cursor,.demo_cursor_secondary{
+      cursor: default;
+    }
     padding: 0px 25px;
     .demo_cursor,.demo_cursor {
       display: none;

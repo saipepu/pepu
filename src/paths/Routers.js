@@ -1,5 +1,5 @@
 import React from 'react';
-import { BrowserRouter, Route, Routes } from 'react-router-dom';
+import { BrowserRouter, HashRouter, Route, Routes } from 'react-router-dom';
 import NotFound from '../Pages/404/404';
 import About from '../Pages/About';
 import Home from '../Pages/Home';

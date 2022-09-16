@@ -90,10 +90,10 @@ const Projects = () => {
           </div>
         </div>
         <div className={styles.projectCardContainer}>
-          <ProjectCard link={'https://saipepu.github.io/micro-animations/'} index={'01'} title={'hovering'} brief={'inspired by amazing Designers from the internet'} description={'these are some useful micro-animation that you can use in your website to grab users attention. Most of the animations are recreated from awards winning websites.'} />
-          <ProjectCard index={'02'} title={'luciana'} brief={'inspired by amazing Designers from the internet'} description={'a modern ecommerce site with two role users (customers) and admins. Built with next.js and node.js, express, mongodb plus other third-party libraries to improve the code quality.'} />
-          <ProjectCard index={'03'} title={'transition'} brief={'inspired by amazing Designers from the internet'} description={'smooth and elegant transition animation while navigating one page to another.'} />
-          <ProjectCard index={'04'} title={'dodo'} brief={'inspired by amazing Designers from the internet'} description={'a minimalist productivity app where you schedule and tackle your tasks and manage your projects.'} />
+          <ProjectCard link={'https://saipepu.github.io/micro-animations/'} index={'01'} title={'Hovering'} brief={'inspired by amazing Designers from the internet'} description={'these are some useful micro-animation that you can use in your website to grab users attention. Most of the animations are recreated from awards winning websites.'} />
+          <ProjectCard link={'https://saipepu.github.io/page-transition/'} index={'02'} title={'Transition'} brief={'inspired by amazing Designers from the internet'} description={'smooth and elegant transition animation while navigating one page to another.'} />
+          <ProjectCard link={'https://saipepu.github.io/ecommerce-site-fakestore/'} index={'03'} title={'FakeStore'} brief={'react js self-study project, working with fakestore api'} description={'a simple ecommerce website built with react js and fakestore api. I learn how to use api with react and improved my frontend skill alot in this projects.'} />
+          <ProjectCard link={''} index={'04'} title={'UX case study'} brief={'a conceptual self-project ux case study from Google UX'} description={'this is my conceptual ux case study about a product for reservation table for restaurants. I learn and improve my ux skill especially empathisin with user and accessibility of a product in this project.'} />
         </div>
         <div className={styles.footerContainer}>
           <Footer />

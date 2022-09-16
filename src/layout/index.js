@@ -24,12 +24,13 @@ const Layout = ({children}) => {
   window.addEventListener('mousemove', (e) => {
     mouseX = e.pageX
     mouseY = e.pageY
-    console.log(mouseX, mouseY)
+    // console.log(mouseX, mouseY)
   })
 
   const mouseMovement = () => {
     const cursorDot = document.getElementById('cursor1')
     const cursorCircle = document.getElementById('cursor2')
+
     if(cursorCircle && cursorCircle){
 
       easeX1 = lerp(easeX1, mouseX, factor)
@@ -40,7 +41,6 @@ const Layout = ({children}) => {
       easeY2 = lerp(easeY2, mouseY, factor1)
       cursorCircle.style.transform = `translate(${easeX2-20}px, ${easeY2-20}px)`
     }
-    console.log('haha')
     requestAnimationFrame(mouseMovement)
   }
   if(document.querySelector('body') != null) {
@@ -56,7 +56,6 @@ const Layout = ({children}) => {
     body.style.height = Math.floor(height) - 100 + 'px'
     pageWrapper.style.height = document.body.getBoundingClientRect().height + 'px'
     bodyWrapper.style.height = document.body.getBoundingClientRect().height + 'px'
-    // console.log(pageWrapper.style.height);
   }
   
   const adjustCardWidth = () => {

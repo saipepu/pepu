@@ -61,6 +61,9 @@ const Contact = () => {
         target: splitWord.current,
         by: 'chars'
       })
+      result[0].words.map((item, index) => {
+        item.style.margin = '0px 5px'
+      })
       result[0].chars.map((item, index) => {
         item.style.animationDelay = `${index * 0.025}s`
       })

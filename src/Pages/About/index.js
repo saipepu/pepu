@@ -6,6 +6,7 @@ import Layout from '../../layout'
 import styles from './about.module.scss'
 import workspaceImg from '../../workspace.png'
 import Splitting from 'splitting'
+import pepu from '../../pepu.png'
 
 const About = () => {
   const splitWord = useRef();
@@ -93,7 +94,7 @@ const About = () => {
           <div className={styles.whatIdo}>
             <div className={styles.index}>
               <div className={styles.profileImgContainer}>
-
+                <img src={pepu} alt="pepu"/>
               </div>
             </div>
             <div className={styles.content} data-attr={'noPseudo'}>

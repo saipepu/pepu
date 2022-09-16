@@ -56,7 +56,7 @@ const Home = () => {
       result[0]?.chars.map((item, index) => {
         // item.style.transitionDelay = `${(Math.random() * 0.5) + 0.5}s`
         item.style.animationDelay = `${(index * 0.08) + 1.5}s`
-        console.log(item);
+        // console.log(item);
       })
     }
   }, [])
