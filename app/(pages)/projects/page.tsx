@@ -1,5 +1,6 @@
 import Link from 'next/link'
 import React from 'react'
+import Th_JudgeHub from './_components/judgehub'
 
 const Projects = () => {
   return (
@@ -13,7 +14,9 @@ const Projects = () => {
         </div>
       </div>
       <div className="md:max-h-full w-full md:flex-1 flex flex-col justify-start items-start gap-[10px] overflow-scroll md:py-[300px]">
-        <div className="w-full bg-gray-600 min-h-[300px]"></div>
+        <div className="w-full flex bg-white min-h-[300px]">
+          <Th_JudgeHub />
+        </div>
         <div className="w-full bg-gray-600 min-h-[300px]"></div>
         <div className="w-full bg-gray-600 min-h-[300px]"></div>
         <div className="w-full bg-gray-600 min-h-[300px]"></div>
