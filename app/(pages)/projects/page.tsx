@@ -2,7 +2,36 @@ import Link from 'next/link'
 import React from 'react'
 import Th_JudgeHub from './_components/judgehub'
 
+type project = {
+  name: String,
+  category: String[],
+  description: String,
+  link: String
+}
+
 const Projects = () => {
+
+  const projectList: project[] = [
+    {
+      name: "JudgeHub",
+      category: ["UI","UX","Frontend","Backend"],
+      description: "JudgeHub is a real-time Leaderboard which is specifically design for a Digital Design and Innovation (DDI) StartUp Pitching Competition held by the Assumption University in Thailand.",
+      link: "/projects"
+    },
+    {
+      name: "Spatial Design",
+      category: ["UI","UX"],
+      description: "Embracing the newly trending technology. Designed a spatial UI design for a school project to showcase the tech skill of the students using Augmented Reality Technology.",
+      link: "/projects"
+    },
+    {
+      name: "iLearn",
+      category: ["UI","UX","Swift"],
+      description: "This project is for a Swift Hackathon held by the D*Code which is the Main coding club in my University.The purpose of the Hackathon is to have some hands on Swift Programming Language and iOS development.",
+      link: "/projects"
+    },
+  ]
+
   return (
     <div className="bg-[#2d2d2d] md:h-full px-[16px] md:px-[50px] py-[24px] pt-[100px] flex flex-col md:flex-row justify-center items-start gap-[10px]">
       <div className="md:flex-1 md:h-full flex flex-col justify-between items-start">
@@ -14,12 +43,25 @@ const Projects = () => {
         </div>
       </div>
       <div className="md:max-h-full w-full md:flex-1 flex flex-col justify-start items-start gap-[10px] overflow-scroll md:py-[300px]">
-        <div className="w-full flex bg-white min-h-[300px]">
-          <Th_JudgeHub />
-        </div>
-        <div className="w-full bg-gray-600 min-h-[300px]"></div>
-        <div className="w-full bg-gray-600 min-h-[300px]"></div>
-        <div className="w-full bg-gray-600 min-h-[300px]"></div>
+        {projectList?.map((item, index) => {
+          return(
+            <div className="w-full flex bg-white min-h-[300px]">
+              <div className="w-full text-black flex flex-col justify-start items-center px-[10px] py-[24px]">
+                <div className="w-full flex flex-col justify-start items-start">
+                  <p className="text-[14px] font-[600]">{index+1}</p>
+                  <h2 className="text-[24px] font-[600]">{item.name}</h2>
+                </div>
+                <div className="flex-1 w-full h-full flex flex-row justify-start items-start gap-[10px]">
+                  <p className="flex-1 text-[14px] font-[300]">{item.category.map(item => `${item}, `)}</p>
+                  <div className="h-full flex-1 flex flex-col justify-between items-start">
+                    <p className="text-[14px] font-[300]">{item.description}</p>
+                    <Link href={`${item.link}`} className="underline">View Detail</Link>
+                  </div>
+                </div>
+              </div>
+            </div>
+          )
+        })}
       </div>
       <div className="text-[24px] w-full flex-col justify-end items-start flex md:hidden">
           <Link href="/projects" target="_blank">EMAIL</Link>
