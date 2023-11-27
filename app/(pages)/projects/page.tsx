@@ -16,7 +16,7 @@ const Projects = () => {
       name: "JudgeHub",
       category: ["UI","UX","Frontend","Backend"],
       description: "JudgeHub is a real-time Leaderboard which is specifically design for a Digital Design and Innovation (DDI) StartUp Pitching Competition held by the Assumption University in Thailand.",
-      link: "/projects"
+      link: "/judgehub"
     },
     {
       name: "Spatial Design",
@@ -54,7 +54,7 @@ const Projects = () => {
                 <div className="flex-1 w-full h-full flex flex-row justify-start items-start gap-[10px]">
                   <p className="flex-1 text-[14px] font-[300]">{item.category.map(item => `${item}, `)}</p>
                   <div className="h-full flex-1 flex flex-col justify-start items-start gap-[20px]">
-                    <p className="text-[14px] font-[300]">{item.description}</p>
+                    <p className="text-[14px] font-[200]">{item.description}</p>
                     <Link href={`${item.link}`} className="underline">View Detail</Link>
                   </div>
                 </div>
