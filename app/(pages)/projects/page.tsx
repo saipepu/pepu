@@ -45,7 +45,7 @@ const Projects = () => {
       <div className="md:max-h-full w-full md:flex-1 flex flex-col justify-start items-start gap-[10px] overflow-scroll md:py-[300px]">
         {projectList?.map((item, index) => {
           return(
-            <div className="w-full flex bg-white min-h-[300px]">
+            <div className="w-full flex bg-white">
               <div className="w-full text-black flex flex-col justify-start items-center px-[10px] py-[24px]">
                 <div className="w-full flex flex-col justify-start items-start">
                   <p className="text-[14px] font-[600]">{index+1}</p>
@@ -53,7 +53,7 @@ const Projects = () => {
                 </div>
                 <div className="flex-1 w-full h-full flex flex-row justify-start items-start gap-[10px]">
                   <p className="flex-1 text-[14px] font-[300]">{item.category.map(item => `${item}, `)}</p>
-                  <div className="h-full flex-1 flex flex-col justify-between items-start">
+                  <div className="h-full flex-1 flex flex-col justify-start items-start gap-[20px]">
                     <p className="text-[14px] font-[300]">{item.description}</p>
                     <Link href={`${item.link}`} className="underline">View Detail</Link>
                   </div>
