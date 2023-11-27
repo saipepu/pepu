@@ -1,6 +1,7 @@
 "use client"
 
 import Image from "next/image";
+import abac from '@/public/logo-au-white.png'
 
 const Judgehub = () => {
   return (
@@ -9,7 +10,7 @@ const Judgehub = () => {
         <div className="md:flex-1 w-full">
           <h1 className="text-[56px] font-bold leading-[110%]">Judgehub</h1>
         </div>
-        <div className="overflow-scroll max-h-full w-full md:flex-1 flex flex-col justify-start items-start gap-[10px] md:py-[300px]">
+        <div className="text-[18px] overflow-scroll max-h-full w-full md:flex-1 flex flex-col justify-start items-start gap-[10px] md:py-[300px] pb-[50px]">
           <p>A real-time Leaderboard for grading StartUp Pitching Competition.</p>
           <div className="w-full min-h-[300px] bg-white">
             {/* <Image
@@ -40,11 +41,36 @@ const Judgehub = () => {
               alt="judgehub-1-image"
             /> */}
           </div>
-          <div className="w-full flex flex-col justify-start items-start gap-[10px]">
+          <div className="w-full flex flex-col justify-start items-start gap-[10px] mt-[10px]">
             <p>Role 👨🏻‍💻</p>
             <div className="w-full flex flex-col justify-start items-start">
-              <p>UI</p>
-              <p>UX</p>
+              <p>UI Design</p>
+              <p>Frontend Development</p>
+              <p>Backend Development</p>
+            </div>
+          </div>
+          <div className="w-full flex flex-col justify-start items-start gap-[10px] mt-[10px]">
+            <p>Tech 🚀</p>
+            <div className="w-full flex flex-col justify-start items-start">
+              <p>React js</p>
+              <p>Node js</p>
+              <p>Express</p>
+              <p>Socket.io</p>
+              <p>Mongodb</p>
+              <p>Heroku</p>
+            </div>
+          </div>
+          <div className="w-full flex flex-col justify-start items-start gap-[10px] mt-[10px]">
+            <p>Client 💼</p>
+            <div className="w-full flex justify-start items-center gap-[10px]">
+              <div className="w-[35px] h-[35px]">
+                <Image
+                  src={abac}
+                  alt="abac-logo"
+                  className="w-full h-full object-contain"
+                />
+              </div>
+              <p>Assumption University of Thailand</p>
             </div>
           </div>
         </div>
