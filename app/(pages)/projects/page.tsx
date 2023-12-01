@@ -22,7 +22,7 @@ const Projects = () => {
       name: "Spatial Design",
       category: ["UI","UX"],
       description: "Embracing the newly trending technology. Designed a spatial UI design for a school project to showcase the tech skill of the students using Augmented Reality Technology.",
-      link: "/projects"
+      link: "/spatial-design"
     },
     {
       name: "iLearn",
