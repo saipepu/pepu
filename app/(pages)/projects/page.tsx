@@ -25,6 +25,12 @@ const Projects = () => {
       link: "/spatial-design"
     },
     {
+      name: "Foodify",
+      category: ["UI","UX","Project Management", "Research"],
+      description: "Foodify is a digital menu app that provide seamless experience in a restaurant by allowing customers to order food from their mobile devices. ",
+      link: "/foodify"
+    },
+    {
       name: "iLearn",
       category: ["UI","UX","Swift"],
       description: "This project is for a Swift Hackathon held by the D*Code which is the Main coding club in my University.The purpose of the Hackathon is to have some hands on Swift Programming Language and iOS development.",
