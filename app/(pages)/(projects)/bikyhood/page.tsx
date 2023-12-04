@@ -64,6 +64,13 @@ const Bikyhood = () => {
               />
             </div>
             <p>It is important to start with the minimal features that are just enough to complete the app idea and get the user achieve their goal.</p>
+            <div className="w-full h-[400px] bg-white">
+              <Image
+                src={userflow}
+                alt="judgehub-1-image"
+                className="w-full h-full object-contain"
+              />
+            </div>
             <p>After the wireframing, I created components and make them prototypable. Relying on components design in Figma can make the design more consistent and maintainable.</p>
             <p>With the predefine and prototypable components, we can build the UI screen much much faster and better. It is easier to customzie to align with the company branding in any time.</p>
             <p>First of all we take Survey from the users.<br/>So that we can learn more about their interests and provide them with the best experience by showing the best matches for them.</p>
