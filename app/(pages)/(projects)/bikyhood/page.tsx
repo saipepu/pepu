@@ -42,7 +42,7 @@ const Bikyhood = () => {
             <div className="w-full h-[400px] bg-white">
               <Image
                 src={thumbnail_1}
-                alt="judgehub-1-image"
+                alt="thumbnail_1"
                 className="w-full h-full object-contain"
               />
             </div>
@@ -51,7 +51,7 @@ const Bikyhood = () => {
             <div className="w-full h-[400px] bg-white">
               <Image
                 src={thumbnail_2}
-                alt="judgehub-1-image"
+                alt="thumbnail_2"
                 className="w-full h-full object-contain"
               />
             </div>
@@ -59,7 +59,7 @@ const Bikyhood = () => {
             <div className="w-full h-[400px] bg-white">
               <Image
                 src={userflow}
-                alt="judgehub-1-image"
+                alt="userflow"
                 className="w-full h-full object-contain"
               />
             </div>
@@ -67,7 +67,7 @@ const Bikyhood = () => {
             <div className="w-full h-[400px] bg-white">
               <Image
                 src={wireframe}
-                alt="judgehub-1-image"
+                alt="wireframe"
                 className="w-full h-full object-contain"
               />
             </div>
@@ -75,7 +75,7 @@ const Bikyhood = () => {
             <div className="w-full h-[400px] bg-white">
               <Image
                 src={component}
-                alt="judgehub-1-image"
+                alt="component"
                 className="w-full h-full object-contain"
               />
             </div>
@@ -84,14 +84,14 @@ const Bikyhood = () => {
               <div className="w-full h-full">
                 <Image
                   src={tile_mockup}
-                  alt="spatial-design-v-2-image"
+                  alt="tile_mockup"
                   className="w-full h-full object-cover"
                 />
               </div>
               <div className="w-full h-full">
                 <Image
                   src={wireframe_mockup}
-                  alt="spatial-design-v-2-image"
+                  alt="wireframe_mockup"
                   className="w-full h-full object-cover"
                 />
               </div>
@@ -100,7 +100,7 @@ const Bikyhood = () => {
             <div className="w-full h-[400px] bg-white">
               <Image
                 src={survery}
-                alt="judgehub-1-image"
+                alt="survery"
                 className="w-full h-full object-contain"
               />
             </div>
