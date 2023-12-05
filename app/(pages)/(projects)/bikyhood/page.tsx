@@ -36,7 +36,8 @@ const Bikyhood = () => {
           <div className="md:flex-1 w-full">
             <h1 className="text-[56px] font-bold leading-[110%]">Bikyhood</h1>
           </div>
-          <div className="text-[18px] font-[200] overflow-scroll max-h-full w-full md:flex-1 flex flex-col justify-start items-start gap-[10px] md:py-[300px] pb-[50px]">
+          <div className="
+leading-tight text-[18px] font-[200] overflow-scroll max-h-full w-full md:flex-1 flex flex-col justify-start items-start gap-[20px] md:py-[300px] pb-[50px]">
             <p>This is a UI design project that I completed for my friend.</p>
             <p>My friend(Ricky) is a bike enthusiast and he found out that many students like him face the problem of where to find and which bike should they buy for daily commute around the campus.</p>
             <div className="w-full h-[400px] bg-white">

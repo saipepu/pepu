@@ -33,7 +33,8 @@ const Athena = () => {
           <div className="md:flex-1 w-full">
             <h1 className="text-[56px] font-bold leading-[110%]">Athena</h1>
           </div>
-          <div className="text-[18px] font-[200] overflow-scroll max-h-full w-full md:flex-1 flex flex-col justify-start items-start gap-[10px] md:py-[300px] pb-[50px]">
+          <div className="
+leading-tight text-[18px] font-[200] overflow-scroll max-h-full w-full md:flex-1 flex flex-col justify-start items-start gap-[20px] md:py-[300px] pb-[50px]">
             <p>This is Tech Startup Project called ‘Athena’.</p>
             <p>Athena is a learn-to-earn platform that encourage the process of learning by gamification.</p>
             <div className="w-full h-[400px] bg-white">

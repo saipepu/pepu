@@ -34,7 +34,8 @@ const Foodify = () => {
           <div className="md:flex-1 w-full">
             <h1 className="text-[56px] font-bold leading-[110%]">Foodify</h1>
           </div>
-          <div className="text-[18px] font-[200] overflow-scroll max-h-full w-full md:flex-1 flex flex-col justify-start items-start gap-[10px] md:py-[300px] pb-[50px]">
+          <div className="
+leading-tight text-[18px] font-[200] overflow-scroll max-h-full w-full md:flex-1 flex flex-col justify-start items-start gap-[20px] md:py-[300px] pb-[50px]">
             <p>Foodify is a digital menu app for restaurants.</p>
             <div className="w-full h-[300px] bg-white">
               <Image

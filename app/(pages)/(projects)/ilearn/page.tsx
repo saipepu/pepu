@@ -35,7 +35,8 @@ const ILearn = () => {
           <div className="md:flex-1 w-full">
             <h1 className="text-[56px] font-bold leading-[110%]">iLearn</h1>
           </div>
-          <div className="text-[18px] font-[200] overflow-scroll max-h-full w-full md:flex-1 flex flex-col justify-start items-start gap-[10px] md:py-[300px] pb-[50px]">
+          <div className="
+leading-tight text-[18px] font-[200] overflow-scroll max-h-full w-full md:flex-1 flex flex-col justify-start items-start gap-[20px] md:py-[300px] pb-[50px]">
             <p>Introducing to iLearn that bring excitement to the world of education.</p>
             <div className="w-full h-[300px] bg-white">
               <Image
@@ -44,6 +45,8 @@ const ILearn = () => {
                 className="w-full h-full object-cover"
               />
             </div>
+            <p>This all started at a Swift Hackathon hosted by my university's coding club.</p>
+            <p>The challenge was: "How can we make learning more fun and engaging?"</p>
             <div className="w-full h-full bg-white">
               <Image
                 src={event_1}
@@ -51,6 +54,7 @@ const ILearn = () => {
                 className="w-full h-full object-cover"
               />
             </div>
+            <p>My main language is javascript and I mostly do web development and UI Design. <br/> But then, this Swift Hackathon came in, so I took the role to be a UI designer and helped to make sure everything run smoothly by being a project manager.</p>
             <div className="w-full h-[400px] bg-white">
               <Image
                 src={event_2}
@@ -58,6 +62,11 @@ const ILearn = () => {
                 className="w-full h-full object-cover"
               />
             </div>
+            <p>With a tight 27-hour deadline, I took the lead on our project.</p>
+            <p>The initial step involved researching education app ideas and assessing my team's technical capabilities.</p>
+            <p>After a brief 15-minute solo exploration of ideas, we gathered for a brainstorming session to share and discuss our findings.</p>
+            <p>As the project manager, my role was to streamline the concept based on our team's technical strengths.</p>
+            <p>Finally, we set our goal to create “An Educational App about Geography and Country. <br/>Users could engage with articles, embedded YouTube videos, and quizzes, earning points for their performance. These points could then be exchanged for rewards within the app's store.</p>
             <div className="w-full bg-white">
               <Image
                 src={mockup_1}
@@ -65,6 +74,14 @@ const ILearn = () => {
                 className="w-full h-[250px] object-cover"
               />
             </div>
+            <p>In all the features that we discussed and researched, here were the least that we decided to stick with</p>
+            <ol className="list-decimal ml-[20px]">
+              <li>home page with course lists</li>
+              <li>course detail page</li>
+              <li>quiz page</li>
+              <li>user profile page</li>
+              <li>item store</li>
+            </ol>
             <div className="w-full bg-white">
               <Image
                 src={store}
@@ -79,6 +96,7 @@ const ILearn = () => {
                 className="w-full h-full object-cover"
               />
             </div>
+            <p>As a UI designer, in record time, I tried my best to come up with unique colors and prototype-ready components to make the design more consistent and professional.<br />Developing multi-stage components not only enhanced efficiency but also accelerated the implementation process for our developers as they built the app.</p>
             <div className="w-full min-h-[200px] h-[250px] py-[10px] flex flex-row justify-start items-start gap-[10px]">
               <div className="w-full h-full bg-white">
                 <Image
@@ -95,6 +113,7 @@ const ILearn = () => {
                 />
               </div>
             </div>
+            <p>I discovered that ‘Creativity is basically connecting the dots’. By referencing different designs from different designers, I could finished the design much much faster.</p>
             <div className="w-full h-full bg-white">
               <Image
                 src={event_3}
@@ -102,6 +121,7 @@ const ILearn = () => {
                 className="w-full h-full object-cover"
               />
             </div>
+            <p>This Hackathon was a journey packed with inspiration, collaboration, and the thrill of pushing boundaries. It was worth every moment and more!</p>
             <div className="w-full h-[400px] bg-white">
               <Image
                 src={event_4}
@@ -109,6 +129,7 @@ const ILearn = () => {
                 className="w-full h-full object-cover"
               />
             </div>
+            <p>I got inspired by how different people could come up with different ideas in such a little amount of time.</p>
             <div className="w-full h-full bg-white">
               <Image
                 src={group_pic}
