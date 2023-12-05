@@ -58,7 +58,7 @@ const Bikyhood = () => {
             <p>This is similar to Facebook Marketplace but specifically for Bike. The project was initially only targeted people around the hood, so I named it ‘Bikyhood’.</p>
             <div className="w-full h-[400px] bg-white">
               <Image
-                src={thumbnail_1}
+                src={userflow}
                 alt="judgehub-1-image"
                 className="w-full h-full object-contain"
               />
@@ -66,18 +66,94 @@ const Bikyhood = () => {
             <p>It is important to start with the minimal features that are just enough to complete the app idea and get the user achieve their goal.</p>
             <div className="w-full h-[400px] bg-white">
               <Image
-                src={userflow}
+                src={wireframe}
                 alt="judgehub-1-image"
                 className="w-full h-full object-contain"
               />
             </div>
             <p>After the wireframing, I created components and make them prototypable. Relying on components design in Figma can make the design more consistent and maintainable.</p>
+            <div className="w-full h-[400px] bg-white">
+              <Image
+                src={component}
+                alt="judgehub-1-image"
+                className="w-full h-full object-contain"
+              />
+            </div>
             <p>With the predefine and prototypable components, we can build the UI screen much much faster and better. It is easier to customzie to align with the company branding in any time.</p>
+            <div className="w-full min-h-[250px] h-[250px] py-[10px] flex flex-row justify-start items-start gap-[10px]">
+              <div className="w-full h-full">
+                <Image
+                  src={tile_mockup}
+                  alt="spatial-design-v-2-image"
+                  className="w-full h-full object-cover"
+                />
+              </div>
+              <div className="w-full h-full">
+                <Image
+                  src={wireframe_mockup}
+                  alt="spatial-design-v-2-image"
+                  className="w-full h-full object-cover"
+                />
+              </div>
+            </div>
             <p>First of all we take Survey from the users.<br/>So that we can learn more about their interests and provide them with the best experience by showing the best matches for them.</p>
+            <div className="w-full h-[400px] bg-white">
+              <Image
+                src={survery}
+                alt="judgehub-1-image"
+                className="w-full h-full object-contain"
+              />
+            </div>
             <p>Being able to search by the nearby location and Filter through various options for their tastes.</p>
+            <div className="w-full h-[400px] bg-white">
+              <Image
+                src={marketplace}
+                alt="marketplace"
+                className="w-full h-full object-contain"
+              />
+            </div>
             <p>A Vehicle detail screen that shows not only different images of the bike and conditions but also the contact of the seller so that users can contact them right away from our platform or through social connections if they are interested.</p>
+            <div className="w-full h-[400px] bg-white">
+              <Image
+                src={bike_detail}
+                alt="bike_detail"
+                className="w-full h-full object-contain"
+              />
+            </div>
             <p>The user profile that has a collection tab showing different vehicles he/she is selling, the review tab displaying past customers’ feedback, a photo(album) tab show casing his/her photos of bike collections.</p>
+            <div className="w-full h-[400px] bg-white">
+              <Image
+                src={seller_profile}
+                alt="seller_profile"
+                className="w-full h-full object-contain"
+              />
+            </div>
             <p>As I have created all the features for the MVP version, I ought to create a Logo and Export the Color Palette as well so that they could be used for branding and marketing in the future.</p>
+            <div className="w-full h-fit py-[10px] flex flex-row justify-start items-start gap-[10px]">
+              <div className="w-full h-full">
+                <Image
+                  src={logo}
+                  alt="logo"
+                  className="w-full h-full object-cover"
+                />
+              </div>
+              <div className="w-full h-full flex flex-col justify-between items-start gap-[10px]">
+                <div className="w-full flex-1">
+                  <Image
+                    src={color}
+                    alt="color"
+                    className="w-full h-full object-contain"
+                  />
+                </div>
+                <div className="w-full flex-1">
+                  <Image
+                    src={logo_mockup}
+                    alt="logo_mockup"
+                    className="w-full h-full object-contain"
+                  />
+                </div>
+              </div>
+            </div>
             <div className="w-full flex-1 flex flex-col justify-start items-start gap-[10px] mt-[10px]">
               <p className="font-bold">Role 👨🏻‍💻</p>
               <div className="w-full flex flex-col justify-start items-start">
