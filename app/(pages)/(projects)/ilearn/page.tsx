@@ -13,7 +13,7 @@ import group_pic from '../../../../public/ilearn/group-pic.png'
 import component from '../../../../public/ilearn/component.png'
 import color from '../../../../public/ilearn/color.png'
 import store from '../../../../public/ilearn/store.png'
-
+import demo_gif from './GeoQuiz_compress.gif'
 
 import React from 'react'
 import Image from 'next/image';
@@ -135,6 +135,13 @@ leading-tight text-[18px] font-[200] overflow-scroll max-h-full w-full md:flex-1
                 src={group_pic}
                 alt="judgehub-1-image"
                 className="w-full h-full object-cover"
+              />
+            </div>
+            <div className="w-full h-[300px] bg-gray-200">
+              <Image
+                src={demo_gif}
+                alt="judgehub-1-image"
+                className="w-full h-full object-contain"
               />
             </div>
             <div className="w-full flex-1 flex flex-col justify-start items-start gap-[10px] mt-[10px]">
