@@ -62,7 +62,7 @@ const SpatialDesign = () => {
               <Image
                 src={immersive}
                 alt="judgehub-1-image"
-                className="w-full h-full object-cover"
+                className="w-full object-cover"
               />
             </div>
             <div className="w-full h-[600px] bg-white">
