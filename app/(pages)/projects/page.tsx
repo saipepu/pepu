@@ -42,6 +42,12 @@ const Projects = () => {
       description: "This project is for a Swift Hackathon held by the D*Code which is the Main coding club in my University.The purpose of the Hackathon is to have some hands on Swift Programming Language and iOS development.",
       link: "/ilearn"
     },
+    {
+      name: "Ecotec",
+      category: ["UI","UX","Frontend","Backend"],
+      description: "Ecotec is a sustainable activity encouraging app that promotes environmental friendly actions. This project opened up a rare opportunity to experience my first national hackathon (HackaThailand) and ranked the 5th Place in the Final Stage.",
+      link: "/ecotec"
+    },
   ]
 
   return (
