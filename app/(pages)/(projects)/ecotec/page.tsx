@@ -1,12 +1,6 @@
-"use client";
-
 import React from 'react'
 import Image from 'next/image';
-import { useRouter } from 'next/navigation'
-import backLeft from '../../../../public/assets/icons/chevron-left.png'
 import thumbnail from '../../../../public/ecotec/thumbnail.png'
-import mockup_1 from '../../../../public/ecotec/mockup-1.png'
-import mockup_2 from '../../../../public/ecotec/mockup-2.png'
 import semifinal_ranks from '../../../../public/ecotec/semi-final-ranks.png'
 import team_1 from '../../../../public/ecotec/team-1.png'
 import team_2 from '../../../../public/ecotec/team-2.png'
@@ -25,21 +19,13 @@ import showcase_4 from '../../../../public/ecotec/showcase-4.png'
 import color from '../../../../public/ecotec/color.png'
 
 const Ecotec = () => {
-  const router = useRouter();
 
   return (
-    <div className="h-full w-full pt-[100px]">
+    <div className="h-full w-full pt-[90px]">
       <div className="h-full w-full flex flex-col justify-start items-center">
-        <div className="w-full px-[16px] md:px-[50px]">
-          <div
-            onClick={router.back}
-            className="w-[35px] h-[35px] flex justify-center items-center bg-gray-600 rounded-lg cursor-pointer hover:bg-gray-400">
-            <Image src={backLeft} alt="left-icon"/>
-          </div>
-        </div>
         <div className="w-full overflow-hidden flex flex-col md:flex-row justify-center items-start px-[16px] md:px-[50px] gap-[10px]">
           <div className="md:flex-1 w-full">
-            <h1 className="text-[56px] font-bold leading-[110%]">iLearn</h1>
+            <h1 className="text-[56px] font-bold leading-[110%]">Ecotec</h1>
           </div>
           <div className="
 leading-tight text-[18px] font-[200] overflow-scroll max-h-full w-full md:flex-1 flex flex-col justify-start items-start gap-[20px] md:py-[300px] pb-[50px]">
@@ -64,7 +50,7 @@ leading-tight text-[18px] font-[200] overflow-scroll max-h-full w-full md:flex-1
             <div className="w-full h-[300px] py-[10px] flex flex-row justify-start items-start gap-[10px]">
               <div className="w-full h-full flex-1">
                 <p>Every time, we met, we did 2 things.</p>
-                <ol className="list-decimal ml-[20px]">
+                <ol className="list-decimal md:ml-[20px] ml-[35px]">
                   <li>Sharing what we have learn during the time and take notes from others.</li>
                   <li>Narrowing down and cutting out some of the ideas to make our product as lean and unique as possible.</li>
                 </ol>
@@ -94,7 +80,7 @@ leading-tight text-[18px] font-[200] overflow-scroll max-h-full w-full md:flex-1
               />
             </div>
             <p>For our Semi-Final soft pitching, we came up with 4 main features as MVP version.</p>
-            <ol className="list-decimal ml-[20px]">
+            <ol className="list-decimal md:ml-[20px] ml-[35px]">
               <li>Order Food</li>
               <li>Check out (self pickup)</li>
               <li>Get Points</li>
@@ -107,7 +93,7 @@ leading-tight text-[18px] font-[200] overflow-scroll max-h-full w-full md:flex-1
                 className="w-full h-full object-cover"
               />
             </div>
-            <div className="w-full h-[300px] py-[10px] flex flex-row justify-start items-start gap-[10px]">
+            <div className="w-full h-[300px] py-[10px] flex flex-row justify-start items-start gap-[2px]">
               <div className="w-full h-full">
                 <Image
                   src={showcase_3}
@@ -123,28 +109,24 @@ leading-tight text-[18px] font-[200] overflow-scroll max-h-full w-full md:flex-1
                 />
               </div>
             </div>
-            <div className="w-full h-[400px]">
+            <div className="w-full">
               <Image
                 src={color}
                 alt="judgehub-1-image"
-                className="w-full h-full object-cover"
+                className="w-full h-full object-contain"
               />
             </div>
-            <div className="w-full h-[300px] py-[10px] flex flex-row justify-start items-start gap-[10px]">
-              <div className="w-full h-full">
-                <p>With a great effort from our team (Starter), we ranked 1st place out of 20 teams in the Semif-Final</p>
-              </div>
-              <div className="w-full h-full">
-                <Image
-                  src={semifinal_ranks}
-                  alt="spatial-design-v-2-2s-image"
-                  className="w-full h-full object-cover"
-                />
-              </div>
+            <p>With a great effort from our team (Starter), we ranked 1st place out of 20 teams in the Semif-Final</p>
+            <div className="w-full">
+              <Image
+                src={semifinal_ranks}
+                alt="spatial-design-v-2-2s-image"
+                className="w-full object-contain"
+              />
             </div>
             <p>That was the start of our journey to the Final.</p>
-            <div className="w-full min-h-[200px] h-[250px] py-[10px] flex flex-row justify-start items-start gap-[10px]">
-              <div className="w-[25%] h-full">
+            <div className="w-full min-h-[200px] h-[250px] py-[10px] flex flex-row justify-start items-start gap-[2px]">
+              <div className="w-[35%] h-full">
                 <Image
                   src={solo_1}
                   alt="spatial-design-v-1-1-image"
@@ -161,7 +143,7 @@ leading-tight text-[18px] font-[200] overflow-scroll max-h-full w-full md:flex-1
             </div>
             <p>This event was full of new experiment for me. When I was from Myanmar, and I never had a chance to participate in such an exciting competition.</p>
             <p>With the help of my Thai Friends, I was able to experience my first Hackathon and finally competing in the final stage.</p>
-            <div className="w-full h-[300px] py-[10px] flex flex-row justify-start items-start gap-[10px]">
+            <div className="w-full h-[300px] py-[10px] flex flex-row justify-start items-start gap-[2px]">
               <div className="w-full h-full bg-white">
                 <Image
                   src={team_2}
@@ -169,7 +151,7 @@ leading-tight text-[18px] font-[200] overflow-scroll max-h-full w-full md:flex-1
                   className="w-full h-full object-cover"
                 />
               </div>
-              <div className="w-[25%] h-full bg-white">
+              <div className="w-[35%] h-full bg-white">
                 <Image
                   src={solo_2}
                   alt="spatial-design-v-2-2s-image"

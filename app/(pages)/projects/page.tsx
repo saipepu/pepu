@@ -60,10 +60,10 @@ const Projects = () => {
           <Link href="/projects">LINKEDIN</Link>
         </div>
       </div>
-      <div className="md:max-h-full w-full md:flex-1 flex flex-col justify-start items-start gap-[10px] overflow-scroll md:py-[300px]">
+      <div className="md:max-h-full w-full md:flex-1 flex flex-col justify-start items-start gap-[2px] overflow-scroll md:py-[300px]">
         {projectList?.map((item, index) => {
           return(
-            <div className="w-full flex bg-white">
+            <div className="w-full flex bg-white rounded-[30px]">
               <div className="w-full text-black flex flex-col justify-start items-center px-[10px] py-[24px]">
                 <div className="w-full flex flex-col justify-start items-start">
                   <p className="text-[14px] font-[600]">{index+1}</p>

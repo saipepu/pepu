@@ -1,5 +1,3 @@
-"use client";
-
 import React from 'react'
 import thumbnail from '../../../../public/athena/Thumbnail.png'
 import leaderboard from '../../../../public/athena/leaderboard.png'
@@ -15,20 +13,12 @@ import event_1 from '../../../../public/athena/event-1.png'
 import event_2 from '../../../../public/athena/event-2.png'
 import { useRouter } from 'next/navigation';
 import Image from 'next/image';
-import backLeft from '../../../../public/assets/icons/chevron-left.png'
 
 const Athena = () => {
-  const router = useRouter()
+
   return (
-    <div className="h-full w-full pt-[100px]">
+    <div className="h-full w-full pt-[90px]">
       <div className="h-full w-full flex flex-col justify-start items-center">
-        <div className="w-full px-[16px] md:px-[50px]">
-          <div
-            onClick={router.back}
-            className="w-[35px] h-[35px] flex justify-center items-center bg-gray-600 rounded-lg cursor-pointer hover:bg-gray-400">
-            <Image src={backLeft} alt="left-icon"/>
-          </div>
-        </div>
         <div className="w-full overflow-hidden flex flex-col md:flex-row justify-center items-start px-[16px] md:px-[50px] gap-[10px]">
           <div className="md:flex-1 w-full">
             <h1 className="text-[56px] font-bold leading-[110%]">Athena</h1>

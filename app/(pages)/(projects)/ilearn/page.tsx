@@ -1,7 +1,3 @@
-"use client";
-
-import { useRouter } from 'next/navigation';
-import backLeft from '../../../../public/assets/icons/chevron-left.png'
 import thumbnail from '../../../../public/ilearn/thumbnail.png'
 import event_1 from '../../../../public/ilearn/event-1.png'
 import event_2 from '../../../../public/ilearn/event-2.png'
@@ -19,18 +15,10 @@ import React from 'react'
 import Image from 'next/image';
 
 const ILearn = () => {
-  const router = useRouter()
 
   return (
-    <div className="h-full w-full pt-[100px]">
+    <div className="h-full w-full pt-[90px]">
       <div className="h-full w-full flex flex-col justify-start items-center">
-        <div className="w-full px-[16px] md:px-[50px]">
-          <div
-            onClick={router.back}
-            className="w-[35px] h-[35px] flex justify-center items-center bg-gray-600 rounded-lg cursor-pointer hover:bg-gray-400">
-            <Image src={backLeft} alt="left-icon"/>
-          </div>
-        </div>
         <div className="w-full overflow-hidden flex flex-col md:flex-row justify-center items-start px-[16px] md:px-[50px] gap-[10px]">
           <div className="md:flex-1 w-full">
             <h1 className="text-[56px] font-bold leading-[110%]">iLearn</h1>
@@ -51,11 +39,11 @@ leading-tight text-[18px] font-[200] overflow-scroll max-h-full w-full md:flex-1
               <Image
                 src={event_1}
                 alt="event_1"
-                className="w-full h-full object-cover"
+                className="w-full h-full object-contain"
               />
             </div>
             <p>My main language is javascript and I mostly do web development and UI Design. <br/> But then, this Swift Hackathon came in, so I took the role to be a UI designer and helped to make sure everything run smoothly by being a project manager.</p>
-            <div className="w-full h-[400px] bg-white">
+            <div className="w-full h-[200px] bg-white">
               <Image
                 src={event_2}
                 alt="event_2"
@@ -66,7 +54,7 @@ leading-tight text-[18px] font-[200] overflow-scroll max-h-full w-full md:flex-1
             <p>The initial step involved researching education app ideas and assessing my team's technical capabilities.</p>
             <p>After a brief 15-minute solo exploration of ideas, we gathered for a brainstorming session to share and discuss our findings.</p>
             <p>As the project manager, my role was to streamline the concept based on our team's technical strengths.</p>
-            <p>Finally, we set our goal to create “An Educational App about Geography and Country. <br/>Users could engage with articles, embedded YouTube videos, and quizzes, earning points for their performance. These points could then be exchanged for rewards within the app's store.</p>
+            <p>Finally, we set our goal to create “An Educational App about Geography and Country. Users could engage with articles, embedded YouTube videos, and quizzes, earning points for their performance. These points could then be exchanged for rewards within the app's store.</p>
             <div className="w-full bg-white">
               <Image
                 src={mockup_1}
@@ -75,7 +63,7 @@ leading-tight text-[18px] font-[200] overflow-scroll max-h-full w-full md:flex-1
               />
             </div>
             <p>In all the features that we discussed and researched, here were the least that we decided to stick with</p>
-            <ol className="list-decimal ml-[20px]">
+            <ol className="list-decimal md:ml-[20px] ml-[35px]">
               <li>home page with course lists</li>
               <li>course detail page</li>
               <li>quiz page</li>
@@ -86,18 +74,18 @@ leading-tight text-[18px] font-[200] overflow-scroll max-h-full w-full md:flex-1
               <Image
                 src={store}
                 alt="judgehub-1-image"
-                className="w-full h-[300px] object-contain"
+                className="w-full object-contain"
               />
             </div>
-            <div className="w-full bg-white">
+            <div className="w-full md:h-[200px] bg-white">
               <Image
                 src={mockup_2}
                 alt="judgehub-1-image"
-                className="w-full h-full object-cover"
+                className="w-full h-full object-contain"
               />
             </div>
             <p>As a UI designer, in record time, I tried my best to come up with unique colors and prototype-ready components to make the design more consistent and professional.<br />Developing multi-stage components not only enhanced efficiency but also accelerated the implementation process for our developers as they built the app.</p>
-            <div className="w-full min-h-[200px] h-[250px] py-[10px] flex flex-row justify-start items-start gap-[10px]">
+            <div className="w-full h-[180px] py-[10px] flex flex-row justify-start items-start gap-[10px]">
               <div className="w-full h-full bg-white">
                 <Image
                   src={component}
@@ -114,7 +102,7 @@ leading-tight text-[18px] font-[200] overflow-scroll max-h-full w-full md:flex-1
               </div>
             </div>
             <p>I discovered that ‘Creativity is basically connecting the dots’. By referencing different designs from different designers, I could finished the design much much faster.</p>
-            <div className="w-full h-full bg-white">
+            <div className="w-full h-[180px] bg-white">
               <Image
                 src={event_3}
                 alt="judgehub-1-image"
@@ -122,7 +110,7 @@ leading-tight text-[18px] font-[200] overflow-scroll max-h-full w-full md:flex-1
               />
             </div>
             <p>This Hackathon was a journey packed with inspiration, collaboration, and the thrill of pushing boundaries. It was worth every moment and more!</p>
-            <div className="w-full h-[400px] bg-white">
+            <div className="w-full h-[180px] bg-white">
               <Image
                 src={event_4}
                 alt="judgehub-1-image"
@@ -130,11 +118,11 @@ leading-tight text-[18px] font-[200] overflow-scroll max-h-full w-full md:flex-1
               />
             </div>
             <p>I got inspired by how different people could come up with different ideas in such a little amount of time.</p>
-            <div className="w-full h-full bg-white">
+            <div className="w-full h-[350px] bg-white">
               <Image
                 src={group_pic}
                 alt="judgehub-1-image"
-                className="w-full h-full object-cover"
+                className="w-full object-contain"
               />
             </div>
             <div className="w-full h-[300px] bg-gray-200">

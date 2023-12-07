@@ -1,5 +1,3 @@
-"use client"
-
 import Image from "next/image";
 import abac from '@/public/logo-au-white.png'
 import thumbnail from '@/public/judgehub/judgehub-thumbnail.png'
@@ -9,21 +7,12 @@ import event1 from '@/public/judgehub/event-1.png'
 import event2 from '@/public/judgehub/event-2.png'
 import event3 from '@/public/judgehub/event-3.png'
 import backLeft from '../../../../public/assets/icons/chevron-left.png'
-import { useRouter } from "next/navigation";
 
 const Judgehub = () => {
-  const router = useRouter();
 
   return (
-    <div className="h-full w-full pt-[100px]">
+    <div className="h-full w-full pt-[90px]">
       <div className="h-full w-full flex flex-col justify-start items-center">
-        <div className="w-full px-[16px] md:px-[50px]">
-          <div
-            onClick={router.back}
-            className="w-[35px] h-[35px] flex justify-center items-center bg-gray-600 rounded-lg cursor-pointer hover:bg-gray-400">
-            <Image src={backLeft} alt="left-icon"/>
-          </div>
-        </div>
         <div className="w-full overflow-hidden flex flex-col md:flex-row justify-center items-start px-[16px] md:px-[50px] gap-[10px]">
           <div className="md:flex-1 w-full">
             <h1 className="text-[56px] font-bold leading-[110%]">Judgehub</h1>
@@ -31,24 +20,24 @@ const Judgehub = () => {
           <div className="
 leading-tight text-[18px] font-[200] overflow-scroll max-h-full w-full md:flex-1 flex flex-col justify-start items-start gap-[20px] md:py-[300px] pb-[50px]">
             <p>A real-time Leaderboard for grading StartUp Pitching Competition.</p>
-            <div className="w-full h-[300px] bg-white">
+            <div className="w-full bg-white">
               <Image
                 src={thumbnail}
                 alt="judgehub-1-image"
-                className="w-full h-full object-cover"
+                className="w-full h-full object-contain"
               />
             </div>
             <p>The pain point is that preparing the excel sheet to grade the competing team is time consuming.</p>
             <p className="mt-[12px]">My professor seeks a dedicated scoring system and ranking leaderboard tailored to his preferences, enabling seamless integration across all future events. The objective is to eliminate the tedious reliance on Excel sheets and provide a cohesive, customizable solution for efficient scoring system.</p>
-            <div className="w-full min-h-[250px] h-[250px] py-[10px] flex flex-row justify-start items-start gap-[10px]">
-              <div className="w-full h-full bg-white">
+            <div className="w-full h-[200px] py-[10px] flex flex-row justify-start items-start gap-[2px]">
+              <div className="w-full h-full">
                 <Image
                   src={laptopMockup}
                   alt="judgehub-1-image"
                   className="w-full h-full object-cover"
                 />
               </div>
-              <div className="w-full h-full bg-white">
+              <div className="w-full h-full">
                 <Image
                   src={phoneMockup}
                   alt="judgehub-1-image"
@@ -57,7 +46,7 @@ leading-tight text-[18px] font-[200] overflow-scroll max-h-full w-full md:flex-1
               </div>
             </div>
             <p>The goal is to implement a customized scoring system and ranking leaderboard to replace Excel sheets, streamlining competition management for judges and ensuring a consistent, efficient process for all future events.</p>
-            <div className="w-full min-h-[250px] h-[250px] py-[10px] flex flex-row justify-start items-start gap-[10px]">
+            <div className="w-full min-h-[250px] h-[250px] py-[10px] flex flex-row justify-start items-start gap-[2px]">
               <div className="w-full h-full bg-white">
                 <Image
                   src={event1}

@@ -1,7 +1,4 @@
-"use client";
-
 import Image from 'next/image'
-import { useRouter } from 'next/navigation'
 import React from 'react'
 import backLeft from '../../../../public/assets/icons/chevron-left.png'
 import thumbnail from '../../../../public/spatial-design/Thumbnail.png'
@@ -15,18 +12,10 @@ import v1_2 from '../../../../public/spatial-design/v1-2.png'
 import abac from '@/public/logo-au-white.png'
 
 const SpatialDesign = () => {
-  const router = useRouter()
 
   return (
-    <div className="h-full w-full pt-[100px]">
+    <div className="h-full w-full pt-[90px]">
       <div className="h-full w-full flex flex-col justify-start items-center">
-        <div className="w-full px-[16px] md:px-[50px]">
-          <div
-            onClick={router.back}
-            className="w-[35px] h-[35px] flex justify-center items-center bg-gray-600 rounded-lg cursor-pointer hover:bg-gray-400">
-            <Image src={backLeft} alt="left-icon"/>
-          </div>
-        </div>
         <div className="w-full overflow-hidden flex flex-col md:flex-row justify-center items-start px-[16px] md:px-[50px] gap-[10px]">
           <div className="md:flex-1 w-full">
             <h1 className="text-[56px] font-bold leading-[110%]">Spatial Design</h1>
@@ -42,19 +31,19 @@ leading-tight text-[18px] font-[200] overflow-scroll max-h-full w-full md:flex-1
               />
             </div>
             <p>The current user experience lacked an efficient solution for students trying to locate or know the status of the professor. There was a need for a information assistance software at the office door that goes beyond traditional methods.</p>
-            <div className="w-full min-h-[250px] h-[250px] py-[10px] flex flex-row justify-start items-start gap-[10px]">
-              <div className="w-full h-full bg-white">
+            <div className="w-full h-[150px] py-[10px] flex flex-row justify-start items-start gap-[2px]">
+              <div className="w-full h-full">
                 <Image
                   src={v1_1}
                   alt="spatial-design-v-1-image"
-                  className="w-full h-full object-cover"
+                  className="w-full h-full object-contain"
                 />
               </div>
-              <div className="w-full h-full bg-white">
+              <div className="w-full h-full">
                 <Image
                   src={v1_2}
                   alt="spatial-design-v-2-image"
-                  className="w-full h-full object-cover"
+                  className="w-full h-full object-contain"
                 />
               </div>
             </div>
