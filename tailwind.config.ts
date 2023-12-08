@@ -12,6 +12,8 @@ const config: Config = {
         'gradient-radial': 'radial-gradient(var(--tw-gradient-stops))',
         'gradient-conic':
           'conic-gradient(from 180deg at 50% 50%, var(--tw-gradient-stops))',
+        // 'coding-bg': "url('./public/assets/coding-bg.png')",
+        // 'uiux-bg': "url('./public/assets/uiux-bg.png')"
       },
       fontFamily: {
         Poppins: ["Poppins", "sans serif"],

@@ -2,6 +2,8 @@ import Image from 'next/image'
 import React from 'react'
 import arrow from '../../../public/assets/icons/arrow.png'
 import arrow_black from '../../../public/assets/icons/arrow_black.png'
+import coding_bg from '../../../public/coding-bg.png'
+import uiux_bg from '../../../public/uiux-bg.png'
 
 const Home = () => {
 
@@ -15,15 +17,18 @@ const Home = () => {
   const highlights = [
     {
       name: "JudgeHub",
-      link: "#"
+      link: "#",
+      type: "Web"
     },
     {
       name: "Athena",
-      link: "#"
+      link: "#",
+      type: "Web"
     },
     {
       name: "Ecotec",
-      link: "#"
+      link: "#",
+      type: "Mobile"
     },
   ]
 
@@ -64,23 +69,66 @@ const Home = () => {
               </div>
             </div>
           </div>
-          <div className="w-full h-[400px] flex justify-start items-start gap-[2px] text-black">
-            <div className="w-full h-full flex flex-col justify-between items-end p-[15px] rounded-[45px] bg-white">
-              <p className="w-full text-[52px] font-[300]">Highlights</p>
-              <div className="">
+          <div className="w-full h-[400px] flex flex-col md:flex-row justify-start items-start gap-[2px] text-black">
+            <div className="w-full min-h-[250px] md:h-full flex flex-col justify-between items-start md:items-end p-[15px] rounded-[45px] bg-white">
+              <p className="w-full text-[32px] md:text-[52px] font-[300]">Highlights</p>
+              <div className="w-full md:w-fit flex flex-col justify-start items-start">
                 {highlights?.map((item, index) => {
                   return (
-                    <div key={index} className="flex">
-                      <p>{index+1}.</p>
-                      {item?.name}
+                    <div key={index} className="w-full text-[24px] md:text-[32px] font-[300] flex justify-start gap-[10px] group cursor-pointer">
+                      <p className='min-w-[25px]'>{index+1}.</p>
+                      <div className="w-full flex justify-between items-end pb-[10px] border-b-black border-b-[1px] gap-[50px]">
+                        <p className="w-full">{item?.name}</p>
+                        <p className="min-w-fit w-[50px] block text-[18px] group-hover:hidden">{item?.type}</p>
+                        <div className="w-[50px] hidden group-hover:block">
+                          <Image
+                            src={arrow_black}
+                            alt="arrow-black"
+                            className='w-[22px] h-[22px] md:w-[28px] md:h-[28px] object-contain'
+                          />
+                        </div>
+                      </div>
                     </div>
                   )
                 })}
               </div>
             </div>
-            <div className="w-full flex flex-col justify-start items-start gap-[2px]">
-              <div className='w-full p-[15px] rounded-[45px] bg-white'>1</div>
-              <div className='w-full p-[15px] rounded-[45px] bg-white'>2</div>
+            <div className="w-full h-full flex flex-col justify-start items-start gap-[2px]">
+              <div className="w-full min-h-[250px] md:min-h-fit md:h-full p-[15px] rounded-[45px] hover:bg-gray-300 group flex justify-start items-start"
+              style={{
+                backgroundImage: `url('/assets/coding-bg.png')`,
+                backgroundRepeat: 'no-repeat',
+                backgroundSize: '100%'
+              }}>
+                <div className='flex justify-center items-center group-hover:bg-white rounded-full px-[10px]'>
+                  <p className='group-hover:block text-[32px] md:text-[52px] font-[300]'>Coding</p>
+                  <div className="w-[28px] h-[28px] md:w-[45px] md:h-[45px] flex justify-center items-center rounded-full overflow-hidden">
+                    <Image
+                      src={arrow_black}
+                      alt="arrow"
+                      className='w-[22px] h-[22px] md:w-[35px] md:h-[35px] group-hover:-rotate-45'
+                    />
+                  </div>
+                </div>
+              </div>
+              <div className='w-full min-h-[250px] md:min-h-fit md:h-full p-[15px] rounded-[45px] bg-white hover:bg-gray-300 group flex justify-start items-start'
+              style={{
+                backgroundImage: `url('/assets/uiux-bg.png')`,
+                backgroundRepeat: 'no-repeat',
+                backgroundPositionY: -100,
+                backgroundSize: '100%'
+              }}>
+                <div className='flex justify-center items-center bg-white rounded-full px-[10px]'>
+                  <p className='group-hover:block text-[32px] md:text-[52px] font-[300]'>UI/UX</p>
+                  <div className="w-[28px] h-[28px] md:w-[45px] md:h-[45px] flex justify-center items-center rounded-full overflow-hidden">
+                    <Image
+                      src={arrow_black}
+                      alt="arrow"
+                      className='w-[22px] h-[22px] md:w-[35px] md:h-[35px] group-hover:-rotate-45'
+                    />
+                  </div>
+                </div>
+              </div>
             </div>
           </div>
         </div>
