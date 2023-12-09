@@ -8,34 +8,48 @@ import uiux_1 from '../../../public/assets/uiux-1.png'
 import uiux_2 from '../../../public/assets/uiux-2.png'
 import uiux_3 from '../../../public/assets/uiux-3.png'
 import uiux_4 from '../../../public/assets/uiux-4.png'
+import Link from 'next/link';
 
 const Home = () => {
 
   const [isUIUXBgHover, setisUIUXBgHover] = useState(false)
   const [isCodingBgHover, setIsCodingBgHover] = useState(false)
+  const [isHighlightHover, setIsHighlightHover] = useState(false)
+  const [highlightThumbnail, setHighlightThumbnail] = useState<Number>()
+  const [mouseX, setMouseX] = useState(0)
+  const [mouseY, setMouseY] = useState(0)
 
   const highlights = [
     {
       name: "JudgeHub",
-      link: "#",
+      link: "judgehub",
       type: "Web"
     },
     {
       name: "Athena",
-      link: "#",
+      link: "athena",
       type: "Web"
     },
     {
       name: "Ecotec",
-      link: "#",
+      link: "ecotec",
       type: "Mobile"
     },
   ]
+  const judgehub = `url('/assets/judgehub.png')`
+  const athena = `url('/assets/athena.png')`
+  const ecotec = `url('/assets/ecotec.png')`
+
+  // window.addEventListener('mousemove', (e) => {
+  //   console.log(e.pageX, e.pageY)
+  //   setMouseX(e.pageX)
+  //   setMouseY(e.pageY)
+  // })
 
   return (
     <main className="h-full bg-[#2d2d2d] overflow-scroll">
       <div className="h-full w-full pt-[80px] flex justify-center items-center">
-        <div className="w-full max-w-[1200px] md:h-full flex flex-col justify-start items-center gap-[2px] px-[10px] md:px-[20px] pb-[10px]">
+        <div className="w-full max-w-[1200px] md:h-full flex flex-col justify-start items-center gap-[2px] px-[10px] md:px-[20px]">
           <div className="pt-[120px] min-h-[50vh] h-full w-full flex flex-col justify-end items-start text-black bg-white rounded-[30px] md:rounded-[40px] overflow-hidden p-[10px]">
             <p className="w-full md:w-[90%] text-[32px] md:text-[52px] font-Inter leading-[110%] tracking-tight font-[300]">I am PePu.
               <span className="
@@ -60,7 +74,7 @@ const Home = () => {
               I build user-friendly websites that boost conversion rates for businesses.
             </p>
             <div className='p-1 pl-4 flex justify-center items-center bg-black text-white rounded-full gap-[10px] group'>
-              <p className="text-[24px] md:text-[32px]">Keep in Touch!</p>
+              <p className="text-[24px] md:text-[32px] font-[300]">Contact Me</p>
               <div className="w-[28px] h-[28px] md:w-[45px] md:h-[45px] bg-white flex justify-center items-center rounded-full overflow-hidden">
                 <Image
                   src={arrow_black}
@@ -71,30 +85,63 @@ const Home = () => {
             </div>
           </div>
           <div className="w-full min-h-[70vh] h-full flex flex-col md:flex-row justify-start items-start gap-[2px] text-black">
-            <div className="w-full min-h-[250px] md:h-full flex flex-col justify-between items-start md:items-end p-[10px] rounded-[30px] md:rounded-[40px] bg-white">
-              <p className='w-full group-hover:block text-[32px] md:text-[52px] font-[300]'>Highlights</p>
-              <div className="w-full md:w-fit flex flex-col justify-start items-start">
-                {highlights?.map((item, index) => {
-                  return (
-                    <div key={index} className="w-full text-[24px] md:text-[32px] font-[300] flex justify-start gap-[10px] group cursor-pointer overflow-hidden">
-                      <p className='min-w-[25px]'>{index+1}.</p>
-                      <div className="w-full flex justify-between items-end pb-[10px] gap-[50px]"
-                       style={index < highlights.length - 1 ? { borderBottomWidth: '1px', borderColor: 'black'} : {}}>
-                        <p className="w-full">{item?.name}</p>
-                        <div className='flex justify-between items-center group-hover:translate-x-[100%] mr-2 duration-[0.8s] ease-in-out'>
-                          <div className="w-[50px] -translate-x-[25px] group-hover:opacity-100 opacity-0 duration-[0.5s] overflow-visible">
-                            <Image
-                              src={arrow_black}
-                              alt="arrow-black"
-                              className='w-[22px] h-[22px] md:w-[25px] md:h-[25px]'
-                            />
+            <div className="w-full h-full flex flex-col justify-start items-start gap-[2px]">
+              <div className="w-full min-h-[250px] md:h-full flex flex-col justify-between items-start md:items-end p-[10px] rounded-[30px] md:rounded-[40px] bg-white">
+                <p className='w-full group-hover:block text-[32px] md:text-[52px] font-[300]'>Highlights</p>
+                <div className="w-full md:w-fit flex flex-col justify-start items-start">
+                  {highlights?.map((item, index) => {
+                    return (
+                      <Link
+                        href={item.link}
+                        key={index}
+                        className="w-full"
+                      >
+                        <div
+                          className="w-full text-[24px] md:text-[32px] font-[300] flex justify-start gap-[10px] group cursor-pointer overflow-hidden"
+                          onMouseMove={() => {
+                            setIsHighlightHover(true)
+                            setHighlightThumbnail(index)
+                          }} onMouseOut={() => setIsHighlightHover(false)}
+                        >
+                          <>
+                          {/* highlight hover effet */}
+                          {/* <div className="absolute w-[120px] h-[120px] duration-0 pointer-events-none border-black border-[0.5px]"
+                            style={{
+                              top: mouseY,
+                              left: mouseX,
+                              opacity: isHighlightHover ? '1' : '0',
+                              transition: 'opacity 0.3s',
+                              backgroundImage: highlightThumbnail == 0 ? judgehub : highlightThumbnail == 1 ? athena : ecotec,
+                              backgroundRepeat: 'no-repeat',
+                              backgroundSize: '150%',
+                              backgroundPosition: '50% 50%'
+                            }}
+                          >
+                          </div> */}
+                          </>
+                          <p className='min-w-[25px]'>{index+1}.</p>
+                          <div className="w-full flex justify-between items-end pb-[10px] gap-[50px]"
+                          style={index < highlights.length - 1 ? { borderBottomWidth: '1px', borderColor: 'black'} : {}}>
+                            <p className="w-full">{item?.name}</p>
+                            <div className='flex justify-between items-center group-hover:translate-x-[100%] mr-2 duration-[0.8s] ease-in-out'>
+                              <p className="min-w-fit -translate-x-[100%] block text-[18px] group-hover:opacity-100 opacity-0">{item?.type}</p>
+                              <div className="w-[50px] duration-[0.5s] overflow-visible">
+                                <Image
+                                  src={arrow_black}
+                                  alt="arrow-black"
+                                  className='w-[22px] h-[22px] md:w-[25px] md:h-[25px]'
+                                />
+                              </div>
+                            </div>
                           </div>
-                          <p className="min-w-fit block text-[18px]">{item?.type}</p>
                         </div>
-                      </div>
-                    </div>
-                  )
-                })}
+                      </Link>
+                    )
+                  })}
+                </div>
+              </div>
+              <div className="w-full h-fit bg-white rounded-[30px] md:rounded-[40px] p-[10px] py-[20px]">
+                <p className="text-[24px] md:text-[32px] font-[300] leading-tight tracking-tight">I was a top-5 finalist in Hackathailand 2023. I have experience working with a couple of start-up teams.</p>
               </div>
             </div>
             <div className="w-full h-full flex flex-col justify-start items-start gap-[2px]">
