@@ -34,9 +34,9 @@ const Home = () => {
 
   return (
     <main className="h-full bg-[#2d2d2d] overflow-scroll">
-      <div className="h-full w-full pt-[80px]">
-        <div className="w-full md:h-full flex flex-col justify-start items-center gap-[2px] px-[10px] md:px-[20px] pb-[10px]">
-          <div className="pt-[120px] h-full w-full flex flex-col justify-end items-start text-black bg-white rounded-[30px] md:rounded-[40px] overflow-hidden p-[10px]">
+      <div className="h-full w-full pt-[80px] flex justify-center items-center">
+        <div className="w-full max-w-[1200px] md:h-full flex flex-col justify-start items-center gap-[2px] px-[10px] md:px-[20px] pb-[10px]">
+          <div className="pt-[120px] min-h-[50vh] h-full w-full flex flex-col justify-end items-start text-black bg-white rounded-[30px] md:rounded-[40px] overflow-hidden p-[10px]">
             <p className="w-full md:w-[90%] text-[32px] md:text-[52px] font-Inter leading-[110%] tracking-tight font-[300]">I am PePu.
               <span className="
                   relative w-[170px] md:w-[250px] inline-flex justify-center items-center 
@@ -70,7 +70,7 @@ const Home = () => {
               </div>
             </div>
           </div>
-          <div className="w-full min-h-[400px] h-full flex flex-col md:flex-row justify-start items-start gap-[2px] text-black">
+          <div className="w-full min-h-[70vh] h-full flex flex-col md:flex-row justify-start items-start gap-[2px] text-black">
             <div className="w-full min-h-[250px] md:h-full flex flex-col justify-between items-start md:items-end p-[10px] rounded-[30px] md:rounded-[40px] bg-white">
               <p className='w-full group-hover:block text-[32px] md:text-[52px] font-[300]'>Highlights</p>
               <div className="w-full md:w-fit flex flex-col justify-start items-start">
@@ -82,11 +82,11 @@ const Home = () => {
                        style={index < highlights.length - 1 ? { borderBottomWidth: '1px', borderColor: 'black'} : {}}>
                         <p className="w-full">{item?.name}</p>
                         <div className='flex justify-between items-center group-hover:translate-x-[100%] mr-2 duration-[0.8s] ease-in-out'>
-                          <div className="w-[50px] -translate-x-[25px] group-hover:opacity-100 opacity-0 duration-[0.5s]">
+                          <div className="w-[50px] -translate-x-[25px] group-hover:opacity-100 opacity-0 duration-[0.5s] overflow-visible">
                             <Image
                               src={arrow_black}
                               alt="arrow-black"
-                              className='w-[22px] h-[22px] md:w-[28px] md:h-[28px] object-contain'
+                              className='w-[22px] h-[22px] md:w-[25px] md:h-[25px]'
                             />
                           </div>
                           <p className="min-w-fit block text-[18px]">{item?.type}</p>
