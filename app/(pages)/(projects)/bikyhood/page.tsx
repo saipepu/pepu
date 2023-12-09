@@ -20,9 +20,9 @@ import color from '../../../../public/bikyhood/color.png'
 const Bikyhood = () => {
 
   return (
-    <div className="h-full w-full pt-[90px]">
+    <div className="h-full w-full pt-[80px]">
       <div className="h-full w-full flex flex-col justify-start items-center">
-        <div className="w-full overflow-hidden flex flex-col md:flex-row justify-center items-start px-[16px] md:px-[50px] gap-[10px]">
+        <div className="w-full overflow-hidden flex flex-col md:flex-row justify-center items-start px-[10px] md:px-[20px] gap-[10px]">
           <div className="md:flex-1 w-full">
             <h1 className="text-[56px] font-bold leading-[110%]">Bikyhood</h1>
           </div>

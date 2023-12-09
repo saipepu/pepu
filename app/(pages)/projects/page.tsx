@@ -51,7 +51,7 @@ const Projects = () => {
   ]
 
   return (
-    <div className="bg-[#2d2d2d] md:h-full px-[16px] md:px-[50px] py-[24px] pt-[100px] flex flex-col md:flex-row justify-center items-start gap-[10px]">
+    <div className="bg-[#2d2d2d] md:h-full px-[10px] md:px-[20px] py-[24px] pt-[100px] flex flex-col md:flex-row justify-center items-start gap-[10px]">
       <div className="md:flex-1 md:h-full flex flex-col justify-between items-start">
         <h1 className="text-[56px] font-bold leading-[110%]">My Frontend Adventures</h1>
         <div className="text-[24px] flex-col justify-end items-start hidden md:flex">
