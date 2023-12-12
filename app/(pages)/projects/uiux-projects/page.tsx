@@ -68,7 +68,7 @@ const page = () => {
           <div className="w-full flex flex-col justify-start items-center gap-[10px] text-black mt-[100px] pb-[50px]">
             {projectList.map((item, index) => {
               return (
-                <div className='w-[300px] md:w-[600px] flex flex-col'>
+                <div className='w-[300px] md:w-[600px] flex flex-col' key={index}>
                   <div className='w-full h-[200px] md:h-[300px] bg-white rounded-[20px] md:rounded-[40px] overflow-hidden'>
                     <Image
                       src={item.image}

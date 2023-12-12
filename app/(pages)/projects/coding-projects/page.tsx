@@ -44,7 +44,7 @@ const page = () => {
     <main className="h-full bg-[#2d2d2d] overflow-scroll">
       <div className="h-full w-full pt-[80px] flex justify-center items-center">
         <div className="w-full max-w-[1200px] md:h-full flex flex-col justify-start items-center gap-[2px] px-[10px] md:px-[20px]">
-          <div className="py-[50px] min-h-[90%] w-full flex flex-col justify-between items-center text-white overflow-hidden border-b-[1px] border-white">
+          <div className="py-[50px] w-full flex flex-col justify-between items-center text-white overflow-hidden border-b-[1px] border-white">
             <div className='text-[18px] md:text-[24px] font-[300] text-center tracking-tighter leading-tight'>
               Hi! I’m Sai PePu, a creative developer based in Thailand,
               <br />looking for new job opportunities as
@@ -68,7 +68,7 @@ const page = () => {
           <div className="w-full flex flex-col justify-start items-center gap-[10px] text-black mt-[100px] pb-[50px]">
             {projectList.map((item, index) => {
               return (
-                <div className='w-[300px] md:w-[600px] flex flex-col'>
+                <div className='w-[300px] md:w-[600px] flex flex-col' key={index}>
                   <div className='w-full h-[200px] md:h-[300px] bg-white rounded-[20px] md:rounded-[40px] overflow-hidden'>
                     <Image
                       src={item.image}
@@ -95,37 +95,3 @@ const page = () => {
 }
 
 export default page
-
-
-// <div className='min-h-[300px] w-full bg-gray-50'>
-// </div>
-{/* <div className='w-full h-full pt-[190px] flex flex-col justify-start items-center bg-[#2d2d2d] text-black'>
-
-<div className="bg-[#ff000050] w-full h-[600px] max-w-[1200px] px-[10px] md:px-[20px] flex flex-col justify-center items-start gap-[10px] overflow-scroll">
-
-  <div className='w-full min-h-full h-full py-[50px] flex flex-col justify-between items-center border-[1px] text-white border-yellow-500 gap-[50px] overflow-hidden'>
-    <div className='text-[18px] md:text-[24px] text-center tracking-tighter leading-tight'>
-      Hi! I’m Sai PePu, a creative developer based in Thailand,
-      <br />looking for new job opportunities as
-      <br />a web designer and a web developer.
-    </div>
-    <div className='text-[18px] md:text-[56px] font-[500] text-center tracking-tighter leading-[100%]'>
-      I craft stunning
-      <br />websites
-      <br />for
-      <br />seamless user
-      <br />experiences.
-    </div>
-    <div className='text-[18px] md:text-[24px] text-center tracking-tighter leading-tight'>
-      "Turning pixels into websites, step by step –
-      <br />where new ideas meet great design, and
-      <br />user experiences go beyond what you'd expect."
-    </div>
-  </div>
-
-  {/* <div className='min-h-[300px] w-full bg-gray-600'>
-  </div> */}
-
-// </div>
-
-// </div> */}
