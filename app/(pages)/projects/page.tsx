@@ -86,7 +86,7 @@ const Projects = () => {
             <Link href="/projects" target="_blank">EMAIL</Link>
             <Link href="/projects">GITHUB</Link>
             <Link href="/projects">LINKEDIN</Link>
-          </div>
+        </div>
       </div>
     </div>
   )

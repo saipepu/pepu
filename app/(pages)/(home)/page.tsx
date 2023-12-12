@@ -141,7 +141,7 @@ const Home = () => {
                 </div>
               </div>
               <div className="w-full h-fit bg-white rounded-[30px] md:rounded-[40px] p-[10px] py-[20px]">
-                <p className="text-[24px] md:text-[32px] font-[300] leading-tight tracking-tight">I was a top-5 finalist in Hackathailand 2023. I have experience working with a couple of start-up teams.</p>
+                <p className="text-[24px] md:text-[28px] font-[300] leading-tight tracking-tight">I was a top-5 finalist in Hackathailand 2023. I have experience working with a couple of start-up teams.</p>
               </div>
             </div>
             <div className="w-full h-full flex flex-col justify-start items-start gap-[2px]">
