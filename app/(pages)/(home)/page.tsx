@@ -144,7 +144,10 @@ const Home = () => {
                 <p className="text-[24px] md:text-[28px] font-[300] leading-tight tracking-tight">I was a top-5 finalist in Hackathailand 2023. I have experience working with a couple of start-up teams.</p>
               </div>
             </div>
-            <div className="w-full h-full flex flex-col justify-start items-start gap-[2px]">
+            <Link
+              className="w-full h-full flex flex-col justify-start items-start gap-[2px]"
+              href={'/projects/coding-projects'}
+            >
               <div className="w-full min-h-[250px] md:min-h-fit md:h-full p-[10px] rounded-[30px] md:rounded-[40px] bg-white hover:bg-gray-300 group flex justify-start items-start ease-in-out duration-[1s]"
               onMouseMove={() => setIsCodingBgHover(true)} onMouseLeave={() => setIsCodingBgHover(false)}
               style={{
@@ -214,7 +217,7 @@ const Home = () => {
                   </div>
                 </div>
               </div>
-            </div>
+            </Link>
           </div>
         </div>
       </div>

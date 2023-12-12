@@ -95,37 +95,3 @@ const page = () => {
 }
 
 export default page
-
-
-// <div className='min-h-[300px] w-full bg-gray-50'>
-// </div>
-{/* <div className='w-full h-full pt-[190px] flex flex-col justify-start items-center bg-[#2d2d2d] text-black'>
-
-<div className="bg-[#ff000050] w-full h-[600px] max-w-[1200px] px-[10px] md:px-[20px] flex flex-col justify-center items-start gap-[10px] overflow-scroll">
-
-  <div className='w-full min-h-full h-full py-[50px] flex flex-col justify-between items-center border-[1px] text-white border-yellow-500 gap-[50px] overflow-hidden'>
-    <div className='text-[18px] md:text-[24px] text-center tracking-tighter leading-tight'>
-      Hi! I’m Sai PePu, a creative developer based in Thailand,
-      <br />looking for new job opportunities as
-      <br />a web designer and a web developer.
-    </div>
-    <div className='text-[18px] md:text-[56px] font-[500] text-center tracking-tighter leading-[100%]'>
-      I craft stunning
-      <br />websites
-      <br />for
-      <br />seamless user
-      <br />experiences.
-    </div>
-    <div className='text-[18px] md:text-[24px] text-center tracking-tighter leading-tight'>
-      "Turning pixels into websites, step by step –
-      <br />where new ideas meet great design, and
-      <br />user experiences go beyond what you'd expect."
-    </div>
-  </div>
-
-  {/* <div className='min-h-[300px] w-full bg-gray-600'>
-  </div> */}
-
-// </div>
-
-// </div> */}
