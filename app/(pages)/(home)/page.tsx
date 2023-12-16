@@ -392,8 +392,8 @@ const Home = () => {
 
           </div>
 
-          <div id="coding" className="w-full flex flex-col justify-start items-center gap-[10px] text-black py-[50px]">
-            <p className='text-white text-[32px] font-[500]'>Projects</p>
+          <div id="coding" className="w-full flex flex-col justify-start items-center gap-[2px] text-black py-[50px]">
+            <p className='text-white text-[32px] font-[500] mb-[20px]'>Projects</p>
             {projectList.map((item, index) => {
               return (
                 <Link
