@@ -83,9 +83,9 @@ const Projects = () => {
           })}
         </div>
         <div className="text-[24px] w-full flex-col justify-end items-start flex md:hidden">
-            <Link href="/projects" target="_blank">EMAIL</Link>
-            <Link href="/projects">GITHUB</Link>
-            <Link href="/projects">LINKEDIN</Link>
+          <Link href="/projects" target="_blank">EMAIL</Link>
+          <Link href="/projects">GITHUB</Link>
+          <Link href="/projects">LINKEDIN</Link>
         </div>
       </div>
     </div>
