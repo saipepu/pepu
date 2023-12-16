@@ -18,8 +18,10 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body className={inter.className}>
-        <Navbar />
-        {children}
+        <main className="h-full bg-[#2d2d2d] overflow-scroll">
+          <Navbar />
+          {children}
+        </main>
       </body>
     </html>
   )

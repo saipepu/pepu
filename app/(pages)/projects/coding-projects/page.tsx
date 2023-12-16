@@ -41,7 +41,7 @@ const page = () => {
   ]
 
   return (
-    <main className="h-full bg-[#2d2d2d] overflow-scroll">
+    <main className="bg-[#2d2d2d] overflow-scroll">
       <div className="h-full w-full pt-[80px] flex justify-center items-center">
         <div className="w-full max-w-[1200px] md:h-full flex flex-col justify-start items-center gap-[2px] px-[10px] md:px-[20px]">
           <div className="py-[50px] w-full flex flex-col justify-between items-center text-white overflow-hidden border-b-[1px] border-white">

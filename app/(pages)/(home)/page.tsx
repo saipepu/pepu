@@ -4,10 +4,7 @@ import Image from 'next/image'
 import React, { useState } from 'react'
 import arrow from '../../../public/assets/icons/arrow.png'
 import arrow_black from '../../../public/assets/icons/arrow_black.png'
-import uiux_1 from '../../../public/assets/uiux-1.png'
-import uiux_2 from '../../../public/assets/uiux-2.png'
-import uiux_3 from '../../../public/assets/uiux-3.png'
-import uiux_4 from '../../../public/assets/uiux-4.png'
+import profile_picture from '../../../public/profile-picture.png'
 import Link from 'next/link';
 
 const Home = () => {
@@ -47,44 +44,55 @@ const Home = () => {
   // })
 
   return (
-    <main className="h-full bg-[#2d2d2d] overflow-scroll">
-      <div className="h-full w-full pt-[80px] flex justify-center items-center">
-        <div className="w-full max-w-[1200px] md:h-full flex flex-col justify-start items-center gap-[2px] px-[10px] md:px-[20px]">
-          <div className="pt-[120px] min-h-[50vh] h-full w-full flex flex-col justify-end items-start text-black bg-white rounded-[30px] md:rounded-[40px] overflow-hidden p-[10px]">
-            <p className="w-full md:w-[90%] text-[32px] md:text-[52px] font-Inter leading-[110%] tracking-tight font-[300]">I am PePu.
-              <span className="
-                  relative w-[170px] md:w-[250px] inline-flex justify-center items-center 
-                  text-[28px] md:text-[42px] rounded-full bg-gray-300
-                  group cursor-pointer
-              ">
-                ABOUT ME
+      <div className="h-full w-full pt-[70px] pb-[10px] flex flex-col justify-start items-center overflow-scroll">
+
+<div className="w-full max-w-[1100px] md:h-full flex flex-col justify-start items-center gap-[2px] px-[10px] md:px-[20px]">
+          <div className="min-h-[50vh] h-full w-full flex flex-col-reverse md:flex-row justify-end md:justify-between items-start gap-[10px] text-black bg-white rounded-[30px] md:rounded-[40px] overflow-hidden p-[10px]">
+
+            <div className="w-full h-full flex flex-col justify-end items-start">
+              <p className="w-full text-[28px] md:text-[42px] font-Inter leading-[110%] tracking-tight font-[300]">I am PePu.
                 <span className="
-                  absolute w-[28px] h-[28px] md:w-[45px] md:h-[45px] inline-flex justify-center items-center
-                  text-[14px] md:text-[20px] left-1 bg-gray-600 rounded-full text-white
-                  group-hover:left-[138px] md:group-hover:left-[200px] duration-[0.8s] ease-out group-hover:rotate-180
+                    relative w-[150px] md:w-[200px] inline-flex justify-center items-center 
+                    text-[24px] md:text-[32px] rounded-full bg-gray-300
+                    group cursor-pointer
                 ">
-                  <span className="group-hover:hidden block">Bio</span>
-                  <Image
-                    src={arrow}
-                    alt="arrow"
-                    className='w-[22px] h-[22px] md:w-[30px] md:h-[30px] rotate-180 hidden group-hover:block'
-                  />
+                  ABOUT ME
+                  <span className="
+                    absolute w-[24px] h-[24px] md:w-[40px] md:h-[40px] inline-flex justify-center items-center
+                    text-[14px] md:text-[20px] left-1 bg-gray-600 rounded-full text-white
+                    group-hover:left-[138px] md:group-hover:left-[155px] duration-[0.8s] ease-out group-hover:rotate-180
+                  ">
+                    <span className="group-hover:hidden block">Bio</span>
+                    <Image
+                      src={arrow}
+                      alt="arrow"
+                      className='w-[22px] h-[22px] md:w-[30px] md:h-[30px] rotate-180 hidden group-hover:block'
+                    />
+                  </span>
                 </span>
-              </span>
-              I build user-friendly websites that boost conversion rates for businesses.
-            </p>
-            <div className='p-1 pl-4 flex justify-center items-center bg-black text-white rounded-full gap-[10px] group'>
-              <p className="text-[24px] md:text-[32px] font-[300]">Contact Me</p>
-              <div className="w-[28px] h-[28px] md:w-[45px] md:h-[45px] bg-white flex justify-center items-center rounded-full overflow-hidden">
-                <Image
-                  src={arrow_black}
-                  alt="arrow"
-                  className='w-[22px] h-[22px] md:w-[30px] md:h-[30px] group-hover:-rotate-45'
-                />
+                I build user-friendly websites that boost conversion rates for businesses.
+              </p>
+              <div className='p-1 pl-4 flex justify-center items-center bg-black text-white rounded-full gap-[10px] group'>
+                <p className="text-[24px] md:text-[28px] font-[300]">Contact Me</p>
+                <div className="w-[28px] h-[28px] md:w-[45px] md:h-[45px] bg-white flex justify-center items-center rounded-full overflow-hidden">
+                  <Image
+                    src={arrow_black}
+                    alt="arrow"
+                    className='w-[22px] h-[22px] md:w-[28px] md:h-[28px] group-hover:-rotate-45'
+                  />
+                </div>
               </div>
             </div>
+            <div className="w-full md:w-[40%] h-[400px] md:h-full">
+              <Image
+                src={profile_picture}
+                alt="profile picture"
+                className='w-full h-full object-cover rounded-[30px]'
+              />
+            </div>
+
           </div>
-          <div className="w-full min-h-[70vh] h-full flex flex-col md:flex-row justify-start items-start gap-[2px] text-black">
+          <div className="w-full h-full flex flex-col md:flex-row justify-start items-start gap-[2px] text-black">
             <div className="w-full h-full flex flex-col justify-start items-start gap-[2px]">
               <div className="w-full min-h-[250px] md:h-full flex flex-col justify-between items-start md:items-end p-[10px] rounded-[30px] md:rounded-[40px] bg-white">
                 <p className='w-full group-hover:block text-[32px] md:text-[52px] font-[300]'>Highlights</p>
@@ -220,8 +228,8 @@ const Home = () => {
             </Link>
           </div>
         </div>
+        
       </div>
-    </main>
   )
 }
 
