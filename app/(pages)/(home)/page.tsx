@@ -53,7 +53,7 @@ const Home = () => {
       image: judgehubTh
     },
     {
-      name: "Notion",
+      name: "Notion-Clone",
       category: ["UI","UX","Frontend","Backend"],
       description: "Ecotec is a sustainable activity encouraging app that promotes environmental friendly actions. This project opened up a rare opportunity to experience my first national hackathon (HackaThailand) and ranked the 5th Place in the Final Stage.",
       link: "/ecotec",
@@ -72,7 +72,12 @@ const Home = () => {
   const athena = `url('/assets/athena.png')`
   const ecotec = `url('/assets/ecotec.png')`
 
+  function lerp(start: number, end: number, t: number): number {
+    return start * (1 - t) + end * t;
+  }
+
   useEffect(() => {
+
     let container = document.getElementById('container')
     let bio = document.getElementById('bio')
     let object1 = document.getElementById('object1')
@@ -85,10 +90,10 @@ const Home = () => {
         let top = bio?.getBoundingClientRect().top ? bio?.getBoundingClientRect().top : 0
         console.log(top)
         if(object1 && object2 && object3 && object4 && top != 0){
-            object1.style.top = `${1 * top -50}px`
-            object2.style.top = `${0.5 * top + 200}px`
-            object3.style.top = `${2.5 * top + 500}px`
-            object4.style.top = `${0.3 * top + 300}px`
+            object1.style.top = `${1 * top + 400}px`
+            object2.style.top = `${0.8 * top + 900}px`
+            object3.style.top = `${0.3 * top + 700}px`
+            object4.style.top = `${1.2 * top + 500}px`
             // object1.style.transform = `translateY(${1.5 * top }px)`
             // object2.style.transform = `translateY(${0.5 * top }px)`
             // object3.style.transform = `translateY(${2.5 * top }px)`
@@ -274,7 +279,7 @@ const Home = () => {
                     }}>
                   </div>
                 </div>
-                <div className='z-[9999] flex justify-center items-center bg-white rounded-full px-[10px]'>
+                <div className='z-[10] flex justify-center items-center bg-white rounded-full px-[10px]'>
                   <p className='group-hover:block text-[32px] md:text-[52px] font-[300] cursor-pointer'>UI/UX</p>
                   <div className="w-[28px] h-[28px] md:w-[45px] md:h-[45px] flex justify-center items-center rounded-full overflow-hidden">
                     <Image
@@ -288,31 +293,31 @@ const Home = () => {
             </Link>
           </div>
 
-          <div id="bio" className="relative min-h-[90vh] md:my-[50px] my-[100px] w-full flex flex-col justify-between items-center text-white border-b-[1px] border-white overflow-visible">
+          <div id="bio" className="relative min-h-[90vh] md:my-[50px] my-[100px] w-full flex flex-col justify-between items-center text-white border-b-[1px] border-white overflow-hidden">
 
-            <div className='absolute w-full h-full -z-1'>
-              <div id="object1" className=' absolute w-[200px] h-[100px] bottom-[-50px] left-0 duration-0 overflow-hidden'>
+            <div className='absolute opacity-50  w-full h-full -z-1'>
+              <div id="object1" className=' absolute w-[80px] md:w-[200px] h-[40px] md:h-[100px] bottom-[-50px] left-0 duration-0 overflow-hidden'>
                 <Image
                   src={judgehubTh}
                   alt="adf"
                   className="w-full h-full object-cover"
                 />
               </div>
-              <div id="object2" className=' absolute w-[200px] h-[100px] top-[40%] right-0 duration-0'>
+              <div id="object2" className=' absolute w-[80px] md:w-[200px] h-[40px] md:h-[100px] top-[40%] right-0 duration-0'>
                 <Image
                   src={notion_cloneTh}
                   alt="adf"
                   className="w-full h-full object-cover"
                 />
               </div>
-              <div id="object3" className=' absolute w-[200px] h-[100px] top-[105%] right-[20%] duration-0'>
+              <div id="object3" className=' absolute w-[80px] md:w-[200px] h-[40px] md:h-[100px] top-[105%] right-[20%] duration-0'>
                 <Image
                   src={judgehubTh}
                   alt="adf"
                   className="w-full h-full object-cover"
                 />
               </div>
-              <div id="object4" className=' absolute w-[200px] h-[100px] top-[60%] left-[40%] duration-0'>
+              <div id="object4" className=' absolute w-[80px] md:w-[200px] h-[40px] md:h-[100px] top-[60%] left-[40%] duration-0'>
                 <Image
                   src={athenaTh}
                   alt="adf"
@@ -347,9 +352,13 @@ const Home = () => {
           </div>
 
           <div id="coding" className="w-full flex flex-col justify-start items-center gap-[20px] text-black py-[50px]">
+            <p className='text-white text-[32px] font-[500]'>Projects</p>
             {projectList.map((item, index) => {
               return (
-                <div className='w-[300px] md:w-[600px] flex flex-col' key={index}>
+                <div
+                  className='w-full md:w-[600px] flex flex-col bg-white rounded-[20px] md:rounded-[40px] p-[2px]'
+                  key={index}
+                >
                   <div className='w-full h-[200px] md:h-[300px] bg-white rounded-[20px] md:rounded-[40px] overflow-hidden'>
                     <Image
                       src={item.image}
@@ -357,13 +366,15 @@ const Home = () => {
                       className="w-full h-full object-cover"
                     />
                   </div>
-                  <p className='w-full text-white text-center text-[28px] leading-tight'>{item.name}</p>
-                  <div className='flex justify-center items-center gap-[10px]'>
-                    {item.category.map((c, index) => {
-                      return (
-                        <p className='text-white' key={index}>{c}</p>
-                      )
-                    })}
+                  <div className='py-[10px]'>
+                    <p className='w-full text-black text-center text-[28px] leading-tight'>{item.name}</p>
+                    <div className='flex justify-center items-center gap-[10px]'>
+                      {item.category.map((c, index) => {
+                        return (
+                          <p className='text-black' key={index}>{c}</p>
+                        )
+                      })}
+                    </div>
                   </div>
                 </div>
               )
