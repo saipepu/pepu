@@ -428,7 +428,7 @@ const Home = () => {
             })}
           </div>
 
-          <div className="text-[24px] w-full flex-col justify-end items-start flex md:hidden">
+          <div className="pb-[20px] text-[24px] w-full flex flex-col md:flex-row justify-end items-start md:justify-center md:gap-[20px]">
             <Link href="/projects" target="_blank">EMAIL</Link>
             <Link href="https://github.com/saipepu" target="_blank">GITHUB</Link>
             <Link href="https://www.linkedin.com/in/pe-pu-6746441b6/" target="_blank">LINKEDIN</Link>
