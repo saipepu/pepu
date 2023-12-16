@@ -17,11 +17,8 @@ const SpatialDesign = () => {
     <div className="h-full w-full pt-[80px] flex justify-center items-start">
       <div className="h-full w-full max-w-[1200px] flex flex-col justify-start items-center">
         <div className="w-full overflow-hidden flex flex-col md:flex-row justify-center items-start px-[10px] md:px-[20px] gap-[10px]">
-          <div className="md:flex-1 w-full">
+          <div className="leading-tight text-[18px] font-[200] overflow-scroll max-h-full w-full md:flex-1 flex flex-col justify-start items-start gap-[20px] md:py-[300px] pb-[50px]">
             <h1 className="text-[56px] font-bold leading-[110%]">Spatial Design</h1>
-          </div>
-          <div className="
-leading-tight text-[18px] font-[200] overflow-scroll max-h-full w-full md:flex-1 flex flex-col justify-start items-start gap-[20px] md:py-[300px] pb-[50px]">
             <p>Embracing the newly trending technology. Designed a spatial UI design for a school project to showcase the tech skill of the students using Augmented Reality Technology.</p>
             <div className="w-full h-[300px] bg-white">
               <Image

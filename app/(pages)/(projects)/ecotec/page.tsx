@@ -24,11 +24,8 @@ const Ecotec = () => {
     <div className="h-full w-full pt-[80px] flex justify-center items-start">
       <div className="h-full w-full max-w-[1200px] flex flex-col justify-start items-center">
         <div className="w-full overflow-hidden flex flex-col md:flex-row justify-center items-start px-[10px] md:px-[20px] gap-[10px]">
-          <div className="md:flex-1 w-full">
+          <div className="leading-tight text-[18px] font-[200] overflow-scroll max-h-full w-full md:flex-1 flex flex-col justify-start items-start gap-[20px] md:py-[300px] pb-[50px]">
             <h1 className="text-[56px] font-bold leading-[110%]">Ecotec</h1>
-          </div>
-          <div className="
-leading-tight text-[18px] font-[200] overflow-scroll max-h-full w-full md:flex-1 flex flex-col justify-start items-start gap-[20px] md:py-[300px] pb-[50px]">
             <p>This is one of my favorite UX UI project. Ecotec is a sustainable activity encouraging app that promotes environmental friendly actions.</p>
             <div className="w-full h-[400px] bg-white">
               <Image

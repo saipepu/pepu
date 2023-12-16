@@ -23,11 +23,9 @@ const Bikyhood = () => {
     <div className="h-full w-full pt-[80px] flex justify-center items-start">
       <div className="h-full w-full max-w-[1200px] flex flex-col justify-start items-center">
         <div className="w-full overflow-hidden flex flex-col md:flex-row justify-center items-start px-[10px] md:px-[20px] gap-[10px]">
-          <div className="md:flex-1 w-full">
-            <h1 className="text-[56px] font-bold leading-[110%]">Bikyhood</h1>
-          </div>
           <div className="
 leading-tight text-[18px] font-[200] overflow-scroll max-h-full w-full md:flex-1 flex flex-col justify-start items-start gap-[20px] md:py-[300px] pb-[50px]">
+            <h1 className="text-[56px] font-bold leading-[110%]">Bikyhood</h1>
             <p>This is a UI design project that I completed for my friend.</p>
             <p>My friend(Ricky) is a bike enthusiast and he found out that many students like him face the problem of where to find and which bike should they buy for daily commute around the campus.</p>
             <div className="w-full bg-white">

@@ -430,8 +430,8 @@ const Home = () => {
 
           <div className="text-[24px] w-full flex-col justify-end items-start flex md:hidden">
             <Link href="/projects" target="_blank">EMAIL</Link>
-            <Link href="/projects">GITHUB</Link>
-            <Link href="/projects">LINKEDIN</Link>
+            <Link href="https://github.com/saipepu" target="_blank">GITHUB</Link>
+            <Link href="https://www.linkedin.com/in/pe-pu-6746441b6/" target="_blank">LINKEDIN</Link>
           </div>
 
         </div>
@@ -441,11 +441,3 @@ const Home = () => {
 }
 
 export default Home
-
-// style={{
-//   backgroundImage: `url('/assets/uiux-bg.png')`,
-//   backgroundRepeat: 'no-repeat',
-//   backgroundPositionY: -200,
-//   backgroundPositionX: -100,
-//   backgroundSize: '120%',
-// }}
