@@ -1,7 +1,7 @@
 "use client";
 
 import Image, { StaticImageData } from 'next/image'
-import React, { useState } from 'react'
+import React, { useEffect, useState } from 'react'
 import arrow from '../../../public/assets/icons/arrow.png'
 import arrow_black from '../../../public/assets/icons/arrow_black.png'
 import profile_picture from '../../../public/profile-picture.png'
@@ -72,14 +72,36 @@ const Home = () => {
   const athena = `url('/assets/athena.png')`
   const ecotec = `url('/assets/ecotec.png')`
 
-  // window.addEventListener('mousemove', (e) => {
-  //   console.log(e.pageX, e.pageY)
-  //   setMouseX(e.pageX)
-  //   setMouseY(e.pageY)
-  // })
+  useEffect(() => {
+    let container = document.getElementById('container')
+    let bio = document.getElementById('bio')
+    let object1 = document.getElementById('object1')
+    let object2 = document.getElementById('object2')
+    let object3 = document.getElementById('object3')
+    let object4 = document.getElementById('object4')
+    if(container && bio) {
+      
+      const animateObject = () => {
+        let top = bio?.getBoundingClientRect().top ? bio?.getBoundingClientRect().top : 0
+        console.log(top)
+        if(object1 && object2 && object3 && object4 && top != 0){
+            object1.style.top = `${1 * top -50}px`
+            object2.style.top = `${0.5 * top + 200}px`
+            object3.style.top = `${2.5 * top + 500}px`
+            object4.style.top = `${0.3 * top + 300}px`
+            // object1.style.transform = `translateY(${1.5 * top }px)`
+            // object2.style.transform = `translateY(${0.5 * top }px)`
+            // object3.style.transform = `translateY(${2.5 * top }px)`
+            // object4.style.transform = `translateY(${0.3 * top }px)`
+        }
+        requestAnimationFrame(animateObject)
+      }
+      animateObject()
+    }
+  }, [])
 
   return (
-      <div className="h-full w-full pt-[70px] pb-[10px] flex flex-col justify-start items-center overflow-scroll">
+      <div id="container" className="h-full w-full pt-[70px] pb-[10px] flex flex-col justify-start items-center overflow-scroll">
 
         <div className="w-full max-w-[1100px] md:h-full flex flex-col justify-start items-center gap-[2px] px-[10px] md:px-[20px]">
           
@@ -266,14 +288,46 @@ const Home = () => {
             </Link>
           </div>
 
-          <div className="min-h-[90vh] md:py-[50px] py-[100px] w-full flex flex-col justify-between items-center text-white overflow-hidden border-b-[1px] border-white">
-            <div className='flex text-[18px] md:text-[24px] font-[300] text-center tracking-tighter leading-tight'>
+          <div id="bio" className="relative min-h-[90vh] md:my-[50px] my-[100px] w-full flex flex-col justify-between items-center text-white border-b-[1px] border-white overflow-visible">
+
+            <div className='absolute w-full h-full -z-1'>
+              <div id="object1" className=' absolute w-[200px] h-[100px] bottom-[-50px] left-0 duration-0 overflow-hidden'>
+                <Image
+                  src={judgehubTh}
+                  alt="adf"
+                  className="w-full h-full object-cover"
+                />
+              </div>
+              <div id="object2" className=' absolute w-[200px] h-[100px] top-[40%] right-0 duration-0'>
+                <Image
+                  src={notion_cloneTh}
+                  alt="adf"
+                  className="w-full h-full object-cover"
+                />
+              </div>
+              <div id="object3" className=' absolute w-[200px] h-[100px] top-[105%] right-[20%] duration-0'>
+                <Image
+                  src={judgehubTh}
+                  alt="adf"
+                  className="w-full h-full object-cover"
+                />
+              </div>
+              <div id="object4" className=' absolute w-[200px] h-[100px] top-[60%] left-[40%] duration-0'>
+                <Image
+                  src={athenaTh}
+                  alt="adf"
+                  className="w-full h-full object-cover"
+                />
+              </div>
+            </div>
+
+            <div className='z-[99] flex text-[18px] md:text-[24px] font-[300] text-center tracking-tighter leading-tight'>
               <p>
                 I'm looking for new job opportunities as
                 <br />a web designer and a web developer.
               </p>
             </div>
-            <div className='flex text-[32px] md:text-[56px] font-[500] text-center tracking-tighter leading-[100%]'>
+            <div className='z-[99] flex text-[32px] md:text-[56px] font-[500] text-center tracking-tighter leading-[100%]'>
               <p>
                 I craft stunning
                 <br />websites
@@ -282,13 +336,14 @@ const Home = () => {
                 <br />experiences.
               </p>
             </div>
-            <div className='flex text-[18px] md:text-[24px] font-[300] text-center tracking-tighter leading-tight'>
+            <div className='z-[99] flex text-[18px] md:text-[24px] font-[300] text-center tracking-tighter leading-tight mb-[50px]'>
               <p>
                 "Turning pixels into websites, step by step –
                 <br />where new ideas meet great design, and
                 <br />user experiences go beyond what you'd expect."
               </p>
             </div>
+
           </div>
 
           <div id="coding" className="w-full flex flex-col justify-start items-center gap-[20px] text-black py-[50px]">
@@ -314,6 +369,7 @@ const Home = () => {
               )
             })}
           </div>
+
         </div>
         
       </div>
