@@ -1,11 +1,22 @@
 "use client";
 
-import Image from 'next/image'
+import Image, { StaticImageData } from 'next/image'
 import React, { useState } from 'react'
 import arrow from '../../../public/assets/icons/arrow.png'
 import arrow_black from '../../../public/assets/icons/arrow_black.png'
 import profile_picture from '../../../public/profile-picture.png'
 import Link from 'next/link';
+import judgehubTh from '../../../public/project-list-image/judgehub.png'
+import notion_cloneTh from '../../../public/project-list-image/notion-clone.png'
+import athenaTh from '../../../public/project-list-image/athena.png'
+
+type project = {
+  name: String,
+  category: String[],
+  description: String,
+  link: String,
+  image: StaticImageData
+}
 
 const Home = () => {
 
@@ -33,6 +44,30 @@ const Home = () => {
       type: "Mobile"
     },
   ]
+  const projectList: project[] = [
+    {
+      name: "JudgeHub",
+      category: ["UI","UX","Frontend","Backend"],
+      description: "JudgeHub is a real-time Leaderboard which is specifically design for a Digital Design and Innovation (DDI) StartUp Pitching Competition held by the Assumption University in Thailand.",
+      link: "/judgehub",
+      image: judgehubTh
+    },
+    {
+      name: "Notion",
+      category: ["UI","UX","Frontend","Backend"],
+      description: "Ecotec is a sustainable activity encouraging app that promotes environmental friendly actions. This project opened up a rare opportunity to experience my first national hackathon (HackaThailand) and ranked the 5th Place in the Final Stage.",
+      link: "/ecotec",
+      image: notion_cloneTh
+    },
+    {
+      name: "Athena",
+      category: ["Frontend","Backend"],
+      description: "This is Tech Startup Project called ‘Athena’. Athena is a learn-to-earn platform that encourage the process of learning by gamification.",
+      link: "/athena",
+      image: athenaTh
+    },
+  ]
+
   const judgehub = `url('/assets/judgehub.png')`
   const athena = `url('/assets/athena.png')`
   const ecotec = `url('/assets/ecotec.png')`
@@ -46,10 +81,11 @@ const Home = () => {
   return (
       <div className="h-full w-full pt-[70px] pb-[10px] flex flex-col justify-start items-center overflow-scroll">
 
-<div className="w-full max-w-[1100px] md:h-full flex flex-col justify-start items-center gap-[2px] px-[10px] md:px-[20px]">
-          <div className="min-h-[50vh] h-full w-full flex flex-col-reverse md:flex-row justify-end md:justify-between items-start gap-[10px] text-black bg-white rounded-[30px] md:rounded-[40px] overflow-hidden p-[10px]">
+        <div className="w-full max-w-[1100px] md:h-full flex flex-col justify-start items-center gap-[2px] px-[10px] md:px-[20px]">
+          
+          <div className="w-full min-h-[50vh] flex flex-col-reverse md:flex-row justify-end md:justify-between items-start gap-[10px] text-black bg-white rounded-[30px] md:rounded-[40px] overflow-hidden p-[10px]">
 
-            <div className="w-full h-full flex flex-col justify-end items-start">
+            <div className="w-full md:h-full flex flex-col justify-end items-start">
               <p className="w-full text-[28px] md:text-[42px] font-Inter leading-[110%] tracking-tight font-[300]">I am PePu.
                 <span className="
                     relative w-[150px] md:w-[200px] inline-flex justify-center items-center 
@@ -59,8 +95,8 @@ const Home = () => {
                   ABOUT ME
                   <span className="
                     absolute w-[24px] h-[24px] md:w-[40px] md:h-[40px] inline-flex justify-center items-center
-                    text-[14px] md:text-[20px] left-1 bg-gray-600 rounded-full text-white
-                    group-hover:left-[138px] md:group-hover:left-[155px] duration-[0.8s] ease-out group-hover:rotate-180
+                    text-[14px] md:text-[20px] left-[3px] bg-gray-600 rounded-full text-white
+                    group-hover:left-[122px] md:group-hover:left-[155px] duration-[0.8s] ease-out group-hover:rotate-180
                   ">
                     <span className="group-hover:hidden block">Bio</span>
                     <Image
@@ -83,16 +119,18 @@ const Home = () => {
                 </div>
               </div>
             </div>
-            <div className="w-full md:w-[40%] h-[400px] md:h-full">
+
+            <div className="w-full md:w-[40%] md:h-full flex justify-end">
               <Image
                 src={profile_picture}
                 alt="profile picture"
-                className='w-full h-full object-cover rounded-[30px]'
+                className= 'w-[150px] h-[200px] md:w-full md:h-full object-cover rounded-[30px]'
               />
             </div>
 
           </div>
-          <div className="w-full h-full flex flex-col md:flex-row justify-start items-start gap-[2px] text-black">
+
+          <div className="w-full md:h-full flex flex-col md:flex-row justify-start items-start gap-[2px] text-black">
             <div className="w-full h-full flex flex-col justify-start items-start gap-[2px]">
               <div className="w-full min-h-[250px] md:h-full flex flex-col justify-between items-start md:items-end p-[10px] rounded-[30px] md:rounded-[40px] bg-white">
                 <p className='w-full group-hover:block text-[32px] md:text-[52px] font-[300]'>Highlights</p>
@@ -154,7 +192,7 @@ const Home = () => {
             </div>
             <Link
               className="w-full h-full flex flex-col justify-start items-start gap-[2px]"
-              href={'/projects/coding-projects'}
+              href={'/#coding'}
             >
               <div className="w-full min-h-[250px] md:min-h-fit md:h-full p-[10px] rounded-[30px] md:rounded-[40px] bg-white hover:bg-gray-300 group flex justify-start items-start ease-in-out duration-[1s]"
               onMouseMove={() => setIsCodingBgHover(true)} onMouseLeave={() => setIsCodingBgHover(false)}
@@ -226,6 +264,55 @@ const Home = () => {
                 </div>
               </div>
             </Link>
+          </div>
+
+          <div className="min-h-[90vh] md:py-[50px] py-[100px] w-full flex flex-col justify-between items-center text-white overflow-hidden border-b-[1px] border-white">
+            <div className='flex text-[18px] md:text-[24px] font-[300] text-center tracking-tighter leading-tight'>
+              <p>
+                I'm looking for new job opportunities as
+                <br />a web designer and a web developer.
+              </p>
+            </div>
+            <div className='flex text-[32px] md:text-[56px] font-[500] text-center tracking-tighter leading-[100%]'>
+              <p>
+                I craft stunning
+                <br />websites
+                <br />for
+                <br />seamless user
+                <br />experiences.
+              </p>
+            </div>
+            <div className='flex text-[18px] md:text-[24px] font-[300] text-center tracking-tighter leading-tight'>
+              <p>
+                "Turning pixels into websites, step by step –
+                <br />where new ideas meet great design, and
+                <br />user experiences go beyond what you'd expect."
+              </p>
+            </div>
+          </div>
+
+          <div id="coding" className="w-full flex flex-col justify-start items-center gap-[20px] text-black py-[50px]">
+            {projectList.map((item, index) => {
+              return (
+                <div className='w-[300px] md:w-[600px] flex flex-col' key={index}>
+                  <div className='w-full h-[200px] md:h-[300px] bg-white rounded-[20px] md:rounded-[40px] overflow-hidden'>
+                    <Image
+                      src={item.image}
+                      alt="adf"
+                      className="w-full h-full object-cover"
+                    />
+                  </div>
+                  <p className='w-full text-white text-center text-[28px] leading-tight'>{item.name}</p>
+                  <div className='flex justify-center items-center gap-[10px]'>
+                    {item.category.map((c, index) => {
+                      return (
+                        <p className='text-white' key={index}>{c}</p>
+                      )
+                    })}
+                  </div>
+                </div>
+              )
+            })}
           </div>
         </div>
         
