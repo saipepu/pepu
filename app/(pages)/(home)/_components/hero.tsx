@@ -1,7 +1,7 @@
 "use client";
 
-import Image, { StaticImageData } from 'next/image'
-import React, { useEffect, useState } from 'react'
+import Image from 'next/image'
+import React from 'react'
 import arrow from '../../../../public/assets/icons/arrow.png'
 import arrow_black from '../../../../public/assets/icons/arrow_black.png'
 import profile_picture from '../../../../public/profile-picture.png'

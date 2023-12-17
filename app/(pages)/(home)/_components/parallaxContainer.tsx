@@ -1,7 +1,7 @@
 "use client";
 
-import Image, { StaticImageData } from 'next/image'
-import React, { useEffect, useState } from 'react'
+import Image from 'next/image'
+import React, { useEffect } from 'react'
 import judgehubTh from '../../../../public/project-list-image/judgehub.png'
 import notion_cloneTh from '../../../../public/project-list-image/notion-clone.png'
 import athenaTh from '../../../../public/project-list-image/athena.png'
