@@ -34,7 +34,9 @@ const Hero = () => {
           </span>
           I build user-friendly websites that boost conversion rates for businesses.
         </p>
-        <div className='p-1 pl-4 flex justify-center items-center bg-black text-white rounded-full gap-[10px] group'>
+        <div
+          onClick={() => window.open('mailto:saipepu.mdy257@gmail.com?subject=subject&body=body')}
+          className='cursor-pointer p-1 pl-4 flex justify-center items-center bg-black text-white rounded-full gap-[10px] group'>
           <p className="text-[24px] md:text-[28px] font-[300]">Contact Me</p>
           <div className="w-[28px] h-[28px] md:w-[45px] md:h-[45px] bg-white flex justify-center items-center rounded-full overflow-hidden">
             <Image

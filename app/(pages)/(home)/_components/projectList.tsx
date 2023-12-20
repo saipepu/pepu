@@ -22,7 +22,7 @@ type project = {
 
 const ProjectList = () => {
 
-  const projectList: project[] = [
+  const codingProjectList: project[] = [
     {
       name: "JudgeHub",
       category: ["Frontend","Backend","UI","UX"],
@@ -50,7 +50,9 @@ const ProjectList = () => {
       description: "Ecotec is a sustainable activity encouraging app that promotes environmental friendly actions. This project opened up a rare opportunity to experience my first national hackathon (HackaThailand) and ranked the 5th Place in the Final Stage.",
       link: "/ecotec",
       image: ecotecTh
-    },
+    }
+  ]
+  const uiProjectList = [
     {
       name: "Foodify",
       category: ["UI","UX","Project Management", "Research"],
@@ -82,11 +84,46 @@ const ProjectList = () => {
   ]
 
   return (
-    <div id="coding" className="w-full flex flex-col justify-start items-center gap-[2px] text-black py-[50px]">
-      <p className='text-white text-[32px] font-[500] mb-[20px]'>Projects</p>
-      {projectList.map((item, index) => {
+    <div className="w-full flex flex-col justify-start items-center gap-[2px] text-black py-[50px]">
+      <p className='text-white text-[32px] font-[500] mb-[20px]'>Coding Projects</p>
+      {codingProjectList.map((item, index) => {
         return (
           <Link
+            id={item.category[0] === 'Frontend' ? 'coding' : 'ui'}
+            href={`${item.link}`}
+            target="_blank"
+            className='w-full md:w-[500px] md:h-[300px] flex flex-col bg-white rounded-[20px] md:rounded-[40px] p-[2px]'
+            key={index}
+          >
+            <div className='w-full h-[200px] md:h-[300px] bg-white rounded-[20px] md:rounded-[40px] overflow-hidden'>
+              {item.image ? (
+                <Image
+                  src={item.image}
+                  alt="adf"
+                  className="w-full h-full object-cover"
+                />
+              ) : (
+                ''
+              )}
+            </div>
+            <div className='py-[10px]'>
+              <p className='w-full text-black text-center text-[28px] leading-tight'>{item.name}</p>
+              <div className='flex justify-center items-center gap-[10px]'>
+                {item.category.map((c, index) => {
+                  return (
+                    <p className='text-black' key={index}>{c}</p>
+                  )
+                })}
+              </div>
+            </div>
+          </Link>
+        )
+      })}
+      <p className='text-white text-[32px] font-[500] mt-[50px] mb-[20px]'>UI UX Projects</p>
+      {uiProjectList.map((item, index) => {
+        return (
+          <Link
+            id={item.category[0] === 'Frontend' ? 'coding' : 'ui'}
             href={`${item.link}`}
             target="_blank"
             className='w-full md:w-[500px] md:h-[300px] flex flex-col bg-white rounded-[20px] md:rounded-[40px] p-[2px]'

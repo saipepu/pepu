@@ -98,11 +98,12 @@ const Highlights = () => {
           <p className="text-[24px] md:text-[28px] font-[300] leading-tight tracking-tight">I was a top-5 finalist in Hackathailand 2023. I have experience working with a couple of start-up teams.</p>
         </div>
       </div>
-      <Link
+      <div
         className="w-full h-full flex flex-col justify-start items-start gap-[2px]"
-        href={'/#coding'}
       >
-        <div className="w-full min-h-[250px] md:min-h-fit md:h-full p-[10px] rounded-[30px] md:rounded-[40px] bg-white hover:bg-gray-300 group flex justify-start items-start ease-in-out duration-[1s]"
+        <Link
+        href={'/#coding'}
+        className="w-full min-h-[250px] md:min-h-fit md:h-full p-[10px] rounded-[30px] md:rounded-[40px] bg-white hover:bg-gray-300 group flex justify-start items-start ease-in-out duration-[1s]"
         onMouseMove={() => setIsCodingBgHover(true)} onMouseLeave={() => setIsCodingBgHover(false)}
         style={{
           backgroundImage: `url('/assets/coding-bg.png')`,
@@ -120,8 +121,9 @@ const Highlights = () => {
               />
             </div>
           </div>
-        </div>
-        <div
+        </Link>
+        <Link
+        href={'/#ui'}
         className='relative w-full min-h-[250px] md:min-h-fit md:h-full p-[10px] rounded-[30px] md:rounded-[40px] bg-white hover:bg-gray-300 group flex justify-start items-start overflow-hidden'
         onMouseMove={() => setisUIUXBgHover(true)} onMouseOut={() => setisUIUXBgHover(false)}
         >
@@ -170,8 +172,8 @@ const Highlights = () => {
               />
             </div>
           </div>
-        </div>
-      </Link>
+        </Link>
+      </div>
     </div>
   )
 }
