@@ -12,7 +12,7 @@ const Judgehub = () => {
 
   return (
     <div className="h-full w-full pt-[80px] flex justify-center items-start">
-      <div className="h-full w-full max-w-[1200px] flex flex-col justify-center items-center">
+      <div className="h-full w-full max-w-[650px] flex flex-col justify-center items-center">
         <div className="leading-tight text-[18px] font-[200] overflow-scroll max-h-full w-full md:flex-1 flex flex-col justify-start items-start gap-[20px] md:py-[300px] p-[10px] pb-[50px]">
           <h1 className="text-[56px] font-bold leading-[110%]">Judgehub</h1>
           <p>A real-time Leaderboard for grading StartUp Pitching Competition.</p>

@@ -41,7 +41,7 @@ const Home = () => {
   return (
       <div id="container" className="h-full w-full pt-[70px] pb-[10px] flex flex-col justify-start items-center overflow-scroll">
 
-        <div className="w-full max-w-[1100px] md:h-full flex flex-col justify-start items-center gap-[2px] px-[10px] md:px-[20px]">
+        <div className="w-full max-w-[1000px] md:h-full flex flex-col justify-start items-center gap-[2px] px-[10px] md:px-[20px]">
           
           <Hero />
           <Highlights />
