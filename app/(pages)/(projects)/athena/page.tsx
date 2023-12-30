@@ -11,8 +11,9 @@ import demo_1 from '../../../../public/athena/demo-1.png'
 import demo_2 from '../../../../public/athena/demo-2.png'
 import event_1 from '../../../../public/athena/event-1.png'
 import event_2 from '../../../../public/athena/event-2.png'
-import { useRouter } from 'next/navigation';
+import white_arrow from '@/public/assets/icons/arrow.png'
 import Image from 'next/image';
+import Link from 'next/link'
 
 const Athena = () => {
 
@@ -25,7 +26,7 @@ const Athena = () => {
               <h1 className="text-[56px] font-bold leading-[110%]">Athena</h1>
               <a href="https://saipepu.github.io/athena_2/#/sign-up" target="_blank" className="rainbow-btn"><span>VIEW WEBSITE</span></a>
             </div>
-            <p>This is Tech Startup Project called ‘Athena’.</p>
+            <p>This Project is for a Tech Startup Team called ‘Athena’.</p>
             <p>Athena is a learn-to-earn platform that encourage the process of learning by gamification.</p>
             <div className="w-full h-[400px] bg-white">
               <Image
@@ -131,6 +132,17 @@ const Athena = () => {
               />
             </div>
             <p>The journey didn’t stop at the rank 2nd. The team even got a couple of investment offers from the investors.</p>
+            <div className="w-full flex flex-row justify-start items-center gap-[20px] mt-[20px]">
+              <Link href="https://saipepu.github.io/athena_2/#/sign-up" target="_blank" className="rainbow-btn"><span>VIEW WEBSITE</span></Link>
+              <Link href="https://github.com/saipepu/athena_2" target="_blank" className='flex items-center'>
+                <Image
+                  src={white_arrow}
+                  alt="white_arrow"
+                  className='w-[16px] h-[16px] -rotate-45'
+                />
+                <p className="underline">github<span className='text-blue-400 font-[400]'>/athena</span></p>
+              </Link>
+            </div>
             <div className="w-full flex-1 flex flex-col justify-start items-start gap-[10px] mt-[10px]">
               <p className="font-bold">Role 👨🏻‍💻</p>
               <div className="w-full flex flex-col justify-start items-start">
