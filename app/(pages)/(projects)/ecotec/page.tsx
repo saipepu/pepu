@@ -25,7 +25,10 @@ const Ecotec = () => {
       <div className="h-full w-full max-w-[650px] flex flex-col justify-start items-center">
         <div className="w-full overflow-hidden flex flex-col md:flex-row justify-center items-start px-[10px] md:px-[20px] gap-[10px]">
           <div className="leading-tight text-[18px] font-[200] overflow-scroll max-h-full w-full md:flex-1 flex flex-col justify-start items-start gap-[20px] md:py-[300px] pb-[50px]">
-            <h1 className="text-[56px] font-bold leading-[110%]">Ecotec</h1>
+            <div className="w-full flex flex-row justify-between items-center">
+              <h1 className="text-[56px] font-bold leading-[110%]">Ecotec</h1>
+              <a href="https://www.figma.com/proto/3iwojUFiobL86KUM03GbUK/Portfolio?page-id=903%3A17&type=design&node-id=903-779&viewport=180%2C150%2C0.16&t=hHmBu4AKcn6fRZD1-1&scaling=scale-down&starting-point-node-id=903%3A779&mode=design" target="_blank" className="rainbow-btn"><span>PROTOTYPE</span></a>
+            </div>
             <p>This is one of my favorite UX UI project. Ecotec is a sustainable activity encouraging app that promotes environmental friendly actions.</p>
             <div className="w-full h-[400px] bg-white">
               <Image
@@ -86,7 +89,7 @@ const Ecotec = () => {
             <div className="w-full h-[400px]">
               <Image
                 src={showcase_2}
-                alt="judgehub-1-image"
+                alt="showcase_2"
                 className="w-full h-full object-cover"
               />
             </div>
@@ -94,14 +97,14 @@ const Ecotec = () => {
               <div className="w-full h-full">
                 <Image
                   src={showcase_3}
-                  alt="spatial-design-v-1-1-image"
+                  alt="showcase_3"
                   className="w-full h-full object-cover"
                 />
               </div>
               <div className="w-full h-full">
                 <Image
                   src={showcase_4}
-                  alt="spatial-design-v-2-2s-image"
+                  alt="showcase_4"
                   className="w-full h-full object-cover"
                 />
               </div>
@@ -183,6 +186,10 @@ const Ecotec = () => {
             </div>
             <p>The journey for the Team was ended along with the event, but for me, as a Computer Science Student, I reused the idea for my Final Project in Database Management System Class and scored a Top Grade!</p>
             <p>This project was full of doubts and uncertainty. But surely, it is one of the fews that I am most proud of.</p>
+            <p>Figma Prototype</p>
+            <div className="w-full">
+              <iframe width="100%" height="650" src="https://www.figma.com/embed?embed_host=share&url=https%3A%2F%2Fwww.figma.com%2Fproto%2F3iwojUFiobL86KUM03GbUK%2FPortfolio%3Fpage-id%3D903%253A17%26type%3Ddesign%26node-id%3D903-779%26viewport%3D180%252C150%252C0.16%26t%3DhHmBu4AKcn6fRZD1-1%26scaling%3Dscale-down%26starting-point-node-id%3D903%253A779%26mode%3Ddesign"></iframe>
+            </div>
             <div className="w-full flex-1 flex flex-col justify-start items-start gap-[10px] mt-[10px]">
               <p className="font-bold">Role 👨🏻‍💻</p>
               <div className="w-full flex flex-col justify-start items-start">
