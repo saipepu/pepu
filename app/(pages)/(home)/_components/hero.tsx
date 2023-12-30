@@ -12,8 +12,9 @@ const Hero = () => {
     <div className="w-full min-h-[50vh] flex flex-col-reverse md:flex-row justify-end md:justify-between items-start gap-[10px] text-black bg-white rounded-[30px] md:rounded-[40px] overflow-hidden p-[10px]">
 
       <div className="w-full md:h-full flex flex-col justify-end items-start">
-        <p className="w-full text-[28px] md:text-[42px] font-Inter leading-[110%] tracking-tight font-[300]">I am PePu.
-          <span className="
+        <p className="w-full text-[28px] md:text-[42px] font-Inter leading-[110%] tracking-tight font-[300]">
+          I am PePu.
+          {/* <span className="
               relative w-[150px] md:w-[200px] inline-flex justify-center items-center 
               text-[24px] md:text-[32px] rounded-full bg-gray-300
               group cursor-pointer
@@ -31,10 +32,10 @@ const Hero = () => {
                 className='w-[22px] h-[22px] md:w-[30px] md:h-[30px] rotate-180 hidden group-hover:block'
               />
             </span>
-          </span>
+          </span> */}
           I build user-friendly websites that boost conversion rates for businesses.
         </p>
-        <div
+        {/* <div
           onClick={() => window.open('mailto:saipepu.mdy257@gmail.com?subject=subject&body=body')}
           className='cursor-pointer p-1 pl-4 flex justify-center items-center bg-black text-white rounded-full gap-[10px] group'>
           <p className="text-[24px] md:text-[28px] font-[300]">Contact Me</p>
@@ -45,7 +46,7 @@ const Hero = () => {
               className='w-[22px] h-[22px] md:w-[28px] md:h-[28px] group-hover:-rotate-45'
             />
           </div>
-        </div>
+        </div> */}
       </div>
 
       <div className="w-full md:w-[40%] md:h-full flex justify-end">
