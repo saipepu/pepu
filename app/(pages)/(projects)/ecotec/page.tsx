@@ -17,6 +17,7 @@ import showcase_2 from '../../../../public/ecotec/showcase-2.png'
 import showcase_3 from '../../../../public/ecotec/showcase-3.png'
 import showcase_4 from '../../../../public/ecotec/showcase-4.png'
 import color from '../../../../public/ecotec/color.png'
+import bitkub from '@/public/ecotec/bitkub_logo.png'
 
 const Ecotec = () => {
 
@@ -175,12 +176,22 @@ const Ecotec = () => {
                 src={team_3}
                 alt="judgehub-1-image"
                 className="w-full h-full object-cover"
-              />
+                />
+            </div>
+            <div className="w-full flex flex-row gap-1">
+              <p>-</p>
+              <i>CEO of Bitkub</i>
+              <Image
+                src={bitkub}
+                alt="bitkub"
+                className="w-[40px] object-cover"
+                />
+              <i>(center)</i>
             </div>
             <div className="w-full h-[400px]">
               <Image
                 src={coding}
-                alt="judgehub-1-image"
+                alt="coding"
                 className="w-full h-full object-cover"
               />
             </div>
