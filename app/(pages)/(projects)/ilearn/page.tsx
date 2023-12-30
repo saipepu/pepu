@@ -22,7 +22,10 @@ const ILearn = () => {
         <div className="w-full overflow-hidden flex flex-col md:flex-row justify-center items-start px-[10px] md:px-[20px] gap-[10px]">
 
           <div className="leading-tight text-[18px] font-[200] overflow-scroll max-h-full w-full md:flex-1 flex flex-col justify-start items-start gap-[20px] md:py-[300px] pb-[50px]">
-            <h1 className="text-[56px] font-bold leading-[110%]">iLearn</h1>
+            <div className="w-full flex flex-row justify-between items-center">
+              <h1 className="text-[56px] font-bold leading-[110%]">iLearn</h1>
+              <a href="https://www.figma.com/proto/3iwojUFiobL86KUM03GbUK/Portfolio?page-id=903%3A17&type=design&node-id=914-3343&viewport=-575%2C256%2C0.2&t=ge7UyNvbceML0X2d-1&scaling=scale-down&starting-point-node-id=914%3A3343&mode=design" target="_blank" className="rainbow-btn"><span>PROTOTYPE</span></a>
+            </div>
             <p>Introducing to iLearn that bring excitement to the world of education.</p>
             <div className="w-full h-[300px] bg-white">
               <Image
