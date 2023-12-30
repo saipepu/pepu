@@ -122,7 +122,7 @@ const Ecotec = () => {
               />
             </div>
             <p>That was the start of our journey to the Final.</p>
-            <div className="w-full min-h-[200px] h-[250px] py-[10px] flex flex-row justify-start items-start gap-[2px]">
+            <div className="w-full h-[250px] py-[10px] flex flex-row justify-start items-start gap-[2px]">
               <div className="w-[35%] h-full">
                 <Image
                   src={solo_1}
