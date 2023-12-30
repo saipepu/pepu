@@ -194,12 +194,12 @@ const Ecotec = () => {
               <p className="font-bold">Role 👨🏻‍💻</p>
               <div className="w-full flex flex-col justify-start items-start">
                 <p>UI Design</p>
+                <p>UX Design</p>
               </div>
             </div>
             <div className="w-full flex flex-col justify-start items-start gap-[10px] mt-[10px]">
               <p className="font-bold">Tech 🚀</p>
               <div className="w-full flex flex-col justify-start items-start">
-                <p>Spatial Design</p>
                 <p>Figma</p>
               </div>
             </div>
