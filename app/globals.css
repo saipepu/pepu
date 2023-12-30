@@ -45,3 +45,47 @@ body {
 * {
   transition: all 0.3s ease-in-out;
 }
+
+.rainbow-btn {
+  text-align: center;
+  position: relative;
+  color: #ffffff;
+  text-decoration: none;
+  border-radius: 6px;
+  display: block;
+  z-index: 2;
+  overflow: hidden;
+  padding: 2px;
+}
+.rainbow-btn:before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 200%;
+  height: 100%;
+  background: linear-gradient(100deg,#ffa69e, #faf3dd, #b8f2e6, #aed9e0, #FAF3DD, #ffa69e);
+  background-size: 50% 100%;
+  animation: rainbow-btn .75s linear infinite
+}
+.rainbow-btn span {
+  position: relative;
+  z-index: 2;
+  padding: 10px;
+  text-decoration: none;
+  align-items: center;
+  background: #000;
+  border-radius: 3px;
+  display: block;
+  justify-content: center;
+  box-sizing: border-box;
+  height: 100%;
+  font-size: 18px;
+  font-family: Inter, 'san-serif'
+}
+
+@keyframes rainbow-btn {
+  to {
+      transform: translateX(-50%)
+  }
+}
