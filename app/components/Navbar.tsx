@@ -21,7 +21,7 @@ const Navbar = () => {
               alt="white_arrow"
               className='w-[16px] h-[16px] -rotate-45'
             />
-            <p>github</p>
+            <p>github.com</p>
           </Link>
           {/* <Link href="/bio" className={params === '/bio' ? 'text-[#666666] cursor-text' : 'block'}>bio</Link> */}
         </div>

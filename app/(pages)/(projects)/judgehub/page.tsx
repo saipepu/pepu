@@ -6,7 +6,8 @@ import laptopMockup from '@/public/judgehub/laptop-mockup.png'
 import event1 from '@/public/judgehub/event-1.png'
 import event2 from '@/public/judgehub/event-2.png'
 import event3 from '@/public/judgehub/event-3.png'
-import backLeft from '../../../../public/assets/icons/chevron-left.png'
+import white_arrow from '@/public/assets/icons/arrow.png'
+import Link from "next/link";
 
 const Judgehub = () => {
 
@@ -14,7 +15,10 @@ const Judgehub = () => {
     <div className="h-full w-full pt-[80px] flex justify-center items-start">
       <div className="h-full w-full max-w-[650px] flex flex-col justify-center items-center">
         <div className="leading-tight text-[18px] font-[200] overflow-scroll max-h-full w-full md:flex-1 flex flex-col justify-start items-start gap-[20px] md:py-[300px] p-[10px] pb-[50px]">
-          <h1 className="text-[56px] font-bold leading-[110%]">Judgehub</h1>
+          <div className="w-full flex flex-row justify-between items-center">
+            <h1 className="text-[56px] font-bold leading-[110%]">Judgehub</h1>
+            <a href="https://saipepu.github.io/JudgeHub/#/leaderboard" target="_blank" className="rainbow-btn"><span>VIEW WEBSITE</span></a>
+          </div>
           <p>A real-time Leaderboard for grading StartUp Pitching Competition.</p>
           <div className="w-full bg-white">
             <Image
@@ -71,6 +75,25 @@ const Judgehub = () => {
               className="w-full h-full object-cover"
             />
           </div>
+          <div className="w-full flex flex-row justify-start items-center gap-[20px] mt-[20px]">
+            <Link href="https://saipepu.github.io/JudgeHub/#/leaderboard" target="_blank" className="rainbow-btn"><span>VIEW WEBSITE</span></Link>
+            <Link href="https://github.com/saipepu/JudgeHub" target="_blank" className='flex items-center'>
+              <Image
+                src={white_arrow}
+                alt="white_arrow"
+                className='w-[16px] h-[16px] -rotate-45'
+              />
+              <p className="underline">github<span className='text-blue-400 font-[400]'>/frontend</span></p>
+            </Link>
+            <Link href="https://github.com/saipepu/ddi-pepu-backend" target="_blank" className='flex items-center'>
+              <Image
+                src={white_arrow}
+                alt="white_arrow"
+                className='w-[16px] h-[16px] -rotate-45'
+              />
+              <p className="underline">github<span className='text-yellow-400 font-[400]'>/backend</span></p>
+            </Link>
+          </div>
           <div className="w-full flex flex-col justify-start items-start gap-[10px] mt-[10px]">
             <p className="font-bold">Role 👨🏻‍💻</p>
             <div className="w-full flex flex-col justify-start items-start">
@@ -92,7 +115,7 @@ const Judgehub = () => {
           </div>
           <div className="w-full flex flex-col justify-start items-start gap-[10px] mt-[10px]">
             <p className="font-bold">Client 💼</p>
-            <div className="w-full flex justify-start items-center gap-[10px]">
+            <Link href="https://ddi.au.edu/en/home-en/" target="_blank" className="w-full flex justify-start items-center gap-[10px]">
               <div className="w-[35px] h-[35px]">
                 <Image
                   src={abac}
@@ -100,8 +123,8 @@ const Judgehub = () => {
                   className="w-full h-full object-contain"
                 />
               </div>
-              <p>Assumption University of Thailand</p>
-            </div>
+              <p className="underline">Assumption University of Thailand</p>
+            </Link>
           </div>
         </div>
       </div>
