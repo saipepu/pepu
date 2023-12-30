@@ -146,7 +146,7 @@ leading-tight text-[18px] font-[200] overflow-scroll max-h-full w-full md:flex-1
                 </div>
               </div>
             </div>
-            <p>Figam Prototype</p>
+            <p>Figma Prototype</p>
             <div className="w-full">
               <iframe width="100%" height="650" src="https://www.figma.com/embed?embed_host=share&url=https%3A%2F%2Fwww.figma.com%2Fproto%2FrIMrnjMPO4FIfknXZaHeyt%2FBikyHood%3Fpage-id%3D22%253A355%26type%3Ddesign%26node-id%3D22-968%26viewport%3D599%252C146%252C0.08%26t%3DDZCPz0rGH5A4t7Re-1%26scaling%3Dscale-down%26starting-point-node-id%3D22%253A968%26mode%3Ddesign"></iframe>
             </div>
