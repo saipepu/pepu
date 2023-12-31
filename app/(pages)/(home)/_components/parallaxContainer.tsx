@@ -12,6 +12,8 @@ const ParallaxContainer = () => {
 
     let container = document.getElementById('container')
     let bio = document.getElementById('bio')
+
+    // object1,2,3,4 represent the animating element
     let object1 = document.getElementById('object1')
     let object2 = document.getElementById('object2')
     let object3 = document.getElementById('object3')
@@ -20,16 +22,11 @@ const ParallaxContainer = () => {
       
       const animateObject = () => {
         let top = bio?.getBoundingClientRect().top ? bio?.getBoundingClientRect().top : 0
-        console.log(top)
         if(object1 && object2 && object3 && object4 && top != 0){
             object1.style.top = `${1 * top + 400}px`
             object2.style.top = `${0.8 * top + 900}px`
             object3.style.top = `${0.3 * top + 700}px`
             object4.style.top = `${1.2 * top + 500}px`
-            // object1.style.transform = `translateY(${1.5 * top }px)`
-            // object2.style.transform = `translateY(${0.5 * top }px)`
-            // object3.style.transform = `translateY(${2.5 * top }px)`
-            // object4.style.transform = `translateY(${0.3 * top }px)`
         }
         requestAnimationFrame(animateObject)
       }

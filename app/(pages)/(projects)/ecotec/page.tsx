@@ -16,8 +16,10 @@ import showcase_1 from '../../../../public/ecotec/showcase-1.png'
 import showcase_2 from '../../../../public/ecotec/showcase-2.png'
 import showcase_3 from '../../../../public/ecotec/showcase-3.png'
 import showcase_4 from '../../../../public/ecotec/showcase-4.png'
+import white_arrow from '@/public/assets/icons/arrow.png'
 import color from '../../../../public/ecotec/color.png'
 import bitkub from '@/public/ecotec/bitkub_logo.png'
+import Link from 'next/link';
 
 const Ecotec = () => {
 
@@ -200,6 +202,24 @@ const Ecotec = () => {
             <p>Figma Prototype</p>
             <div className="w-full">
               <iframe width="100%" height="650" src="https://www.figma.com/embed?embed_host=share&url=https%3A%2F%2Fwww.figma.com%2Fproto%2F3iwojUFiobL86KUM03GbUK%2FPortfolio%3Fpage-id%3D903%253A17%26type%3Ddesign%26node-id%3D903-779%26viewport%3D180%252C150%252C0.16%26t%3DhHmBu4AKcn6fRZD1-1%26scaling%3Dscale-down%26starting-point-node-id%3D903%253A779%26mode%3Ddesign"></iframe>
+            </div>
+            <div className="w-full flex flex-row justify-start items-center gap-[20px] mt-[20px]">
+              <Link href="https://github.com/saipepu/Ecotec-Frontend" target="_blank" className='flex items-center'>
+                <Image
+                  src={white_arrow}
+                  alt="white_arrow"
+                  className='w-[16px] h-[16px] -rotate-45'
+                />
+                <p className="underline">github/ecotec<span className='text-blue-400 font-[400]'>-frontend</span></p>
+              </Link>
+              <Link href="https://github.com/saipepu/Ecotec-Backend" target="_blank" className='flex items-center'>
+                <Image
+                  src={white_arrow}
+                  alt="white_arrow"
+                  className='w-[16px] h-[16px] -rotate-45'
+                />
+                <p className="underline">github/ecotec<span className='text-yellow-400 font-[400]'>-backend</span></p>
+              </Link>
             </div>
             <div className="w-full flex-1 flex flex-col justify-start items-start gap-[10px] mt-[10px]">
               <p className="font-bold">Role 👨🏻‍💻</p>

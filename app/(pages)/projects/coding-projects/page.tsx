@@ -1,6 +1,6 @@
 "use client";
 
-import React from 'react'
+import React, { useEffect } from 'react'
 import judgehub from '../../../../public/project-list-image/judgehub.png'
 import athena from '../../../../public/project-list-image/athena.png'
 import notion_clone from '../../../../public/project-list-image/notion-clone.png'
@@ -41,7 +41,7 @@ const page = () => {
   ]
 
   return (
-    <div className="h-full w-full flex justify-center items-center overflow-scroll">
+    <div id="project-card" className="h-full w-full flex justify-center items-center overflow-scroll">
       <div className="h-full w-full md:w-[1100px] pt-[70px] flex flex-col justify-start items-center">
         <div className="min-h-[80vh] py-[50px] w-full flex flex-col justify-between items-center text-white overflow-hidden border-b-[1px] border-white">
           <div className='flex text-[18px] md:text-[24px] font-[300] text-center tracking-tighter leading-tight'>

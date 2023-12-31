@@ -89,3 +89,23 @@ body {
       transform: translateX(-50%)
   }
 }
+
+.scaleAnimation {
+  transform-origin: center;
+  animation: Scale 0.3s forwards;
+}
+
+@keyframes Scale {
+  0% {
+    transform: scale(0.1)
+  }
+  80% {
+    transform: scale(0.9)
+  }
+  90% {
+    transform: scale(0.95)
+  }
+  100% {
+    transform: scale(1)
+  }
+}

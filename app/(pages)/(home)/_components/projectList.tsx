@@ -83,6 +83,32 @@ const ProjectList = () => {
     },
   ]
 
+  let count = codingProjectList.length + uiProjectList.length
+  useEffect(() => {
+
+    let projectCard = document.getElementsByClassName('project-card')
+    if(projectCard) {
+      
+      const animateObject = () => {
+        for(let i=0; i<projectCard.length; i++) {
+          let top = projectCard[i]?.getBoundingClientRect().top ? projectCard[i]?.getBoundingClientRect().top : 0
+          let wTop = window.innerHeight
+          if(wTop - top > 0) {
+            if(!projectCard[i].classList.contains('scaleAnimation')) {
+              count -= 1
+            }
+            console.log(count)
+            projectCard[i].classList.add('scaleAnimation')
+          }
+        }
+        if(count>0) {
+          requestAnimationFrame(animateObject)
+        }
+      }
+      animateObject()
+    }
+  }, [])
+
   return (
     <div className="w-full flex flex-col justify-start items-center gap-[2px] text-black py-[50px]">
       <p className='text-white text-[32px] font-[500] mb-[20px]'>Coding Projects</p>
@@ -92,7 +118,7 @@ const ProjectList = () => {
             id={item.category[0] === 'Frontend' ? 'coding' : 'ui'}
             href={`${item.link}`}
             target="_blank"
-            className='w-full md:w-[500px] md:h-[300px] flex flex-col bg-white rounded-[20px] md:rounded-[40px] p-[2px]'
+            className='project-card scale-0 w-full md:w-[500px] md:h-[300px] flex flex-col bg-white rounded-[20px] md:rounded-[40px] p-[2px]'
             key={index}
           >
             <div className='w-full h-[200px] md:h-[300px] bg-white rounded-[20px] md:rounded-[40px] overflow-hidden'>
@@ -126,7 +152,7 @@ const ProjectList = () => {
             id={item.category[0] === 'Frontend' ? 'coding' : 'ui'}
             href={`${item.link}`}
             target="_blank"
-            className='w-full md:w-[500px] md:h-[300px] flex flex-col bg-white rounded-[20px] md:rounded-[40px] p-[2px]'
+            className='project-card w-full md:w-[500px] md:h-[300px] flex flex-col bg-white rounded-[20px] md:rounded-[40px] p-[2px]'
             key={index}
           >
             <div className='w-full h-[200px] md:h-[300px] bg-white rounded-[20px] md:rounded-[40px] overflow-hidden'>
