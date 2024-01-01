@@ -22,9 +22,9 @@ const Athena = () => {
       <div className="h-full w-full max-w-[650px] flex flex-col justify-start items-center">
         <div className="w-full overflow-hidden flex flex-col md:flex-row justify-center items-start px-[10px] md:px-[20px] gap-[10px]">
           <div className="leading-tight text-[18px] font-[200] overflow-scroll max-h-full w-full md:flex-1 flex flex-col justify-start items-start gap-[20px] md:py-[300px] pb-[50px]">
-            <div className="w-full flex flex-row justify-between items-center">
+            <div className="w-full flex flex-col justify-start items-start gap-2 md:flex-row md:justify-between md:items-center">
               <h1 className="text-[56px] font-bold leading-[110%]">Athena</h1>
-              <a href="https://saipepu.github.io/athena_2/#/sign-up" target="_blank" className="rainbow-btn"><span>VIEW WEBSITE</span></a>
+              <a href="https://saipepu.github.io/athena_2/#/sign-up" target="_blank" className="rainbow-btn"><span className="text-[12px] md:text-[18px]">VIEW WEBSITE</span></a>
             </div>
             <p>This Project is for a Tech Startup Team called ‘Athena’.</p>
             <p>Athena is a learn-to-earn platform that encourage the process of learning by gamification.</p>
@@ -132,8 +132,8 @@ const Athena = () => {
               />
             </div>
             <p>The journey didn’t stop at the rank 2nd. The team even got a couple of investment offers from the investors.</p>
-            <div className="w-full flex flex-row justify-start items-center gap-[20px] mt-[20px]">
-              <Link href="https://saipepu.github.io/athena_2/#/sign-up" target="_blank" className="rainbow-btn"><span>VIEW WEBSITE</span></Link>
+            <div className="w-full flex flex-col items-start md:flex-row justify-start md:items-center md:gap-[20px] gap-2 mt-[20px]">
+              <Link href="https://saipepu.github.io/athena_2/#/sign-up" target="_blank" className="rainbow-btn"><span className="text-[12px] md:text-[18px]">VIEW WEBSITE</span></Link>
               <Link href="https://github.com/saipepu/athena_2" target="_blank" className='flex items-center'>
                 <Image
                   src={white_arrow}

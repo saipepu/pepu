@@ -25,9 +25,9 @@ const Bikyhood = () => {
         <div className="w-full overflow-hidden flex flex-col md:flex-row justify-center items-start px-[10px] md:px-[20px] gap-[10px]">
           <div className="
 leading-tight text-[18px] font-[200] overflow-scroll max-h-full w-full md:flex-1 flex flex-col justify-start items-start gap-[20px] md:py-[300px] pb-[50px]">
-            <div className="w-full flex flex-row justify-between items-center">
+            <div className="w-full flex flex-col justify-start items-start gap-2 md:flex-row md:justify-between md:items-center">
               <h1 className="text-[56px] font-bold leading-[110%]">Bikyhood</h1>
-              <a href="https://www.figma.com/embed?embed_host=share&url=https%3A%2F%2Fwww.figma.com%2Fproto%2FrIMrnjMPO4FIfknXZaHeyt%2FBikyHood%3Fpage-id%3D22%253A355%26type%3Ddesign%26node-id%3D22-968%26viewport%3D599%252C146%252C0.08%26t%3DDZCPz0rGH5A4t7Re-1%26scaling%3Dscale-down%26starting-point-node-id%3D22%253A968%26mode%3Ddesign" target="_blank" className="rainbow-btn"><span>PROTOTYPE</span></a>
+              <a href="https://www.figma.com/embed?embed_host=share&url=https%3A%2F%2Fwww.figma.com%2Fproto%2FrIMrnjMPO4FIfknXZaHeyt%2FBikyHood%3Fpage-id%3D22%253A355%26type%3Ddesign%26node-id%3D22-968%26viewport%3D599%252C146%252C0.08%26t%3DDZCPz0rGH5A4t7Re-1%26scaling%3Dscale-down%26starting-point-node-id%3D22%253A968%26mode%3Ddesign" target="_blank" className="rainbow-btn"><span className="text-[12px] md:text-[18px]">PROTOTYPE</span></a>
             </div>
             <p>This is a UI design project that I completed for my friend.</p>
             <p>My friend(Ricky) is a bike enthusiast and he found out that many students like him face the problem of where to find and which bike should they buy for daily commute around the campus.</p>
