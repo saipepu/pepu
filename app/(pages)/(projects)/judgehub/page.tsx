@@ -17,7 +17,7 @@ const Judgehub = () => {
         <div className="leading-tight text-[18px] font-[200] overflow-scroll max-h-full w-full md:flex-1 flex flex-col justify-start items-start gap-[20px] md:py-[300px] p-[10px] pb-[50px]">
           <div className="w-full flex flex-col justify-start items-start gap-2 md:flex-row md:justify-between md:items-center">
             <h1 className="text-[56px] font-bold leading-[110%]">Judgehub</h1>
-            <a href="https://saipepu.github.io/JudgeHub/#/leaderboard" target="_blank" className="rainbow-btn"><span className="text-[12px] md:text-[18px]">VIEW WEBSITE</span></a>
+            {/* <a href="https://saipepu.github.io/JudgeHub/#/leaderboard" target="_blank" className="rainbow-btn"><span className="text-[12px] md:text-[18px]">VIEW WEBSITE</span></a> */}
           </div>
           <p>A real-time Leaderboard for grading StartUp Pitching Competition.</p>
           <div className="w-full bg-white">
@@ -76,7 +76,7 @@ const Judgehub = () => {
             />
           </div>
           <div className="w-full flex flex-col justify-start items-start md:flex-row md:justify-start md:items-center md:gap-[20px] gap-2 mt-[20px]">
-            <Link href="https://saipepu.github.io/JudgeHub/#/leaderboard" target="_blank" className="rainbow-btn"><span className="text-[12px] md:text-[18px]">VIEW WEBSITE</span></Link>
+            {/* <Link href="https://saipepu.github.io/JudgeHub/#/leaderboard" target="_blank" className="rainbow-btn"><span className="text-[12px] md:text-[18px]">VIEW WEBSITE</span></Link> */}
             <Link href="https://github.com/saipepu/JudgeHub" target="_blank" className='flex items-center'>
               <Image
                 src={white_arrow}
