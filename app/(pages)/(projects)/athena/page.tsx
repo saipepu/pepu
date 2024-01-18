@@ -26,7 +26,7 @@ const Athena = () => {
               <h1 className="text-[56px] font-bold leading-[110%]">Athena</h1>
               <a href="https://saipepu.github.io/athena_2/#/sign-up" target="_blank" className="rainbow-btn"><span className="text-[12px] md:text-[18px]">VIEW WEBSITE</span></a>
             </div>
-            <p>This Project is for a Tech Startup Team called ‘Athena’.</p>
+            <p>This web project is for a Tech Startup Team called ‘Athena’.</p>
             <p>Athena is a learn-to-earn platform that encourage the process of learning by gamification.</p>
             <div className="w-full h-[400px] bg-white">
               <Image

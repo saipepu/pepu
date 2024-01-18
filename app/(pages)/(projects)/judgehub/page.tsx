@@ -126,6 +126,7 @@ const Judgehub = () => {
               <p className="underline">Assumption University of Thailand</p>
             </Link>
           </div>
+          <i className="text-[14px]">The project is already completed and the live website has been <span className="text-red-400">shut down.</span></i>
         </div>
       </div>
     </div>
