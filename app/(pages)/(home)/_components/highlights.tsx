@@ -95,7 +95,11 @@ const Highlights = () => {
           </div>
         </div>
         <div className="w-full h-fit bg-white rounded-[30px] md:rounded-[40px] p-[10px] py-[20px]">
-          <p className="text-[24px] md:text-[28px] font-[300] leading-tight tracking-tight">I was a top-5 finalist in Hackathailand 2023. I have experience working with a couple of start-up teams.</p>
+          <p className="text-[24px] md:text-[28px] font-[300] leading-tight tracking-tight">
+            - 2024 IBM Thailand Intern <br />
+            - 2023 Hackathailand Top 5 Finalist <br />
+            - Founder of <span><a href="https://pitchhub-landing.vercel.app" className='underline'>Pitchhub</a></span>
+          </p>
         </div>
       </div>
       <div
